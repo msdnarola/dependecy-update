@@ -1,15 +1,8 @@
 /* eslint-disable no-restricted-imports */
 /* eslint-disable no-unused-vars */
 import React from "react";
-import {createMuiTheme, withStyles, makeStyles} from "@material-ui/core";
-import {
-  Button,
-  Grid,
-  ButtonGroup,
-  Fab,
-  Icon,
-  IconButton
-} from "@material-ui/core";
+import { createMuiTheme, withStyles, makeStyles } from "@material-ui/core";
+import { Button, Grid, ButtonGroup, Fab, Icon, IconButton } from "@material-ui/core";
 import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward";
 import DeleteIcon from "@material-ui/icons/Delete";
 import NavigationIcon from "@material-ui/icons/Navigation";
@@ -20,12 +13,12 @@ import CloudUploadIcon from "@material-ui/icons/CloudUpload";
 import KeyboardVoiceIcon from "@material-ui/icons/KeyboardVoice";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 import PhotoCamera from "@material-ui/icons/PhotoCamera";
-import {ThemeProvider} from "@material-ui/styles";
-import {green, purple} from "@material-ui/core/colors";
-import {ButtonBase, Typography} from "@material-ui/core";
-import {MemoryRouter as Router} from "react-router";
-import {Link} from "react-router-dom";
-import {Notice, KTCodeExample} from "../../../../_metronic/_partials/controls";
+import { ThemeProvider } from "@material-ui/styles";
+import { green, purple } from "@material-ui/core/colors";
+import { ButtonBase, Typography } from "@material-ui/core";
+import { MemoryRouter as Router } from "react-router";
+import { Link } from "react-router-dom";
+import { Notice, KTCodeExample } from "../../../../_metronic/_partials/controls";
 
 const BootstrapButton = withStyles({
   root: {
@@ -47,118 +40,116 @@ const BootstrapButton = withStyles({
       "sans-serif",
       '"Apple Color Emoji"',
       '"Segoe UI Emoji"',
-      '"Segoe UI Symbol"'
+      '"Segoe UI Symbol"',
     ].join(","),
     "&:hover": {
       backgroundColor: "#0069d9",
-      borderColor: "#0062cc"
+      borderColor: "#0062cc",
     },
     "&:active": {
       boxShadow: "none",
       backgroundColor: "#0062cc",
-      borderColor: "#005cbf"
+      borderColor: "#005cbf",
     },
     "&:focus": {
-      boxShadow: "0 0 0 0.2rem rgba(0,123,255,.5)"
-    }
-  }
+      boxShadow: "0 0 0 0.2rem rgba(0,123,255,.5)",
+    },
+  },
 })(Button);
 
-const ColorButton = withStyles(theme => ({
+const ColorButton = withStyles((theme) => ({
   root: {
     color: theme.palette.getContrastText(purple[500]),
     backgroundColor: purple[500],
     "&:hover": {
-      backgroundColor: purple[700]
-    }
-  }
+      backgroundColor: purple[700],
+    },
+  },
 }))(Button);
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   margin: {
-    margin: theme.spacing(1)
-  }
+    margin: theme.spacing(1),
+  },
 }));
 
 const theme = createMuiTheme({
   palette: {
-    primary: green
-  }
+    primary: green,
+  },
 });
 
-const AdapterLink = React.forwardRef((props, ref) => (
-  <Link innerRef={ref} {...props} />
-));
+const AdapterLink = React.forwardRef((props, ref) => <Link innerRef={ref} {...props} />);
 
 const CollisionLink = React.forwardRef((props, ref) => (
   <Link innerRef={ref} to="/getting-started/installation/" {...props} />
 ));
 
-const useStyles1 = makeStyles(theme => ({
+const useStyles1 = makeStyles((theme) => ({
   button: {
-    margin: theme.spacing(1)
+    margin: theme.spacing(1),
   },
   input: {
-    display: "none"
-  }
+    display: "none",
+  },
 }));
 
-const useStyles2 = makeStyles(theme => ({
+const useStyles2 = makeStyles((theme) => ({
   fab: {
-    margin: theme.spacing(1)
+    margin: theme.spacing(1),
   },
   extendedIcon: {
-    marginRight: theme.spacing(1)
-  }
+    marginRight: theme.spacing(1),
+  },
 }));
 
-const useStyles3 = makeStyles(theme => ({
+const useStyles3 = makeStyles((theme) => ({
   button: {
-    margin: theme.spacing(1)
+    margin: theme.spacing(1),
   },
   leftIcon: {
-    marginRight: theme.spacing(1)
+    marginRight: theme.spacing(1),
   },
   rightIcon: {
-    marginLeft: theme.spacing(1)
+    marginLeft: theme.spacing(1),
   },
   iconSmall: {
-    fontSize: 20
-  }
+    fontSize: 20,
+  },
 }));
 
-const useStyles4 = makeStyles(theme => ({
+const useStyles4 = makeStyles((theme) => ({
   margin: {
-    margin: theme.spacing(1)
-  }
+    margin: theme.spacing(1),
+  },
 }));
 
-const useStyles5 = makeStyles(theme => ({
+const useStyles5 = makeStyles((theme) => ({
   root: {
     display: "flex",
     flexWrap: "wrap",
     minWidth: 300,
-    width: "100%"
+    width: "100%",
   },
   image: {
     position: "relative",
     height: 200,
     [theme.breakpoints.down("xs")]: {
       width: "100% !important", // Overrides inline-style
-      height: 100
+      height: 100,
     },
     "&:hover, &$focusVisible": {
       zIndex: 1,
       "& $imageBackdrop": {
-        opacity: 0.15
+        opacity: 0.15,
       },
       "& $imageMarked": {
-        opacity: 0
+        opacity: 0,
       },
       "& $imageTitle": {
-        border: "4px solid currentColor"
-      }
-    }
+        border: "4px solid currentColor",
+      },
+    },
   },
   focusVisible: {},
   imageButton: {
@@ -170,7 +161,7 @@ const useStyles5 = makeStyles(theme => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    color: theme.palette.common.white
+    color: theme.palette.common.white,
   },
   imageSrc: {
     position: "absolute",
@@ -179,7 +170,7 @@ const useStyles5 = makeStyles(theme => ({
     top: 0,
     bottom: 0,
     backgroundSize: "cover",
-    backgroundPosition: "center 40%"
+    backgroundPosition: "center 40%",
   },
   imageBackdrop: {
     position: "absolute",
@@ -189,12 +180,11 @@ const useStyles5 = makeStyles(theme => ({
     bottom: 0,
     backgroundColor: theme.palette.common.black,
     opacity: 0.4,
-    transition: theme.transitions.create("opacity")
+    transition: theme.transitions.create("opacity"),
   },
   imageTitle: {
     position: "relative",
-    padding: `${theme.spacing(2)}px ${theme.spacing(4)}px ${theme.spacing(1) +
-      6}px`
+    padding: `${theme.spacing(2)}px ${theme.spacing(4)}px ${theme.spacing(1) + 6}px`,
   },
   imageMarked: {
     height: 3,
@@ -203,33 +193,29 @@ const useStyles5 = makeStyles(theme => ({
     position: "absolute",
     bottom: -2,
     left: "calc(50% - 9px)",
-    transition: theme.transitions.create("opacity")
-  }
+    transition: theme.transitions.create("opacity"),
+  },
 }));
 
 const images = [
   {
     url: "https://material-ui.com/static/images/grid-list/breakfast.jpg",
     title: "Breakfast",
-    width: "40%"
+    width: "40%",
   },
   {
     url: "https://material-ui.com/static/images/grid-list/burgers.jpg",
     title: "Burgers",
-    width: "30%"
+    width: "30%",
   },
   {
     url: "https://material-ui.com/static/images/grid-list/camera.jpg",
     title: "Camera",
-    width: "30%"
-  }
+    width: "30%",
+  },
 ];
 
-const options = [
-  "Create a merge commit",
-  "Squash and merge",
-  "Rebase and merge"
-];
+const options = ["Create a merge commit", "Squash and merge", "Rebase and merge"];
 
 export default function ButtonsExamplesPage() {
   const classes1 = useStyles1();
@@ -242,10 +228,7 @@ export default function ButtonsExamplesPage() {
   return (
     <>
       <Notice icon="flaticon-warning font-primary">
-        <span>
-          Buttons allow users to take actions, and make choices, with a single
-          tap.
-        </span>{" "}
+        <span>Buttons allow users to take actions, and make choices, with a single tap.</span>{" "}
         <span>
           <code>Buttons</code> communicate actions that users can take.
         </span>
@@ -255,8 +238,7 @@ export default function ButtonsExamplesPage() {
             target="_blank"
             className="font-weight-bold"
             rel="noopener noreferrer"
-            href="https://material-ui.com/components/buttons/"
-          >
+            href="https://material-ui.com/components/buttons/">
             demos & documentation
           </a>
         </span>
@@ -264,12 +246,14 @@ export default function ButtonsExamplesPage() {
 
       <div className="row">
         <div className="col-lg-6">
-          <KTCodeExample jsCode={jsCode1} beforeCodeTitle="Contained Buttons" codeBlockHeight="400px">
+          <KTCodeExample
+            jsCode={jsCode1}
+            beforeCodeTitle="Contained Buttons"
+            codeBlockHeight="400px">
             <div>
-              <code>Contained</code> buttons are high-emphasis, distinguished by
-              their use of elevation and fill. They contain actions that are
-              primary to your app. The last example of this demo show how to use
-              an upload button.
+              <code>Contained</code> buttons are high-emphasis, distinguished by their use of
+              elevation and fill. They contain actions that are primary to your app. The last
+              example of this demo show how to use an upload button.
             </div>
             <div className="separator separator-dashed my-7" />
 
@@ -277,33 +261,16 @@ export default function ButtonsExamplesPage() {
               <Button variant="contained" className={classes1.button}>
                 Default
               </Button>
-              <Button
-                variant="contained"
-                color="primary"
-                className={classes1.button}
-              >
+              <Button variant="contained" color="primary" className={classes1.button}>
                 Primary
               </Button>
-              <Button
-                variant="contained"
-                color="secondary"
-                className={classes1.button}
-              >
+              <Button variant="contained" color="secondary" className={classes1.button}>
                 Secondary
               </Button>
-              <Button
-                variant="contained"
-                color="secondary"
-                disabled
-                className={classes1.button}
-              >
+              <Button variant="contained" color="secondary" disabled className={classes1.button}>
                 Disabled
               </Button>
-              <Button
-                variant="contained"
-                href="#contained-buttons"
-                className={classes1.button}
-              >
+              <Button variant="contained" href="#contained-buttons" className={classes1.button}>
                 Link
               </Button>
               <input
@@ -314,55 +281,40 @@ export default function ButtonsExamplesPage() {
                 type="file"
               />
               <label htmlFor="contained-button-file">
-                <Button
-                  variant="contained"
-                  component="span"
-                  className={classes1.button}
-                >
+                <Button variant="contained" component="span" className={classes1.button}>
                   Upload
                 </Button>
               </label>
             </div>
           </KTCodeExample>
 
-          <KTCodeExample jsCode={jsCode3} beforeCodeTitle="Outlined Buttons" codeBlockHeight="400px">
+          <KTCodeExample
+            jsCode={jsCode3}
+            beforeCodeTitle="Outlined Buttons"
+            codeBlockHeight="400px">
             <span>
-              <code>Outlined buttons</code> are medium-emphasis buttons. They
-              contain actions that are important, but aren’t the primary action
-              in an app.
+              <code>Outlined buttons</code> are medium-emphasis buttons. They contain actions that
+              are important, but aren’t the primary action in an app.
             </span>
             <div className="gutter-t">
-              Outlined buttons are also a lower emphasis alternative to
-              contained buttons, or a higher emphasis alternative to text
-              buttons.
+              Outlined buttons are also a lower emphasis alternative to contained buttons, or a
+              higher emphasis alternative to text buttons.
             </div>
             <div className="separator separator-dashed my-7"></div>
             <div>
               <Button variant="outlined" className={classes1.button}>
                 Default
               </Button>
-              <Button
-                variant="outlined"
-                color="primary"
-                className={classes1.button}
-              >
+              <Button variant="outlined" color="primary" className={classes1.button}>
                 Primary
               </Button>
-              <Button
-                variant="outlined"
-                color="secondary"
-                className={classes1.button}
-              >
+              <Button variant="outlined" color="secondary" className={classes1.button}>
                 Secondary
               </Button>
               <Button variant="outlined" disabled className={classes1.button}>
                 Disabled
               </Button>
-              <Button
-                variant="outlined"
-                href="#outlined-buttons"
-                className={classes1.button}
-              >
+              <Button variant="outlined" href="#outlined-buttons" className={classes1.button}>
                 Link
               </Button>
               <input
@@ -373,38 +325,25 @@ export default function ButtonsExamplesPage() {
                 type="file"
               />
               <label htmlFor="outlined-button-file">
-                <Button
-                  variant="outlined"
-                  component="span"
-                  className={classes1.button}
-                >
+                <Button variant="outlined" component="span" className={classes1.button}>
                   Upload
                 </Button>
               </label>
-              <Button
-                variant="outlined"
-                color="inherit"
-                className={classes1.button}
-              >
+              <Button variant="outlined" color="inherit" className={classes1.button}>
                 Inherit
               </Button>
             </div>
           </KTCodeExample>
 
-          <KTCodeExample
-            jsCode={jsCode12}
-            beforeCodeTitle="Third-party routing library"
-          >
+          <KTCodeExample jsCode={jsCode12} beforeCodeTitle="Third-party routing library">
             <span>
-              One common use case is to use the button to trigger a navigation
-              to a new page. The <code>ButtonBase</code> component provides a
-              property to handle this use case: <code>component</code>. However
-              for certain focus polyfills <code>ButtonBase</code> requires the
-              DOM node of the provided component. This is achieved by attaching
-              a ref to the component and expecting that the component forwards
-              this ref to the underlying DOM node. Given that a lot of our
-              interactive components rely on ButtonBase, you should be able to
-              take advantage of it everywhere:
+              One common use case is to use the button to trigger a navigation to a new page. The{" "}
+              <code>ButtonBase</code> component provides a property to handle this use case:{" "}
+              <code>component</code>. However for certain focus polyfills <code>ButtonBase</code>{" "}
+              requires the DOM node of the provided component. This is achieved by attaching a ref
+              to the component and expecting that the component forwards this ref to the underlying
+              DOM node. Given that a lot of our interactive components rely on ButtonBase, you
+              should be able to take advantage of it everywhere:
             </span>
             <div className="separator separator-dashed my-7"></div>
             <Router>
@@ -417,181 +356,145 @@ export default function ButtonsExamplesPage() {
 
           <KTCodeExample jsCode={jsCode7} beforeCodeTitle="Sizes" codeBlockHeight="400px">
             <span>
-              Fancy larger or smaller buttons? Use the <code>size</code>{" "}
-              property.
+              Fancy larger or smaller buttons? Use the <code>size</code> property.
             </span>
             <div className="separator separator-dashed my-7" />
 
             <div className="pb-3">
-              <span className="pr-3">
+              <span className="pe-3">
                 <Button size="small" className={classes2.margin}>
                   Small
                 </Button>
               </span>
-              <span className="pr-3">
+              <span className="pe-3">
                 <Button size="medium" className={classes2.margin}>
                   Medium
                 </Button>
               </span>
-              <span className="pr-3">
+              <span className="pe-3">
                 <Button size="large" className={classes2.margin}>
                   Large
                 </Button>
               </span>
             </div>
             <div className="pb-3">
-              <span className="pr-3">
-                <Button
-                  variant="outlined"
-                  size="small"
-                  color="primary"
-                  className={classes2.margin}
-                >
+              <span className="pe-3">
+                <Button variant="outlined" size="small" color="primary" className={classes2.margin}>
                   Small
                 </Button>
               </span>
-              <span className="pr-3">
+              <span className="pe-3">
                 <Button
                   variant="outlined"
                   size="medium"
                   color="primary"
-                  className={classes2.margin}
-                >
+                  className={classes2.margin}>
                   Medium
                 </Button>
               </span>
-              <span className="pr-3">
-                <Button
-                  variant="outlined"
-                  size="large"
-                  color="primary"
-                  className={classes2.margin}
-                >
+              <span className="pe-3">
+                <Button variant="outlined" size="large" color="primary" className={classes2.margin}>
                   Large
                 </Button>
               </span>
             </div>
             <div className="pb-3">
-              <span className="pr-3">
+              <span className="pe-3">
                 <Button
                   variant="contained"
                   size="small"
                   color="primary"
-                  className={classes2.margin}
-                >
+                  className={classes2.margin}>
                   Small
                 </Button>
               </span>
-              <span className="pr-3">
+              <span className="pe-3">
                 <Button
                   variant="contained"
                   size="medium"
                   color="primary"
-                  className={classes2.margin}
-                >
+                  className={classes2.margin}>
                   Medium
                 </Button>
               </span>
-              <span className="pr-3">
+              <span className="pe-3">
                 <Button
                   variant="contained"
                   size="large"
                   color="primary"
-                  className={classes2.margin}
-                >
+                  className={classes2.margin}>
                   Large
                 </Button>
               </span>
             </div>
             <div className="pb-3">
-              <span className="pr-3">
-                <Fab
-                  size="small"
-                  color="secondary"
-                  aria-label="Add"
-                  className={classes2.margin}
-                >
+              <span className="pe-3">
+                <Fab size="small" color="secondary" aria-label="Add" className={classes2.margin}>
                   <AddIcon />
                 </Fab>
               </span>
-              <span className="pr-3">
-                <Fab
-                  size="medium"
-                  color="secondary"
-                  aria-label="Add"
-                  className={classes2.margin}
-                >
+              <span className="pe-3">
+                <Fab size="medium" color="secondary" aria-label="Add" className={classes2.margin}>
                   <AddIcon />
                 </Fab>
               </span>
-              <span className="pr-3">
-                <Fab
-                  color="secondary"
-                  aria-label="Add"
-                  className={classes2.margin}
-                >
+              <span className="pe-3">
+                <Fab color="secondary" aria-label="Add" className={classes2.margin}>
                   <AddIcon />
                 </Fab>
               </span>
             </div>
             <div className="pb-3">
-              <span className="pr-3">
+              <span className="pe-3">
                 <Fab
                   variant="extended"
                   size="small"
                   color="primary"
                   aria-label="Add"
-                  className={classes2.margin}
-                >
+                  className={classes2.margin}>
                   <NavigationIcon className={classes2.extendedIcon} />
                   Extended
                 </Fab>
               </span>
-              <span className="pr-3">
+              <span className="pe-3">
                 <Fab
                   variant="extended"
                   size="medium"
                   color="primary"
                   aria-label="Add"
-                  className={classes2.margin}
-                >
+                  className={classes2.margin}>
                   <NavigationIcon className={classes2.extendedIcon} />
                   Extended
                 </Fab>
               </span>
-              <span className="pr-3">
+              <span className="pe-3">
                 <Fab
                   variant="extended"
                   color="primary"
                   aria-label="Add"
-                  className={classes2.margin}
-                >
+                  className={classes2.margin}>
                   <NavigationIcon className={classes2.extendedIcon} />
                   Extended
                 </Fab>
               </span>
             </div>
             <div>
-              <span className="pr-3">
-                <IconButton
-                  aria-label="Delete"
-                  className={classes2.margin}
-                  size="small"
-                >
+              <span className="pe-3">
+                <IconButton aria-label="Delete" className={classes2.margin} size="small">
                   <ArrowDownwardIcon fontSize="inherit" />
                 </IconButton>
               </span>
-              <span className="pr-3">
+              <span className="pe-3">
                 <IconButton aria-label="Delete" className={classes2.margin}>
                   <DeleteIcon fontSize="small" />
                 </IconButton>
               </span>
-              <span className="pr-3">
+              <span className="pe-3">
                 <IconButton aria-label="Delete" className={classes2.margin}>
                   <DeleteIcon />
                 </IconButton>
               </span>
-              <span className="pr-3">
+              <span className="pe-3">
                 <IconButton aria-label="Delete" className={classes2.margin}>
                   <DeleteIcon fontSize="large" />
                 </IconButton>
@@ -600,39 +503,26 @@ export default function ButtonsExamplesPage() {
           </KTCodeExample>
 
           <KTCodeExample jsCode={jsCode9} beforeCodeTitle="Icon Buttons">
-            <span>
-              Icon buttons are commonly found in app bars and toolbars.
-            </span>
+            <span>Icon buttons are commonly found in app bars and toolbars.</span>
             <div className="pt-3">
-              Icons are also appropriate for toggle buttons that allow a single
-              choice to be selected or deselected, such as adding or removing a
-              star to an item.
+              Icons are also appropriate for toggle buttons that allow a single choice to be
+              selected or deselected, such as adding or removing a star to an item.
             </div>
             <div className="separator separator-dashed my-7" />
             <div>
               <IconButton className={classes1.button} aria-label="Delete">
                 <DeleteIcon />
               </IconButton>
-              <IconButton
-                className={classes1.button}
-                aria-label="Delete"
-                disabled
-                color="primary"
-              >
+              <IconButton className={classes1.button} aria-label="Delete" disabled color="primary">
                 <DeleteIcon />
               </IconButton>
-              <IconButton
-                color="secondary"
-                className={classes1.button}
-                aria-label="Add an alarm"
-              >
+              <IconButton color="secondary" className={classes1.button} aria-label="Add an alarm">
                 <Icon>alarm</Icon>
               </IconButton>
               <IconButton
                 color="primary"
                 className={classes1.button}
-                aria-label="Add to shopping cart"
-              >
+                aria-label="Add to shopping cart">
                 <AddShoppingCartIcon />
               </IconButton>
               <input
@@ -646,8 +536,7 @@ export default function ButtonsExamplesPage() {
                   color="primary"
                   className={classes1.button}
                   aria-label="Upload picture"
-                  component="span"
-                >
+                  component="span">
                   <PhotoCamera />
                 </IconButton>
               </label>
@@ -657,9 +546,8 @@ export default function ButtonsExamplesPage() {
         <div className="col-lg-6">
           <KTCodeExample jsCode={jsCode2} beforeCodeTitle="Text Buttons" codeBlockHeight="400px">
             <span>
-              <code>Text buttons</code> are typically used for less-pronounced
-              actions. In cards, text buttons help maintain an emphasis on card
-              content.
+              <code>Text buttons</code> are typically used for less-pronounced actions. In cards,
+              text buttons help maintain an emphasis on card content.
             </span>
             <div className="separator separator-dashed my-7" />
             <div>
@@ -693,33 +581,22 @@ export default function ButtonsExamplesPage() {
 
           <KTCodeExample jsCode={jsCode4} beforeCodeTitle="Grouped Buttons" codeBlockHeight="400px">
             <span>
-              The ButtonGroup component can be used to group outlined (the
-              default) or contained buttons.
+              The ButtonGroup component can be used to group outlined (the default) or contained
+              buttons.
             </span>
             <div className="separator separator-dashed my-7" />
             <Grid container spacing={3}>
               <Grid item xs={12} md={6}>
-                <Grid
-                  container
-                  spacing={1}
-                  direction="column"
-                  alignItems="center"
-                >
+                <Grid container spacing={1} direction="column" alignItems="center">
                   <Grid item>
-                    <ButtonGroup
-                      size="small"
-                      aria-label="Small outlined button group"
-                    >
+                    <ButtonGroup size="small" aria-label="Small outlined button group">
                       <Button>One</Button>
                       <Button>Two</Button>
                       <Button>Three</Button>
                     </ButtonGroup>
                   </Grid>
                   <Grid item>
-                    <ButtonGroup
-                      color="primary"
-                      aria-label="Outlined primary button group"
-                    >
+                    <ButtonGroup color="primary" aria-label="Outlined primary button group">
                       <Button>One</Button>
                       <Button>Two</Button>
                       <Button>Three</Button>
@@ -729,8 +606,7 @@ export default function ButtonsExamplesPage() {
                     <ButtonGroup
                       color="secondary"
                       size="large"
-                      aria-label="Large outlined secondary button group"
-                    >
+                      aria-label="Large outlined secondary button group">
                       <Button>One</Button>
                       <Button>Two</Button>
                       <Button>Three</Button>
@@ -739,18 +615,12 @@ export default function ButtonsExamplesPage() {
                 </Grid>
               </Grid>
               <Grid item xs={12} md={6}>
-                <Grid
-                  container
-                  spacing={1}
-                  direction="column"
-                  alignItems="center"
-                >
+                <Grid container spacing={1} direction="column" alignItems="center">
                   <Grid item>
                     <ButtonGroup
                       variant="contained"
                       size="small"
-                      aria-label="Small contained button group"
-                    >
+                      aria-label="Small contained button group">
                       <Button>One</Button>
                       <Button>Two</Button>
                       <Button>Three</Button>
@@ -760,8 +630,7 @@ export default function ButtonsExamplesPage() {
                     <ButtonGroup
                       variant="contained"
                       color="primary"
-                      aria-label="Full-width contained primary button group"
-                    >
+                      aria-label="Full-width contained primary button group">
                       <Button>One</Button>
                       <Button>Two</Button>
                       <Button>Three</Button>
@@ -772,8 +641,7 @@ export default function ButtonsExamplesPage() {
                       variant="contained"
                       color="secondary"
                       size="large"
-                      aria-label="Large contained secondary button group"
-                    >
+                      aria-label="Large contained secondary button group">
                       <Button>One</Button>
                       <Button>Two</Button>
                       <Button>Three</Button>
@@ -782,10 +650,7 @@ export default function ButtonsExamplesPage() {
                 </Grid>
               </Grid>
               <Grid item xs={12}>
-                <ButtonGroup
-                  fullWidth
-                  aria-label="Full width outlined button group"
-                >
+                <ButtonGroup fullWidth aria-label="Full width outlined button group">
                   <Button>Full</Button>
                   <Button>width</Button>
                   <Button>ButtonGroup</Button>
@@ -797,12 +662,10 @@ export default function ButtonsExamplesPage() {
           <KTCodeExample
             jsCode={jsCode6}
             beforeCodeTitle="Floating Action Buttons"
-            codeBlockHeight="400px"
-          >
+            codeBlockHeight="400px">
             <span>
-              A floating action button (FAB) performs the primary, or most
-              common, action on a screen. FABs come in two types: regular, and
-              extended.
+              A floating action button (FAB) performs the primary, or most common, action on a
+              screen. FABs come in two types: regular, and extended.
             </span>
             <div className="separator separator-dashed my-7" />
             <div>
@@ -812,11 +675,7 @@ export default function ButtonsExamplesPage() {
               <Fab color="secondary" aria-label="Edit" className={classes2.fab}>
                 <Icon>edit_icon</Icon>
               </Fab>
-              <Fab
-                variant="extended"
-                aria-label="Delete"
-                className={classes2.fab}
-              >
+              <Fab variant="extended" aria-label="Delete" className={classes2.fab}>
                 <NavigationIcon className={classes2.extendedIcon} />
                 Extended
               </Fab>
@@ -829,57 +688,32 @@ export default function ButtonsExamplesPage() {
           <KTCodeExample
             jsCode={jsCode8}
             beforeCodeTitle="Buttons with icons and label"
-            codeBlockHeight="400px"
-          >
+            codeBlockHeight="400px">
             <span>
-              Sometimes you might want to have icons for certain button to
-              enhance the UX of the application as we recognize logos more
-              easily than plain text. For example, if you have a delete button
-              you can label it with a dustbin icon.
+              Sometimes you might want to have icons for certain button to enhance the UX of the
+              application as we recognize logos more easily than plain text. For example, if you
+              have a delete button you can label it with a dustbin icon.
             </span>
             <div className="separator separator-dashed my-7" />
             <div>
-              <Button
-                variant="contained"
-                color="secondary"
-                className={classes3.button}
-              >
+              <Button variant="contained" color="secondary" className={classes3.button}>
                 Delete
                 <DeleteIcon className={classes3.rightIcon} />
               </Button>
-              <Button
-                variant="contained"
-                color="primary"
-                className={classes3.button}
-              >
+              <Button variant="contained" color="primary" className={classes3.button}>
                 Send
                 <Icon className={classes3.rightIcon}>send</Icon>
               </Button>
-              <Button
-                variant="contained"
-                color="default"
-                className={classes3.button}
-              >
+              <Button variant="contained" color="default" className={classes3.button}>
                 Upload
                 <CloudUploadIcon className={classes3.rightIcon} />
               </Button>
-              <Button
-                variant="contained"
-                disabled
-                color="secondary"
-                className={classes3.button}
-              >
+              <Button variant="contained" disabled color="secondary" className={classes3.button}>
                 <KeyboardVoiceIcon className={classes3.leftIcon} />
                 Talk
               </Button>
-              <Button
-                variant="contained"
-                size="small"
-                className={classes3.button}
-              >
-                <SaveIcon
-                  className={clsx(classes3.leftIcon, classes3.iconSmall)}
-                />
+              <Button variant="contained" size="small" className={classes3.button}>
+                <SaveIcon className={clsx(classes3.leftIcon, classes3.iconSmall)} />
                 Save
               </Button>
             </div>
@@ -887,24 +721,16 @@ export default function ButtonsExamplesPage() {
 
           <KTCodeExample jsCode={jsCode10} beforeCodeTitle="Customized buttons">
             <span>
-              Here are some examples of customizing the component. You can learn
-              more about this in the overrides documentation page.
+              Here are some examples of customizing the component. You can learn more about this in
+              the overrides documentation page.
             </span>
             <div className="separator separator-dashed my-7" />
             <div>
-              <ColorButton
-                variant="contained"
-                color="primary"
-                className={classes4.margin}
-              >
+              <ColorButton variant="contained" color="primary" className={classes4.margin}>
                 Custom CSS
               </ColorButton>
               <ThemeProvider theme={theme}>
-                <Button
-                  variant="contained"
-                  color="primary"
-                  className={classes4.margin}
-                >
+                <Button variant="contained" color="primary" className={classes4.margin}>
                   Theme Provider
                 </Button>
               </ThemeProvider>
@@ -912,36 +738,36 @@ export default function ButtonsExamplesPage() {
                 variant="contained"
                 color="primary"
                 disableRipple
-                className={classes4.margin}
-              >
+                className={classes4.margin}>
                 Bootstrap
               </BootstrapButton>
             </div>
           </KTCodeExample>
 
-          <KTCodeExample jsCode={jsCode11} beforeCodeTitle="Complex Buttons" codeBlockHeight="400px">
+          <KTCodeExample
+            jsCode={jsCode11}
+            beforeCodeTitle="Complex Buttons"
+            codeBlockHeight="400px">
             <span>
-              The Text Buttons, Contained Buttons, Floating Action Buttons and
-              Icon Buttons are built on top of the same component: the{" "}
-              <code>ButtonBase</code>. You can take advantage of this lower
-              level component to build custom interactions.
+              The Text Buttons, Contained Buttons, Floating Action Buttons and Icon Buttons are
+              built on top of the same component: the <code>ButtonBase</code>. You can take
+              advantage of this lower level component to build custom interactions.
             </span>
             <div className="separator separator-dashed my-7" />
             <div className={classes5.root}>
-              {images.map(image => (
+              {images.map((image) => (
                 <ButtonBase
                   focusRipple
                   key={image.title}
                   className={classes5.image}
                   focusVisibleClassName={classes5.focusVisible}
                   style={{
-                    width: image.width
-                  }}
-                >
+                    width: image.width,
+                  }}>
                   <span
                     className={classes5.imageSrc}
                     style={{
-                      backgroundImage: `url(${image.url})`
+                      backgroundImage: `url(${image.url})`,
                     }}
                   />
                   <span className={classes5.imageBackdrop} />
@@ -950,8 +776,7 @@ export default function ButtonsExamplesPage() {
                       component="span"
                       variant="subtitle1"
                       color="inherit"
-                      className={classes5.imageTitle}
-                    >
+                      className={classes5.imageTitle}>
                       {image.title}
                       <span className={classes5.imageMarked} />
                     </Typography>

@@ -14,7 +14,7 @@ export function ListsWidget9({ className }) {
             <span className="text-muted mt-3 font-weight-bold font-size-sm">890,344 Sales</span>
           </h3>
           <div className="card-toolbar">
-            <Dropdown className="dropdown-inline" align="end">
+            <Dropdown className="dropdown-inline" alignRight>
               <Dropdown.Toggle id="dropdown-toggle-top" as={DropdownCustomToggler}>
                 <i className="ki ki-bold-more-hor" />
               </Dropdown.Toggle>
@@ -36,7 +36,7 @@ export function ListsWidget9({ className }) {
                 <i className="fa fa-genderless text-warning icon-xl"></i>
               </div>
 
-              <div className="font-weight-mormal font-size-lg timeline-content text-muted pl-3">
+              <div className="font-weight-mormal font-size-lg timeline-content text-muted ps-3">
                 Outlines keep you honest. And keep structure
               </div>
             </div>
@@ -51,7 +51,7 @@ export function ListsWidget9({ className }) {
               </div>
 
               <div className="timeline-content d-flex">
-                <span className="font-weight-bolder text-dark-75 pl-3 font-size-lg">
+                <span className="font-weight-bolder text-dark-75 ps-3 font-size-lg">
                   AEOL meeting
                 </span>
               </div>
@@ -66,7 +66,7 @@ export function ListsWidget9({ className }) {
                 <i className="fa fa-genderless text-danger icon-xl"></i>
               </div>
 
-              <div className="timeline-content font-weight-bolder font-size-lg text-dark-75 pl-3">
+              <div className="timeline-content font-weight-bolder font-size-lg text-dark-75 ps-3">
                 Make deposit
                 <a href="#" className="text-primary">
                   USD 700
@@ -84,7 +84,7 @@ export function ListsWidget9({ className }) {
                 <i className="fa fa-genderless text-primary icon-xl"></i>
               </div>
 
-              <div className="timeline-content font-weight-mormal font-size-lg text-muted pl-3">
+              <div className="timeline-content font-weight-mormal font-size-lg text-muted ps-3">
                 Indulging in poorly driving and keep structure keep great
               </div>
             </div>
@@ -98,7 +98,7 @@ export function ListsWidget9({ className }) {
                 <i className="fa fa-genderless text-danger icon-xl"></i>
               </div>
 
-              <div className="timeline-content font-weight-bolder text-dark-75 pl-3 font-size-lg">
+              <div className="timeline-content font-weight-bolder text-dark-75 ps-3 font-size-lg">
                 New order placed
                 <a href="#" className="text-primary">
                   #XF-2356
@@ -116,7 +116,7 @@ export function ListsWidget9({ className }) {
                 <i className="fa fa-genderless text-info icon-xl"></i>
               </div>
 
-              <div className="timeline-content font-weight-mormal font-size-lg text-muted pl-3">
+              <div className="timeline-content font-weight-mormal font-size-lg text-muted ps-3">
                 Outlines keep and you honest. Indulging in poorly driving
               </div>
             </div>
@@ -130,7 +130,7 @@ export function ListsWidget9({ className }) {
                 <i className="fa fa-genderless text-primary icon-xl"></i>
               </div>
 
-              <div className="timeline-content font-weight-mormal font-size-lg text-muted pl-3">
+              <div className="timeline-content font-weight-mormal font-size-lg text-muted ps-3">
                 Indulging in poorly driving and keep structure keep great
               </div>
             </div>
@@ -144,7 +144,7 @@ export function ListsWidget9({ className }) {
                 <i className="fa fa-genderless text-danger icon-xl"></i>
               </div>
 
-              <div className="timeline-content font-weight-bolder font-size-lg text-dark-75 pl-3">
+              <div className="timeline-content font-weight-bolder font-size-lg text-dark-75 ps-3">
                 New order placed
                 <a href="#" className="text-primary">
                   #XF-2356

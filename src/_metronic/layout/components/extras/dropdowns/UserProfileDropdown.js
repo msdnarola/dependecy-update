@@ -19,16 +19,16 @@ export function UserProfileDropdown() {
   }, [uiService]);
 
   return (
-    <Dropdown drop="down" align="end">
+    <Dropdown drop="down" alignRight>
       <Dropdown.Toggle as={DropdownTopbarItemToggler} id="dropdown-toggle-user-profile">
         <div
           className={
             "btn btn-icon btn-hover-transparent-white d-flex align-items-center btn-lg px-md-2 w-md-auto"
           }>
-          <span className="text-white opacity-70 font-weight-bold font-size-base d-none d-md-inline mr-1">
+          <span className="text-white opacity-70 font-weight-bold font-size-base d-none d-md-inline me-1">
             Hi,
           </span>{" "}
-          <span className="text-white opacity-90 font-weight-bolder font-size-base d-none d-md-inline mr-4">
+          <span className="text-white opacity-90 font-weight-bolder font-size-base d-none d-md-inline me-4">
             {user.firstname} {user.lastname}
           </span>
           <span className="symbol symbol-35">
@@ -44,10 +44,10 @@ export function UserProfileDropdown() {
           {layoutProps.light && (
             <>
               <div className="d-flex align-items-center p-8 rounded-top">
-                <div className="symbol symbol-md bg-light-primary mr-3 flex-shrink-0">
+                <div className="symbol symbol-md bg-light-primary me-3 flex-shrink-0">
                   <img src={toAbsoluteUrl("/media/users/300_21.jpg")} alt="" />
                 </div>
-                <div className="text-dark m-0 flex-grow-1 mr-3 font-size-h5">
+                <div className="text-dark m-0 flex-grow-1 me-3 font-size-h5">
                   {user.firstname} {user.lastname}
                 </div>
                 <span className="label label-light-success label-lg font-weight-bold label-inline">
@@ -64,13 +64,13 @@ export function UserProfileDropdown() {
               style={{
                 backgroundImage: `url(${toAbsoluteUrl("/media/misc/bg-1.jpg")})`,
               }}>
-              <div className="symbol bg-white-o-15 mr-3">
+              <div className="symbol bg-white-o-15 me-3">
                 <span className="symbol-label text-success font-weight-bold font-size-h4">
                   {user.firstname[0]}
                 </span>
                 {/*<img alt="Pic" className="hidden" src={user.pic} />*/}
               </div>
-              <div className="text-white m-0 flex-grow-1 mr-3 font-size-h5">
+              <div className="text-white m-0 flex-grow-1 me-3 font-size-h5">
                 {user.firstname} {user.lastname}
               </div>
               <span className="label label-success label-lg font-weight-bold label-inline">
@@ -83,7 +83,7 @@ export function UserProfileDropdown() {
         <div className="navi navi-spacer-x-0 pt-5">
           <Link to="/user-profile" className="navi-item px-8 cursor-pointer">
             <div className="navi-link">
-              <div className="navi-icon mr-2">
+              <div className="navi-icon me-2">
                 <i className="flaticon2-calendar-3 text-success" />
               </div>
               <div className="navi-text">
@@ -100,7 +100,7 @@ export function UserProfileDropdown() {
 
           <a className="navi-item px-8">
             <div className="navi-link">
-              <div className="navi-icon mr-2">
+              <div className="navi-icon me-2">
                 <i className="flaticon2-mail text-warning"></i>
               </div>
               <div className="navi-text">
@@ -112,7 +112,7 @@ export function UserProfileDropdown() {
 
           <a className="navi-item px-8">
             <div className="navi-link">
-              <div className="navi-icon mr-2">
+              <div className="navi-icon me-2">
                 <i className="flaticon2-rocket-1 text-danger"></i>
               </div>
               <div className="navi-text">
@@ -124,7 +124,7 @@ export function UserProfileDropdown() {
 
           <a className="navi-item px-8">
             <div className="navi-link">
-              <div className="navi-icon mr-2">
+              <div className="navi-icon me-2">
                 <i className="flaticon2-hourglass text-primary"></i>
               </div>
               <div className="navi-text">

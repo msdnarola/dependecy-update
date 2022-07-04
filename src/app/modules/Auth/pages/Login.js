@@ -155,7 +155,7 @@ function Login(props) {
         <div className="mb-3 d-flex flex-wrap justify-content-between align-items-center">
           <Link
             to="/auth/forgot-password"
-            className="text-dark-50 text-hover-primary my-3 mr-2"
+            className="text-dark-50 text-hover-primary my-3 me-2"
             id="kt_login_forgot">
             <FormattedMessage id="AUTH.GENERAL.FORGOT_BUTTON" />
           </Link>
@@ -165,7 +165,7 @@ function Login(props) {
             disabled={formik.isSubmitting}
             className={`btn btn-primary font-weight-bold px-9 py-4 my-3`}>
             <span>Sign In</span>
-            {loading && <span className="ml-3 spinner spinner-white"></span>}
+            {loading && <span className="ms-3 spinner spinner-white"></span>}
           </button>
         </div>
       </form>

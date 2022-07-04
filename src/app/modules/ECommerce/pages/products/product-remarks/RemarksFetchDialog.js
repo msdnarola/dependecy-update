@@ -44,12 +44,9 @@ export function RemarksFetchDialog() {
     <Modal
       show={remarksUIProps.showFetchRemarksDialog}
       onHide={remarksUIProps.closeFetchRemarksDialog}
-      aria-labelledby="example-modal-sizes-title-lg"
-    >
+      aria-labelledby="example-modal-sizes-title-lg">
       <Modal.Header closeButton>
-        <Modal.Title id="example-modal-sizes-title-lg">
-          Fetch selected elements
-        </Modal.Title>
+        <Modal.Title id="example-modal-sizes-title-lg">Fetch selected elements</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <div className="list-timeline list-timeline-skin-light padding-30">
@@ -59,11 +56,10 @@ export function RemarksFetchDialog() {
                 <span className="list-timeline-text">
                   <span
                     className="label label-lg label-light-success label-inline"
-                    style={{ width: "60px" }}
-                  >
+                    style={{ width: "60px" }}>
                     ID: {remark.id}
                   </span>{" "}
-                  <span className="ml-5">{remark.text} </span>
+                  <span className="ms-5">{remark.text} </span>
                 </span>
               </div>
             ))}
@@ -75,16 +71,14 @@ export function RemarksFetchDialog() {
           <button
             type="button"
             onClick={remarksUIProps.closeFetchRemarksDialog}
-            className="btn btn-light btn-elevate"
-          >
+            className="btn btn-light btn-elevate">
             Cancel
           </button>
           <> </>
           <button
             type="button"
             onClick={remarksUIProps.closeFetchRemarksDialog}
-            className="btn btn-primary btn-elevate"
-          >
+            className="btn btn-primary btn-elevate">
             Ok
           </button>
         </div>

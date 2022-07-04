@@ -147,7 +147,7 @@ export function SearchDropdown() {
     <>
       {layoutProps.offcanvas && (
         <div className="topbar-item">
-          <div className="btn btn-icon btn-clean btn-lg mr-1" id="kt_quick_search_toggle">
+          <div className="btn btn-icon btn-clean btn-lg me-1" id="kt_quick_search_toggle">
             <span className="svg-icon svg-icon-xl svg-icon-primary">
               <SVG src={toAbsoluteUrl("/media/svg/icons/General/Search.svg")} />
             </span>
@@ -156,7 +156,7 @@ export function SearchDropdown() {
       )}
       {!layoutProps.offcanvas && (
         <Dropdown
-          align="end"
+          alignRight
           drop="down"
           onToggle={() => {
             setData(null);
@@ -168,7 +168,7 @@ export function SearchDropdown() {
             <OverlayTrigger
               placement="bottom"
               overlay={<Tooltip id="search-panel-tooltip">Quick search</Tooltip>}>
-              <div className="btn btn-icon btn-hover-transparent-white btn-lg btn-dropdown mr-1">
+              <div className="btn btn-icon btn-hover-transparent-white btn-lg btn-dropdown me-1">
                 <span className="svg-icon svg-icon-xl">
                   <SVG src={toAbsoluteUrl("/media/svg/icons/General/Search.svg")} />
                 </span>

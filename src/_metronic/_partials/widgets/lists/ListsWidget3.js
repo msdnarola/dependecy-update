@@ -13,7 +13,7 @@ export function ListsWidget3({ className }) {
         <div className="card-header border-0">
           <h3 className="card-title font-weight-bolder text-dark">Authors</h3>
           <div className="card-toolbar">
-            <Dropdown className="dropdown-inline" drop="down" align="end">
+            <Dropdown className="dropdown-inline" drop="down" alignRight>
               <Dropdown.Toggle
                 id="dropdown-toggle-top2"
                 variant="transparent"
@@ -29,7 +29,7 @@ export function ListsWidget3({ className }) {
         {/* Body */}
         <div className="card-body pt-2">
           <div className="d-flex align-items-center mb-10">
-            <div className="symbol symbol-40 symbol-light-success mr-5">
+            <div className="symbol symbol-40 symbol-light-success me-5">
               <span className="symbol-label">
                 <SVG
                   className="h-75 align-self-end"
@@ -46,7 +46,7 @@ export function ListsWidget3({ className }) {
           </div>
 
           <div className="d-flex align-items-center mb-10">
-            <div className="symbol symbol-40 symbol-light-success mr-5">
+            <div className="symbol symbol-40 symbol-light-success me-5">
               <span className="symbol-label">
                 <SVG
                   className="h-75 align-self-end"
@@ -63,7 +63,7 @@ export function ListsWidget3({ className }) {
           </div>
 
           <div className="d-flex align-items-center mb-10">
-            <div className="symbol symbol-40 symbol-light-success mr-5">
+            <div className="symbol symbol-40 symbol-light-success me-5">
               <span className="symbol-label">
                 <SVG
                   className="h-75 align-self-end"
@@ -79,7 +79,7 @@ export function ListsWidget3({ className }) {
             <ItemDropdown item="" />
           </div>
           <div className="d-flex align-items-center mb-10">
-            <div className="symbol symbol-40 symbol-light-success mr-5">
+            <div className="symbol symbol-40 symbol-light-success me-5">
               <span className="symbol-label">
                 <SVG
                   className="h-75 align-self-end"
@@ -96,7 +96,7 @@ export function ListsWidget3({ className }) {
           </div>
 
           <div className="d-flex align-items-center mb-2">
-            <div className="symbol symbol-40 symbol-light-success mr-5">
+            <div className="symbol symbol-40 symbol-light-success me-5">
               <span className="symbol-label">
                 <SVG
                   className="h-75 align-self-end"
@@ -120,7 +120,7 @@ export function ListsWidget3({ className }) {
 const ItemDropdown = ({ item }) => {
   return (
     <>
-      <Dropdown className="dropdown-inline" align="end">
+      <Dropdown className="dropdown-inline" alignRight>
         <Dropdown.Toggle id="dropdown-toggle-top" as={DropdownCustomToggler}>
           <i className="ki ki-bold-more-hor" />
         </Dropdown.Toggle>

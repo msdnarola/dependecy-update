@@ -29,10 +29,7 @@ export function SpecificationsFetchDialog() {
   // Specs Redux state
   const { specifications } = useSelector(
     (state) => ({
-      specifications: selectedSpecifications(
-        state.specifications.entities,
-        specsUIProps.ids
-      ),
+      specifications: selectedSpecifications(state.specifications.entities, specsUIProps.ids),
     }),
     shallowEqual
   );
@@ -48,12 +45,9 @@ export function SpecificationsFetchDialog() {
     <Modal
       show={specsUIProps.show}
       onHide={specsUIProps.onHide}
-      aria-labelledby="example-modal-sizes-title-lg"
-    >
+      aria-labelledby="example-modal-sizes-title-lg">
       <Modal.Header closeButton>
-        <Modal.Title id="example-modal-sizes-title-lg">
-          Fetch selected elements
-        </Modal.Title>
+        <Modal.Title id="example-modal-sizes-title-lg">Fetch selected elements</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <div className="list-timeline list-timeline-skin-light padding-30">
@@ -63,11 +57,10 @@ export function SpecificationsFetchDialog() {
                 <span className="list-timeline-text">
                   <span
                     className="label label-lg label-light-success label-inline"
-                    style={{ width: "60px" }}
-                  >
+                    style={{ width: "60px" }}>
                     ID: {specification.id}
                   </span>{" "}
-                  <span className="ml-5">
+                  <span className="ms-5">
                     {specification.name}: {specification.value}{" "}
                   </span>
                 </span>
@@ -78,19 +71,14 @@ export function SpecificationsFetchDialog() {
       </Modal.Body>
       <Modal.Footer>
         <div>
-          <button
-            type="button"
-            onClick={specsUIProps.onHide}
-            className="btn btn-light btn-elevate"
-          >
+          <button type="button" onClick={specsUIProps.onHide} className="btn btn-light btn-elevate">
             Cancel
           </button>
           <> </>
           <button
             type="button"
             onClick={specsUIProps.onHide}
-            className="btn btn-primary btn-elevate"
-          >
+            className="btn btn-primary btn-elevate">
             Ok
           </button>
         </div>

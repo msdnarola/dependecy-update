@@ -13,7 +13,7 @@ export function ListsWidget8({ className }) {
         <div className="card-header border-0">
           <h3 className="card-title font-weight-bolder text-dark">Trends</h3>
           <div className="card-toolbar">
-            <Dropdown className="dropdown-inline" align="end">
+            <Dropdown className="dropdown-inline" alignRight>
               <Dropdown.Toggle
                 variant="transparent"
                 id="dropdown-toggle-top"
@@ -31,7 +31,7 @@ export function ListsWidget8({ className }) {
         <div className="card-body pt-0">
           <div className="mb-10">
             <div className="d-flex align-items-center">
-              <div className="symbol symbol-45 symbol-light mr-5">
+              <div className="symbol symbol-45 symbol-light me-5">
                 <span className="symbol-label">
                   <SVG
                     className="h-50 align-self-center"
@@ -56,7 +56,7 @@ export function ListsWidget8({ className }) {
 
           <div className="mb-10">
             <div className="d-flex align-items-center">
-              <div className="symbol symbol-45 symbol-light mr-5">
+              <div className="symbol symbol-45 symbol-light me-5">
                 <span className="symbol-label">
                   <SVG
                     className="h-50 align-self-center"
@@ -81,7 +81,7 @@ export function ListsWidget8({ className }) {
 
           <div className="">
             <div className="d-flex align-items-center">
-              <div className="symbol symbol-45 symbol-light mr-5">
+              <div className="symbol symbol-45 symbol-light me-5">
                 <span className="symbol-label">
                   <SVG
                     className="h-50 align-self-center"

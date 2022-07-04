@@ -1,13 +1,13 @@
 import React from "react";
-import {Button, Toast, Col, Row} from "react-bootstrap";
-import {Notice, KTCodeExample} from "../../../_metronic/_partials/controls";
+import { Button, Toast, Col, Row } from "react-bootstrap";
+import { Notice, KTCodeExample } from "../../../_metronic/_partials/controls";
 
 class Example extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       showA: true,
-      showB: true
+      showB: true,
     };
   }
 
@@ -20,17 +20,11 @@ class Example extends React.Component {
         <Col xs={6}>
           <Toast show={showA} onClose={toggleShowA}>
             <Toast.Header>
-              <img
-                src="holder.js/20x20?text=%20"
-                className="rounded mr-2"
-                alt=""
-              />
-              <strong className="mr-auto">Bootstrap</strong>
+              <img src="holder.js/20x20?text=%20" className="rounded me-2" alt="" />
+              <strong className="me-auto">Bootstrap</strong>
               <small>11 mins ago</small>
             </Toast.Header>
-            <Toast.Body>
-              Woohoo, you're reading this text in a Toast!
-            </Toast.Body>
+            <Toast.Body>Woohoo, you're reading this text in a Toast!</Toast.Body>
           </Toast>
         </Col>
         <Col xs={6}>
@@ -41,17 +35,11 @@ class Example extends React.Component {
         <Col xs={6} className="my-1">
           <Toast onClose={toggleShowB} show={showB} animation={false}>
             <Toast.Header>
-              <img
-                src="holder.js/20x20?text=%20"
-                className="rounded mr-2"
-                alt=""
-              />
-              <strong className="mr-auto">Bootstrap</strong>
+              <img src="holder.js/20x20?text=%20" className="rounded me-2" alt="" />
+              <strong className="me-auto">Bootstrap</strong>
               <small>11 mins ago</small>
             </Toast.Header>
-            <Toast.Body>
-              Woohoo, you're reading this text in a Toast!
-            </Toast.Body>
+            <Toast.Body>Woohoo, you're reading this text in a Toast!</Toast.Body>
           </Toast>
         </Col>
         <Col xs={6}>
@@ -68,7 +56,7 @@ class Example1 extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      show: false
+      show: false,
     };
   }
 
@@ -81,17 +69,11 @@ class Example1 extends React.Component {
         <Col xs={6}>
           <Toast onClose={handleClose} show={show} delay={3000} autohide>
             <Toast.Header>
-              <img
-                src="holder.js/20x20?text=%20"
-                className="rounded mr-2"
-                alt=""
-              />
-              <strong className="mr-auto">Bootstrap</strong>
+              <img src="holder.js/20x20?text=%20" className="rounded me-2" alt="" />
+              <strong className="me-auto">Bootstrap</strong>
               <small>11 mins ago</small>
             </Toast.Header>
-            <Toast.Body>
-              Woohoo, you're reading this text in a Toast!
-            </Toast.Body>
+            <Toast.Body>Woohoo, you're reading this text in a Toast!</Toast.Body>
           </Toast>
         </Col>
         <Col xs={6}>
@@ -108,8 +90,8 @@ export default class ToastsExamplesPage extends React.Component {
       <>
         <Notice icon="flaticon-warning font-primary">
           <span>
-            Push notifications to your visitors with a toast, a lightweight and
-            easily customizable alert message.
+            Push notifications to your visitors with a toast, a lightweight and easily customizable
+            alert message.
           </span>{" "}
           <span>
             For more info please check the components's official{" "}
@@ -117,8 +99,7 @@ export default class ToastsExamplesPage extends React.Component {
               target="_blank"
               className="font-weight-bold"
               rel="noopener noreferrer"
-              href="https://react-bootstrap.github.io/components/toasts/"
-            >
+              href="https://react-bootstrap.github.io/components/toasts/">
               demos & documentation
             </a>
           </span>
@@ -129,104 +110,73 @@ export default class ToastsExamplesPage extends React.Component {
             <KTCodeExample jsCode={jsCode1} beforeCodeTitle="Basic">
               <div className="section">
                 <span className="section-sub">
-                  To encourage extensible and predictable toasts, we recommend a
-                  header and body. Toast headers use display: flex, allowing
-                  easy alignment of content thanks to our margin and flexbox
-                  utilities.
+                  To encourage extensible and predictable toasts, we recommend a header and body.
+                  Toast headers use display: flex, allowing easy alignment of content thanks to our
+                  margin and flexbox utilities.
                 </span>
                 <p className="section-sub">
-                  Toasts are as flexible as you need and have very little
-                  required markup. At a minimum, we require a single element to
-                  contain your “toasted” content and strongly encourage a
-                  dismiss button.
+                  Toasts are as flexible as you need and have very little required markup. At a
+                  minimum, we require a single element to contain your “toasted” content and
+                  strongly encourage a dismiss button.
                 </p>
                 <div className="separator separator-dashed my-7"></div>
                 <Toast>
                   <Toast.Header>
-                    <img
-                      src="holder.js/20x20?text=%20"
-                      className="rounded mr-2"
-                      alt=""
-                    />
-                    <strong className="mr-auto">Bootstrap</strong>
+                    <img src="holder.js/20x20?text=%20" className="rounded me-2" alt="" />
+                    <strong className="me-auto">Bootstrap</strong>
                     <small>11 mins ago</small>
                   </Toast.Header>
-                  <Toast.Body>
-                    Hello, world! This is a toast message.
-                  </Toast.Body>
+                  <Toast.Body>Hello, world! This is a toast message.</Toast.Body>
                 </Toast>
               </div>
             </KTCodeExample>
 
             <KTCodeExample jsCode={jsCode3} beforeCodeTitle="Stacking">
               <span>
-                When you have multiple toasts, we default to vertically stacking
-                them in a readable manner.
+                When you have multiple toasts, we default to vertically stacking them in a readable
+                manner.
               </span>
               <div className="separator separator-dashed my-7"></div>
               <>
                 <Toast>
                   <Toast.Header>
-                    <img
-                      src="holder.js/20x20?text=%20"
-                      className="rounded mr-2"
-                      alt=""
-                    />
-                    <strong className="mr-auto">Bootstrap</strong>
+                    <img src="holder.js/20x20?text=%20" className="rounded me-2" alt="" />
+                    <strong className="me-auto">Bootstrap</strong>
                     <small>just now</small>
                   </Toast.Header>
                   <Toast.Body>See? Just like this.</Toast.Body>
                 </Toast>
                 <Toast>
                   <Toast.Header>
-                    <img
-                      src="holder.js/20x20?text=%20"
-                      className="rounded mr-2"
-                      alt=""
-                    />
-                    <strong className="mr-auto">Bootstrap</strong>
+                    <img src="holder.js/20x20?text=%20" className="rounded me-2" alt="" />
+                    <strong className="me-auto">Bootstrap</strong>
                     <small>2 seconds ago</small>
                   </Toast.Header>
-                  <Toast.Body>
-                    Heads up, toasts will stack automatically
-                  </Toast.Body>
+                  <Toast.Body>Heads up, toasts will stack automatically</Toast.Body>
                 </Toast>
               </>
             </KTCodeExample>
 
-            <KTCodeExample
-              jsCode={jsCode5}
-              beforeCodeTitle="Autohide"
-              codeBlockHeight="400px"
-            >
+            <KTCodeExample jsCode={jsCode5} beforeCodeTitle="Autohide" codeBlockHeight="400px">
               <span>
-                A Toast can also automatically hide after X milliseconds. For
-                that, use the <code>autohide</code> prop in combination with{" "}
-                <code>delay</code> the prop to sepecify the delay. But be aware,
-                that it will only trigger the <code>onClose</code> function, you
-                have to set manually the show property.
+                A Toast can also automatically hide after X milliseconds. For that, use the{" "}
+                <code>autohide</code> prop in combination with <code>delay</code> the prop to
+                sepecify the delay. But be aware, that it will only trigger the <code>onClose</code>{" "}
+                function, you have to set manually the show property.
               </span>
               <div className="separator separator-dashed my-7"></div>
               <Example1 />
             </KTCodeExample>
           </div>
           <div className="col-md-6">
-            <KTCodeExample
-              jsCode={jsCode2}
-              beforeCodeTitle="Dismissible"
-              codeBlockHeight="400px"
-            >
+            <KTCodeExample jsCode={jsCode2} beforeCodeTitle="Dismissible" codeBlockHeight="400px">
               <Example />
             </KTCodeExample>
 
-            <KTCodeExample
-              jsCode={jsCode4}
-              beforeCodeTitle="Placement"
-              codeBlockHeight="400px"
-            >
+            <KTCodeExample jsCode={jsCode4} beforeCodeTitle="Placement" codeBlockHeight="400px">
               <span>
-                Place toasts with custom CSS as you need them. The top right is
-                often used for notifications, as is the top middle.
+                Place toasts with custom CSS as you need them. The top right is often used for
+                notifications, as is the top middle.
               </span>
               <div className="separator separator-dashed my-7"></div>
               <div
@@ -234,41 +184,29 @@ export default class ToastsExamplesPage extends React.Component {
                 aria-atomic="true"
                 style={{
                   position: "relative",
-                  minHeight: "200px"
-                }}
-              >
+                  minHeight: "200px",
+                }}>
                 <div
                   style={{
                     position: "absolute",
                     top: 0,
-                    right: 0
-                  }}
-                >
+                    right: 0,
+                  }}>
                   <Toast>
                     <Toast.Header>
-                      <img
-                        src="holder.js/20x20?text=%20"
-                        className="rounded mr-2"
-                        alt=""
-                      />
-                      <strong className="mr-auto">Bootstrap</strong>
+                      <img src="holder.js/20x20?text=%20" className="rounded me-2" alt="" />
+                      <strong className="me-auto">Bootstrap</strong>
                       <small>just now</small>
                     </Toast.Header>
                     <Toast.Body>See? Just like this.</Toast.Body>
                   </Toast>
                   <Toast>
                     <Toast.Header>
-                      <img
-                        src="holder.js/20x20?text=%20"
-                        className="rounded mr-2"
-                        alt=""
-                      />
-                      <strong className="mr-auto">Bootstrap</strong>
+                      <img src="holder.js/20x20?text=%20" className="rounded me-2" alt="" />
+                      <strong className="me-auto">Bootstrap</strong>
                       <small>2 seconds ago</small>
                     </Toast.Header>
-                    <Toast.Body>
-                      Heads up, toasts will stack automatically
-                    </Toast.Body>
+                    <Toast.Body>Heads up, toasts will stack automatically</Toast.Body>
                   </Toast>
                 </div>
               </div>
@@ -283,8 +221,8 @@ export default class ToastsExamplesPage extends React.Component {
 const jsCode1 = `
 <Toast>
   <Toast.Header>
-    <img src="holder.js/20x20?text=%20" className="rounded mr-2" alt="" />
-    <strong className="mr-auto">Bootstrap</strong>
+    <img src="holder.js/20x20?text=%20" className="rounded me-2" alt="" />
+    <strong className="me-auto">Bootstrap</strong>
     <small>11 mins ago</small>
   </Toast.Header>
   <Toast.Body>Hello, world! This is a toast message.</Toast.Body>
@@ -311,10 +249,10 @@ class Example extends React.Component {
             <Toast.Header>
               <img
                 src="holder.js/20x20?text=%20"
-                className="rounded mr-2"
+                className="rounded me-2"
                 alt=""
               />
-              <strong className="mr-auto">Bootstrap</strong>
+              <strong className="me-auto">Bootstrap</strong>
               <small>11 mins ago</small>
             </Toast.Header>
             <Toast.Body>
@@ -332,10 +270,10 @@ class Example extends React.Component {
             <Toast.Header>
               <img
                 src="holder.js/20x20?text=%20"
-                className="rounded mr-2"
+                className="rounded me-2"
                 alt=""
               />
-              <strong className="mr-auto">Bootstrap</strong>
+              <strong className="me-auto">Bootstrap</strong>
               <small>11 mins ago</small>
             </Toast.Header>
             <Toast.Body>
@@ -359,16 +297,16 @@ const jsCode3 = `
 <>
   <Toast>
     <Toast.Header>
-      <img src="holder.js/20x20?text=%20" className="rounded mr-2" alt="" />
-      <strong className="mr-auto">Bootstrap</strong>
+      <img src="holder.js/20x20?text=%20" className="rounded me-2" alt="" />
+      <strong className="me-auto">Bootstrap</strong>
       <small>just now</small>
     </Toast.Header>
     <Toast.Body>See? Just like this.</Toast.Body>
   </Toast>
   <Toast>
     <Toast.Header>
-      <img src="holder.js/20x20?text=%20" className="rounded mr-2" alt="" />
-      <strong className="mr-auto">Bootstrap</strong>
+      <img src="holder.js/20x20?text=%20" className="rounded me-2" alt="" />
+      <strong className="me-auto">Bootstrap</strong>
       <small>2 seconds ago</small>
     </Toast.Header>
     <Toast.Body>Heads up, toasts will stack automatically</Toast.Body>
@@ -393,16 +331,16 @@ const jsCode4 = `
   >
     <Toast>
       <Toast.Header>
-        <img src="holder.js/20x20?text=%20" className="rounded mr-2" alt="" />
-        <strong className="mr-auto">Bootstrap</strong>
+        <img src="holder.js/20x20?text=%20" className="rounded me-2" alt="" />
+        <strong className="me-auto">Bootstrap</strong>
         <small>just now</small>
       </Toast.Header>
       <Toast.Body>See? Just like this.</Toast.Body>
     </Toast>
     <Toast>
       <Toast.Header>
-        <img src="holder.js/20x20?text=%20" className="rounded mr-2" alt="" />
-        <strong className="mr-auto">Bootstrap</strong>
+        <img src="holder.js/20x20?text=%20" className="rounded me-2" alt="" />
+        <strong className="me-auto">Bootstrap</strong>
         <small>2 seconds ago</small>
       </Toast.Header>
       <Toast.Body>Heads up, toasts will stack automatically</Toast.Body>
@@ -430,10 +368,10 @@ class Example extends React.Component {
             <Toast.Header>
               <img
                 src="holder.js/20x20?text=%20"
-                className="rounded mr-2"
+                className="rounded me-2"
                 alt=""
               />
-              <strong className="mr-auto">Bootstrap</strong>
+              <strong className="me-auto">Bootstrap</strong>
               <small>11 mins ago</small>
             </Toast.Header>
             <Toast.Body>

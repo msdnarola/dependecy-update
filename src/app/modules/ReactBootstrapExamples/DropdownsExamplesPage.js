@@ -137,7 +137,7 @@ export default class DropdownsExamplesPage extends React.Component {
               <>
                 <ButtonToolbar>
                   {[DropdownButton, SplitButton].map((DropdownType, idx) => (
-                    <div key={idx} className="pr-1">
+                    <div key={idx} className="pe-1">
                       <DropdownType
                         size="lg"
                         title="Drop small"
@@ -155,7 +155,7 @@ export default class DropdownsExamplesPage extends React.Component {
                 <br />
                 <ButtonToolbar>
                   {[DropdownButton, SplitButton].map((DropdownType, idx) => (
-                    <div key={idx} className="pr-1">
+                    <div key={idx} className="pe-1">
                       <DropdownType
                         size="sm"
                         variant="secondary"
@@ -197,7 +197,7 @@ export default class DropdownsExamplesPage extends React.Component {
               </span>
               <div className="separator separator-dashed my-7" />
               <ButtonToolbar>
-                <div className="pr-1">
+                <div className="pe-1">
                   <Dropdown>
                     <Dropdown.Toggle id="dropdown-custom-1">Pow! Zoom!</Dropdown.Toggle>
                     <Dropdown.Menu className="super-colors">
@@ -211,7 +211,7 @@ export default class DropdownsExamplesPage extends React.Component {
                     </Dropdown.Menu>
                   </Dropdown>
                 </div>
-                <div className="pr-1">
+                <div className="pe-1">
                   <Dropdown as={ButtonGroup}>
                     <Button variant="info">mix it up style-wise</Button>
                     <Dropdown.Toggle split variant="success" id="dropdown-custom-2" />
@@ -239,7 +239,7 @@ export default class DropdownsExamplesPage extends React.Component {
               <>
                 <ButtonToolbar>
                   {["up", "down", "left", "right"].map((direction) => (
-                    <div className="pr-1 pb-1" key={direction}>
+                    <div className="pe-1 pb-1" key={direction}>
                       <DropdownButton
                         drop={direction}
                         variant="secondary"
@@ -258,7 +258,7 @@ export default class DropdownsExamplesPage extends React.Component {
 
                 <ButtonToolbar>
                   {["up", "down", "left", "right"].map((direction) => (
-                    <div className="pr-1" key={direction}>
+                    <div className="pe-1" key={direction}>
                       <SplitButton
                         drop={direction}
                         variant="secondary"

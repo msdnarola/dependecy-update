@@ -34,24 +34,20 @@ export function PaginationLinks({ paginationProps }) {
       {pagesCount < 2 && <></>}
       {pagesCount > 1 && (
         <>
-          <div className={`d-flex flex-wrap py-2 mr-3 ${disabledClass}`}>
+          <div className={`d-flex flex-wrap py-2 me-3 ${disabledClass}`}>
             <a
               onClick={() => handleFirstPage(paginationProps)}
-              className="btn btn-icon btn-sm btn-light btn-hover-primary mr-2 my-1"
-            >
+              className="btn btn-icon btn-sm btn-light btn-hover-primary me-2 my-1">
               <i className="ki ki-bold-double-arrow-back icon-xs" />
             </a>
             <a
               onClick={() => handlePrevPage(paginationProps)}
-              className="btn btn-icon btn-sm btn-light btn-hover-primary mr-2 my-1"
-            >
+              className="btn btn-icon btn-sm btn-light btn-hover-primary me-2 my-1">
               <i className="ki ki-bold-arrow-back icon-xs" />
             </a>
 
             {page > 1 && (
-              <a className="btn btn-icon btn-sm border-0 btn-hover-primary mr-2 my-1">
-                ...
-              </a>
+              <a className="btn btn-icon btn-sm border-0 btn-hover-primary me-2 my-1">...</a>
             )}
             {pages.map((p) => (
               <a
@@ -59,26 +55,21 @@ export function PaginationLinks({ paginationProps }) {
                 onClick={() => handleSelectedPage(paginationProps, p)}
                 className={`btn btn-icon btn-sm border-0 btn-light ${
                   page === p ? " btn-hover-primary active" : ""
-                } mr-2 my-1`}
-              >
+                } me-2 my-1`}>
                 {p}
               </a>
             ))}
             {page < pagesCount && (
-              <a className="btn btn-icon btn-sm border-0 btn-hover-primary mr-2 my-1">
-                ...
-              </a>
+              <a className="btn btn-icon btn-sm border-0 btn-hover-primary me-2 my-1">...</a>
             )}
             <a
               onClick={() => handleNextPage(paginationProps)}
-              className="btn btn-icon btn-sm btn-light btn-hover-primary mr-2 my-1"
-            >
+              className="btn btn-icon btn-sm btn-light btn-hover-primary me-2 my-1">
               <i className="ki ki-bold-arrow-next icon-xs"></i>
             </a>
             <a
               onClick={() => handleLastPage(paginationProps)}
-              className="btn btn-icon btn-sm btn-light btn-hover-primary mr-2 my-1"
-            >
+              className="btn btn-icon btn-sm btn-light btn-hover-primary me-2 my-1">
               <i className="ki ki-bold-double-arrow-next icon-xs"></i>
             </a>
           </div>

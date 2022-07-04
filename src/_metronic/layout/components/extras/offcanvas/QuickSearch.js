@@ -13,15 +13,12 @@ export function QuickSearch() {
         <div className="offcanvas-header d-flex align-items-center justify-content-between mb-5">
           <h3 className="font-weight-bold m-0">
             Search
-            <small className="text-muted font-size-sm ml-2">
-              files, reports, members
-            </small>
+            <small className="text-muted font-size-sm ms-2">files, reports, members</small>
           </h3>
           <a
             href="#"
             className="btn btn-xs btn-icon btn-light btn-hover-primary"
-            id="kt_quick_search_close"
-          >
+            id="kt_quick_search_close">
             <i className="ki ki-close icon-xs text-muted"></i>
           </a>
         </div>
@@ -32,30 +29,18 @@ export function QuickSearch() {
           {/* begin::Container */}
           <div
             className="quick-search quick-search-offcanvas quick-search-has-result"
-            id="kt_quick_search_offcanvas"
-          >
+            id="kt_quick_search_offcanvas">
             {/* begin::Form */}
-            <form
-              method="get"
-              className="quick-search-form border-bottom pt-5 pb-1"
-            >
+            <form method="get" className="quick-search-form border-bottom pt-5 pb-1">
               <div className="input-group">
                 <div className="input-group-prepend">
                   <span className="input-group-text">
                     <span className="svg-icon svg-icon-lg">
-                      <SVG
-                        src={toAbsoluteUrl(
-                          "/media/svg/icons/General/Search.svg"
-                        )}
-                      />
+                      <SVG src={toAbsoluteUrl("/media/svg/icons/General/Search.svg")} />
                     </span>
                   </span>
                 </div>
-                <input
-                  type="text"
-                  className="form-control "
-                  placeholder="Search..."
-                />
+                <input type="text" className="form-control " placeholder="Search..." />
                 <div className="input-group-append">
                   <span className="input-group-text">
                     <i className="quick-search-close ki ki-close icon-sm text-muted"></i>
@@ -84,16 +69,11 @@ export function QuickSearch() {
                         <SVG src={toAbsoluteUrl("/media/svg/files/doc.svg")} />
                       </div>
                     </div>
-                    <div className="d-flex flex-column ml-3 mt-2 mb-2">
-                      <a
-                        href="#"
-                        className="font-weight-bold text-dark text-hover-primary"
-                      >
+                    <div className="d-flex flex-column ms-3 mt-2 mb-2">
+                      <a href="#" className="font-weight-bold text-dark text-hover-primary">
                         AirPlus Requirements
                       </a>
-                      <span className="font-size-sm font-weight-bold text-muted">
-                        by Grog John
-                      </span>
+                      <span className="font-size-sm font-weight-bold text-muted">by Grog John</span>
                     </div>
                   </div>
                   {/* end::Item */}
@@ -105,11 +85,8 @@ export function QuickSearch() {
                         <SVG src={toAbsoluteUrl("/media/svg/files/pdf.svg")} />
                       </div>
                     </div>
-                    <div className="d-flex flex-column ml-3 mt-2 mb-2">
-                      <a
-                        href="#"
-                        className="font-weight-bold text-dark text-hover-primary"
-                      >
+                    <div className="d-flex flex-column ms-3 mt-2 mb-2">
+                      <a href="#" className="font-weight-bold text-dark text-hover-primary">
                         TechNav Documentation
                       </a>
                       <span className="font-size-sm font-weight-bold text-muted">
@@ -126,11 +103,8 @@ export function QuickSearch() {
                         <SVG src={toAbsoluteUrl("/media/svg/files/xml.svg")} />
                       </div>
                     </div>
-                    <div className="d-flex flex-column ml-3 mt-2 mb-2">
-                      <a
-                        href="#"
-                        className="font-weight-bold text-dark text-hover-primary"
-                      >
+                    <div className="d-flex flex-column ms-3 mt-2 mb-2">
+                      <a href="#" className="font-weight-bold text-dark text-hover-primary">
                         All Framework Docs
                       </a>
                       <span className="font-size-sm font-weight-bold text-muted">
@@ -147,11 +121,8 @@ export function QuickSearch() {
                         <SVG src={toAbsoluteUrl("/media/svg/files/csv.svg")} />
                       </div>
                     </div>
-                    <div className="d-flex flex-column ml-3 mt-2 mb-2">
-                      <a
-                        href="#"
-                        className="font-weight-bold text-dark text-hover-primary"
-                      >
+                    <div className="d-flex flex-column ms-3 mt-2 mb-2">
+                      <a href="#" className="font-weight-bold text-dark text-hover-primary">
                         Finance & Accounting Reports
                       </a>
                       <span className="font-size-sm font-weight-bold text-muted">
@@ -173,22 +144,15 @@ export function QuickSearch() {
                       <div
                         className="symbol-label"
                         style={{
-                          backgroundImage: `url("${toAbsoluteUrl(
-                            "/media/users/300_20.jpg"
-                          )}")`,
+                          backgroundImage: `url("${toAbsoluteUrl("/media/users/300_20.jpg")}")`,
                         }}
                       />
                     </div>
-                    <div className="d-flex flex-column ml-3 mt-2 mb-2">
-                      <a
-                        href="#"
-                        className="font-weight-bold text-dark text-hover-primary"
-                      >
+                    <div className="d-flex flex-column ms-3 mt-2 mb-2">
+                      <a href="#" className="font-weight-bold text-dark text-hover-primary">
                         Milena Gibson
                       </a>
-                      <span className="font-size-sm font-weight-bold text-muted">
-                        UI Designer
-                      </span>
+                      <span className="font-size-sm font-weight-bold text-muted">UI Designer</span>
                     </div>
                   </div>
                   <div className="d-flex align-items-center flex-grow-1 mb-2">
@@ -196,17 +160,12 @@ export function QuickSearch() {
                       <div
                         className="symbol-label"
                         style={{
-                          backgroundImage: `url("${toAbsoluteUrl(
-                            "/media/users/300_15.jpg"
-                          )}")`,
+                          backgroundImage: `url("${toAbsoluteUrl("/media/users/300_15.jpg")}")`,
                         }}
                       />
                     </div>
-                    <div className="d-flex flex-column ml-3 mt-2 mb-2">
-                      <a
-                        href="#"
-                        className="font-weight-bold text-dark text-hover-primary"
-                      >
+                    <div className="d-flex flex-column ms-3 mt-2 mb-2">
+                      <a href="#" className="font-weight-bold text-dark text-hover-primary">
                         Stefan JohnStefan
                       </a>
                       <span className="font-size-sm font-weight-bold text-muted">
@@ -219,17 +178,12 @@ export function QuickSearch() {
                       <div
                         className="symbol-label"
                         style={{
-                          backgroundImage: `url("${toAbsoluteUrl(
-                            "/media/users/300_12.jpg"
-                          )}")`,
+                          backgroundImage: `url("${toAbsoluteUrl("/media/users/300_12.jpg")}")`,
                         }}
                       />
                     </div>
-                    <div className="d-flex flex-column ml-3 mt-2 mb-2">
-                      <a
-                        href="#"
-                        className="font-weight-bold text-dark text-hover-primary"
-                      >
+                    <div className="d-flex flex-column ms-3 mt-2 mb-2">
+                      <a href="#" className="font-weight-bold text-dark text-hover-primary">
                         Anna Strong
                       </a>
                       <span className="font-size-sm font-weight-bold text-muted">
@@ -242,17 +196,12 @@ export function QuickSearch() {
                       <div
                         className="symbol-label"
                         style={{
-                          backgroundImage: `url("${toAbsoluteUrl(
-                            "/media/users/300_16.jpg"
-                          )}")`,
+                          backgroundImage: `url("${toAbsoluteUrl("/media/users/300_16.jpg")}")`,
                         }}
                       />
                     </div>
-                    <div className="d-flex flex-column ml-3 mt-2 mb-2">
-                      <a
-                        href="#"
-                        className="font-weight-bold text-dark text-hover-primary"
-                      >
+                    <div className="d-flex flex-column ms-3 mt-2 mb-2">
+                      <a href="#" className="font-weight-bold text-dark text-hover-primary">
                         Nick Bold
                       </a>
                       <span className="font-size-sm font-weight-bold text-muted">
@@ -274,16 +223,11 @@ export function QuickSearch() {
                         <i className="flaticon-psd text-primary"></i>
                       </div>
                     </div>
-                    <div className="d-flex flex-column ml-3 mt-2 mb-2">
-                      <a
-                        href="#"
-                        className="font-weight-bold text-dark text-hover-primary"
-                      >
+                    <div className="d-flex flex-column ms-3 mt-2 mb-2">
+                      <a href="#" className="font-weight-bold text-dark text-hover-primary">
                         79 PSD files generated
                       </a>
-                      <span className="font-size-sm font-weight-bold text-muted">
-                        by Grog John
-                      </span>
+                      <span className="font-size-sm font-weight-bold text-muted">by Grog John</span>
                     </div>
                   </div>
                   <div className="d-flex align-items-center flex-grow-1 mb-2">
@@ -292,11 +236,8 @@ export function QuickSearch() {
                         <i className="flaticon2-supermarket text-warning"></i>
                       </div>
                     </div>
-                    <div className="d-flex flex-column ml-3 mt-2 mb-2">
-                      <a
-                        href="#"
-                        className="font-weight-bold text-dark text-hover-primary"
-                      >
+                    <div className="d-flex flex-column ms-3 mt-2 mb-2">
+                      <a href="#" className="font-weight-bold text-dark text-hover-primary">
                         $2900 worth products sold
                       </a>
                       <span className="font-size-sm font-weight-bold text-muted">
@@ -310,11 +251,8 @@ export function QuickSearch() {
                         <i className="flaticon-safe-shield-protection text-info"></i>
                       </div>
                     </div>
-                    <div className="d-flex flex-column ml-3 mt-2 mb-2">
-                      <a
-                        href="#"
-                        className="font-weight-bold text-dark text-hover-primary"
-                      >
+                    <div className="d-flex flex-column ms-3 mt-2 mb-2">
+                      <a href="#" className="font-weight-bold text-dark text-hover-primary">
                         4 New items submitted
                       </a>
                       <span className="font-size-sm font-weight-bold text-muted">
@@ -328,11 +266,8 @@ export function QuickSearch() {
                         <i className="flaticon-safe-shield-protection text-warning"></i>
                       </div>
                     </div>
-                    <div className="d-flex flex-column ml-3 mt-2 mb-2">
-                      <a
-                        href="#"
-                        className="font-weight-bold text-dark text-hover-primary"
-                      >
+                    <div className="d-flex flex-column ms-3 mt-2 mb-2">
+                      <a href="#" className="font-weight-bold text-dark text-hover-primary">
                         4 New items submitted
                       </a>
                       <span className="font-size-sm font-weight-bold text-muted">

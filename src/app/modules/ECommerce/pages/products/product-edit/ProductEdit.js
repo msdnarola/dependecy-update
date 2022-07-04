@@ -76,7 +76,7 @@ export function ProductEdit({
     }
   };
 
-  const btnRef = useRef();  
+  const btnRef = useRef();
   const saveProductClick = () => {
     if (btnRef && btnRef.current) {
       btnRef.current.click();
@@ -92,25 +92,17 @@ export function ProductEdit({
       {actionsLoading && <ModalProgressBar />}
       <CardHeader title={title}>
         <CardHeaderToolbar>
-          <button
-            type="button"
-            onClick={backToProductsList}
-            className="btn btn-light"
-          >
+          <button type="button" onClick={backToProductsList} className="btn btn-light">
             <i className="fa fa-arrow-left"></i>
             Back
           </button>
           {`  `}
-          <button className="btn btn-light ml-2">
+          <button className="btn btn-light ms-2">
             <i className="fa fa-redo"></i>
             Reset
           </button>
           {`  `}
-          <button
-            type="submit"
-            className="btn btn-primary ml-2"
-            onClick={saveProductClick}
-          >
+          <button type="submit" className="btn btn-primary ms-2" onClick={saveProductClick}>
             Save
           </button>
         </CardHeaderToolbar>
@@ -122,8 +114,7 @@ export function ProductEdit({
               className={`nav-link ${tab === "basic" && "active"}`}
               data-toggle="tab"
               role="tab"
-              aria-selected={(tab === "basic").toString()}
-            >
+              aria-selected={(tab === "basic").toString()}>
               Basic info
             </a>
           </li>
@@ -135,8 +126,7 @@ export function ProductEdit({
                   className={`nav-link ${tab === "remarks" && "active"}`}
                   data-toggle="tab"
                   role="button"
-                  aria-selected={(tab === "remarks").toString()}
-                >
+                  aria-selected={(tab === "remarks").toString()}>
                   Product remarks
                 </a>
               </li>
@@ -145,8 +135,7 @@ export function ProductEdit({
                   className={`nav-link ${tab === "specs" && "active"}`}
                   data-toggle="tab"
                   role="tab"
-                  aria-selected={(tab === "specs").toString()}
-                >
+                  aria-selected={(tab === "specs").toString()}>
                   Product specifications
                 </a>
               </li>

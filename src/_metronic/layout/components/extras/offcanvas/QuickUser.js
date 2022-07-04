@@ -18,26 +18,22 @@ export function QuickUser() {
   };
 
   return (
-    <div
-      id="kt_quick_user"
-      className="offcanvas offcanvas-right offcanvas p-10"
-    >
+    <div id="kt_quick_user" className="offcanvas offcanvas-right offcanvas p-10">
       <div className="offcanvas-header d-flex align-items-center justify-content-between pb-5">
         <h3 className="font-weight-bold m-0">
           User Profile
-          <small className="text-muted font-size-sm ml-2">12 messages</small>
+          <small className="text-muted font-size-sm ms-2">12 messages</small>
         </h3>
         <a
           className="btn btn-xs btn-icon btn-light btn-hover-primary cursor-pointer"
-          id="kt_quick_user_close"
-        >
+          id="kt_quick_user_close">
           <i className="ki ki-close icon-xs text-muted" />
         </a>
       </div>
 
-      <div className="offcanvas-content pr-5 mr-n5">
+      <div className="offcanvas-content pe-5 me-n5">
         <div className="d-flex align-items-center mt-5">
-          <div className="symbol symbol-100 mr-5">
+          <div className="symbol symbol-100 me-5">
             <div
               className="symbol-label"
               style={{
@@ -47,38 +43,29 @@ export function QuickUser() {
             <i className="symbol-badge bg-success" />
           </div>
           <div className="d-flex flex-column">
-            <a
-              href="#"
-              className="font-weight-bold font-size-h5 text-dark-75 text-hover-primary"
-            >
+            <a href="#" className="font-weight-bold font-size-h5 text-dark-75 text-hover-primary">
               {user.firstname} {user.lastname}
             </a>
             <div className="text-muted mt-1">{user.occupation}</div>
             <div className="navi mt-2">
               <a className="navi-item cursor-pointer">
                 <span className="navi-link p-0 pb-2">
-                  <span className="navi-icon mr-1">
+                  <span className="navi-icon me-1">
                     <span className="svg-icon-lg svg-icon-primary">
                       <SVG
                         src={toAbsoluteUrl(
                           "/media/svg/icons/Communication/Mail-notification.svg"
-                        )}
-                      ></SVG>
+                        )}></SVG>
                     </span>
                   </span>
-                  <span className="navi-text text-muted text-hover-primary">
-                    {user.email}
-                  </span>
+                  <span className="navi-text text-muted text-hover-primary">{user.email}</span>
                 </span>
               </a>
             </div>
             {/* <Link to="/logout" className="btn btn-light-primary btn-bold">
                 Sign Out
               </Link> */}
-            <button
-              className="btn btn-light-primary btn-bold"
-              onClick={logoutClick}
-            >
+            <button className="btn btn-light-primary btn-bold" onClick={logoutClick}>
               Sign out
             </button>
           </div>
@@ -89,14 +76,10 @@ export function QuickUser() {
         <div className="navi navi-spacer-x-0 p-0">
           <Link to="/user-profile" className="navi-item">
             <div className="navi-link">
-              <div className="symbol symbol-40 bg-light mr-3">
+              <div className="symbol symbol-40 bg-light me-3">
                 <div className="symbol-label">
                   <span className="svg-icon svg-icon-md svg-icon-success">
-                    <SVG
-                      src={toAbsoluteUrl(
-                        "/media/svg/icons/General/Notification2.svg"
-                      )}
-                    ></SVG>
+                    <SVG src={toAbsoluteUrl("/media/svg/icons/General/Notification2.svg")}></SVG>
                   </span>
                 </div>
               </div>
@@ -114,14 +97,10 @@ export function QuickUser() {
 
           <Link to="/user-profile" className="navi-item">
             <div className="navi-link">
-              <div className="symbol symbol-40 bg-light mr-3">
+              <div className="symbol symbol-40 bg-light me-3">
                 <div className="symbol-label">
                   <span className="svg-icon svg-icon-md svg-icon-warning">
-                    <SVG
-                      src={toAbsoluteUrl(
-                        "/media/svg/icons/Shopping/Chart-bar1.svg"
-                      )}
-                    ></SVG>
+                    <SVG src={toAbsoluteUrl("/media/svg/icons/Shopping/Chart-bar1.svg")}></SVG>
                   </span>
                 </div>
               </div>
@@ -134,14 +113,10 @@ export function QuickUser() {
 
           <a href="/user/profile" className="navi-item">
             <div className="navi-link">
-              <div className="symbol symbol-40 bg-light mr-3">
+              <div className="symbol symbol-40 bg-light me-3">
                 <div className="symbol-label">
                   <span className="svg-icon svg-icon-md svg-icon-danger">
-                    <SVG
-                      src={toAbsoluteUrl(
-                        "/media/svg/icons/Files/Selected-file.svg"
-                      )}
-                    ></SVG>
+                    <SVG src={toAbsoluteUrl("/media/svg/icons/Files/Selected-file.svg")}></SVG>
                   </span>
                 </div>
               </div>
@@ -154,14 +129,11 @@ export function QuickUser() {
 
           <a href="/user/profile" className="navi-item">
             <div className="navi-link">
-              <div className="symbol symbol-40 bg-light mr-3">
+              <div className="symbol symbol-40 bg-light me-3">
                 <div className="symbol-label">
                   <span className="svg-icon svg-icon-md svg-icon-primary">
                     <SVG
-                      src={toAbsoluteUrl(
-                        "/media/svg/icons/Communication/Mail-opened.svg"
-                      )}
-                    ></SVG>
+                      src={toAbsoluteUrl("/media/svg/icons/Communication/Mail-opened.svg")}></SVG>
                   </span>
                 </div>
               </div>
@@ -179,95 +151,77 @@ export function QuickUser() {
           <h5 className="mb-5">Recent Notifications</h5>
 
           <div className="d-flex align-items-center bg-light-warning rounded p-5 gutter-b">
-            <span className="svg-icon svg-icon-warning mr-5">
+            <span className="svg-icon svg-icon-warning me-5">
               <SVG
                 src={toAbsoluteUrl("/media/svg/icons/Home/Library.svg")}
-                className="svg-icon svg-icon-lg"
-              ></SVG>
+                className="svg-icon svg-icon-lg"></SVG>
             </span>
 
-            <div className="d-flex flex-column flex-grow-1 mr-2">
+            <div className="d-flex flex-column flex-grow-1 me-2">
               <a
                 href="#"
-                className="font-weight-normal text-dark-75 text-hover-primary font-size-lg mb-1"
-              >
+                className="font-weight-normal text-dark-75 text-hover-primary font-size-lg mb-1">
                 Another purpose persuade
               </a>
               <span className="text-muted font-size-sm">Due in 2 Days</span>
             </div>
 
-            <span className="font-weight-bolder text-warning py-1 font-size-lg">
-              +28%
-            </span>
+            <span className="font-weight-bolder text-warning py-1 font-size-lg">+28%</span>
           </div>
 
           <div className="d-flex align-items-center bg-light-success rounded p-5 gutter-b">
-            <span className="svg-icon svg-icon-success mr-5">
+            <span className="svg-icon svg-icon-success me-5">
               <SVG
                 src={toAbsoluteUrl("/media/svg/icons/Communication/Write.svg")}
-                className="svg-icon svg-icon-lg"
-              ></SVG>
+                className="svg-icon svg-icon-lg"></SVG>
             </span>
-            <div className="d-flex flex-column flex-grow-1 mr-2">
+            <div className="d-flex flex-column flex-grow-1 me-2">
               <a
                 href="#"
-                className="font-weight-normal text-dark-75 text-hover-primary font-size-lg mb-1"
-              >
+                className="font-weight-normal text-dark-75 text-hover-primary font-size-lg mb-1">
                 Would be to people
               </a>
               <span className="text-muted font-size-sm">Due in 2 Days</span>
             </div>
 
-            <span className="font-weight-bolder text-success py-1 font-size-lg">
-              +50%
-            </span>
+            <span className="font-weight-bolder text-success py-1 font-size-lg">+50%</span>
           </div>
 
           <div className="d-flex align-items-center bg-light-danger rounded p-5 gutter-b">
-            <span className="svg-icon svg-icon-danger mr-5">
+            <span className="svg-icon svg-icon-danger me-5">
               <SVG
-                src={toAbsoluteUrl(
-                  "/media/svg/icons/Communication/Group-chat.svg"
-                )}
-                className="svg-icon svg-icon-lg"
-              ></SVG>
+                src={toAbsoluteUrl("/media/svg/icons/Communication/Group-chat.svg")}
+                className="svg-icon svg-icon-lg"></SVG>
             </span>
-            <div className="d-flex flex-column flex-grow-1 mr-2">
+            <div className="d-flex flex-column flex-grow-1 me-2">
               <a
                 href="#"
-                className="font-weight-normel text-dark-75 text-hover-primary font-size-lg mb-1"
-              >
+                className="font-weight-normel text-dark-75 text-hover-primary font-size-lg mb-1">
                 Purpose would be to persuade
               </a>
               <span className="text-muted font-size-sm">Due in 2 Days</span>
             </div>
 
-            <span className="font-weight-bolder text-danger py-1 font-size-lg">
-              -27%
-            </span>
+            <span className="font-weight-bolder text-danger py-1 font-size-lg">-27%</span>
           </div>
 
           <div className="d-flex align-items-center bg-light-info rounded p-5">
-            <span className="svg-icon svg-icon-info mr-5">
+            <span className="svg-icon svg-icon-info me-5">
               <SVG
                 src={toAbsoluteUrl("/media/svg/icons/General/Attachment2.svg")}
-                className="svg-icon svg-icon-lg"
-              ></SVG>
+                className="svg-icon svg-icon-lg"></SVG>
             </span>
 
-            <div className="d-flex flex-column flex-grow-1 mr-2">
+            <div className="d-flex flex-column flex-grow-1 me-2">
               <a
                 href="#"
-                className="font-weight-normel text-dark-75 text-hover-primary font-size-lg mb-1"
-              >
+                className="font-weight-normel text-dark-75 text-hover-primary font-size-lg mb-1">
                 The best product
               </a>
               <span className="text-muted font-size-sm">Due in 2 Days</span>
             </div>
 
-            <span className="font-weight-bolder text-info py-1 font-size-lg">
-              +8%
-            </span>
+            <span className="font-weight-bolder text-info py-1 font-size-lg">+8%</span>
           </div>
         </div>
       </div>

@@ -18,9 +18,7 @@ export function BaseTablesWidget1({ className }) {
         {/* begin::Header */}
         <div className="card-header border-0 pt-5">
           <h3 className="card-title align-items-start flex-column">
-            <span className="card-label font-weight-bolder text-dark">
-              Authors Earnings
-            </span>
+            <span className="card-label font-weight-bolder text-dark">Authors Earnings</span>
             <span className="text-muted mt-3 font-weight-bold font-size-sm">
               More than 400+ new members
             </span>
@@ -29,34 +27,28 @@ export function BaseTablesWidget1({ className }) {
             <ul className="nav nav-pills nav-pills-sm nav-dark-75">
               <li className="nav-item">
                 <a
-                  className={`nav-link py-2 px-4 ${activeTab === tabs.tab1 &&
-                    "active"}`}
+                  className={`nav-link py-2 px-4 ${activeTab === tabs.tab1 && "active"}`}
                   data-toggle="tab"
                   href={`#${tabs.tab1}`}
-                  onClick={() => setActiveTab(tabs.tab1)}
-                >
+                  onClick={() => setActiveTab(tabs.tab1)}>
                   Month
                 </a>
               </li>
               <li className="nav-item">
                 <a
-                  className={`nav-link py-2 px-4 ${activeTab === tabs.tab2 &&
-                    "active"}`}
+                  className={`nav-link py-2 px-4 ${activeTab === tabs.tab2 && "active"}`}
                   data-toggle="tab"
                   href={`#${tabs.tab2}`}
-                  onClick={() => setActiveTab(tabs.tab2)}
-                >
+                  onClick={() => setActiveTab(tabs.tab2)}>
                   Week
                 </a>
               </li>
               <li className="nav-item">
                 <a
-                  className={`nav-link py-2 px-4 ${activeTab === tabs.tab3 &&
-                    "active"}`}
+                  className={`nav-link py-2 px-4 ${activeTab === tabs.tab3 && "active"}`}
                   data-toggle="tab"
                   href={`#${tabs.tab3}`}
-                  onClick={() => setActiveTab(tabs.tab3)}
-                >
+                  onClick={() => setActiveTab(tabs.tab3)}>
                   Day
                 </a>
               </li>
@@ -82,132 +74,100 @@ export function BaseTablesWidget1({ className }) {
               </thead>
               <tbody>
                 <tr>
-                  <td className="pl-0">
-                    <div className="symbol symbol-50 symbol-light mr-2 mt-2">
+                  <td className="ps-0">
+                    <div className="symbol symbol-50 symbol-light me-2 mt-2">
                       <span className="symbol-label">
                         <SVG
                           className="h-75 align-self-end"
-                          src={toAbsoluteUrl("/media/svg/avatars/001-boy.svg")}
-                        ></SVG>
+                          src={toAbsoluteUrl("/media/svg/avatars/001-boy.svg")}></SVG>
                       </span>
                     </div>
                   </td>
-                  <td className="pl-0">
+                  <td className="ps-0">
                     <a
                       href="#"
-                      className="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg"
-                    >
+                      className="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg">
                       Brad Simmons
                     </a>
-                    <span className="text-muted font-weight-bold d-block">
-                      Successful Fellas
-                    </span>
+                    <span className="text-muted font-weight-bold d-block">Successful Fellas</span>
                   </td>
                   <td></td>
                   <td className="text-right">
-                    <span className="text-muted font-weight-bold d-block font-size-sm">
-                      Paid
-                    </span>
+                    <span className="text-muted font-weight-bold d-block font-size-sm">Paid</span>
                     <span className="text-dark-75 font-weight-bolder d-block font-size-lg">
                       $2,000,000
                     </span>
                   </td>
                   <td className="text-right">
-                    <span className="font-weight-bolder text-primary">
-                      +28%
-                    </span>
+                    <span className="font-weight-bolder text-primary">+28%</span>
                   </td>
-                  <td className="text-right pr-0">
+                  <td className="text-right pe-0">
                     <a href="#" className="btn btn-icon btn-light btn-sm">
                       <span className="svg-icon svg-icon-md svg-icon-success">
                         <SVG
-                          src={toAbsoluteUrl(
-                            "/media/svg/icons/Navigation/Arrow-right.svg"
-                          )}
-                        ></SVG>
+                          src={toAbsoluteUrl("/media/svg/icons/Navigation/Arrow-right.svg")}></SVG>
                       </span>
                     </a>
                   </td>
                 </tr>
                 <tr>
-                  <td className="pl-0">
-                    <div className="symbol symbol-50 symbol-light mr-2 mt-2">
+                  <td className="ps-0">
+                    <div className="symbol symbol-50 symbol-light me-2 mt-2">
                       <span className="symbol-label">
                         <SVG
                           className="h-75 align-self-end"
-                          src={toAbsoluteUrl(
-                            "/media/svg/avatars/018-girl-9.svg"
-                          )}
-                        ></SVG>
+                          src={toAbsoluteUrl("/media/svg/avatars/018-girl-9.svg")}></SVG>
                       </span>
                     </div>
                   </td>
-                  <td className="pl-0">
+                  <td className="ps-0">
                     <a
                       href="#"
-                      className="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg"
-                    >
+                      className="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg">
                       Jessie Clarcson
                     </a>
-                    <span className="text-muted font-weight-bold d-block">
-                      HTML, CSS Coding
-                    </span>
+                    <span className="text-muted font-weight-bold d-block">HTML, CSS Coding</span>
                   </td>
                   <td></td>
                   <td className="text-right">
-                    <span className="text-muted font-weight-bold d-block font-size-sm">
-                      Paid
-                    </span>
+                    <span className="text-muted font-weight-bold d-block font-size-sm">Paid</span>
                     <span className="text-dark-75 font-weight-bolder d-block font-size-lg">
                       $1,200,000
                     </span>
                   </td>
                   <td className="text-right">
-                    <span className="font-weight-bolder text-warning">
-                      +52%
-                    </span>
+                    <span className="font-weight-bolder text-warning">+52%</span>
                   </td>
-                  <td className="text-right pr-0">
+                  <td className="text-right pe-0">
                     <a href="#" className="btn btn-icon btn-light btn-sm">
                       <span className="svg-icon svg-icon-md svg-icon-success">
                         <SVG
-                          src={toAbsoluteUrl(
-                            "/media/svg/icons/Navigation/Arrow-right.svg"
-                          )}
-                        ></SVG>
+                          src={toAbsoluteUrl("/media/svg/icons/Navigation/Arrow-right.svg")}></SVG>
                       </span>
                     </a>
                   </td>
                 </tr>
                 <tr>
-                  <td className="pl-0">
-                    <div className="symbol symbol-50 symbol-light mr-2 mt-2">
+                  <td className="ps-0">
+                    <div className="symbol symbol-50 symbol-light me-2 mt-2">
                       <span className="symbol-label">
                         <SVG
                           className="h-75 align-self-end"
-                          src={toAbsoluteUrl(
-                            "/media/svg/avatars/047-girl-25.svg"
-                          )}
-                        ></SVG>
+                          src={toAbsoluteUrl("/media/svg/avatars/047-girl-25.svg")}></SVG>
                       </span>
                     </div>
                   </td>
-                  <td className="pl-0">
+                  <td className="ps-0">
                     <a
                       href="#"
-                      className="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg"
-                    >
+                      className="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg">
                       Lebron Wayde
                     </a>
-                    <span className="text-muted font-weight-bold d-block">
-                      ReactJS Developer
-                    </span>
+                    <span className="text-muted font-weight-bold d-block">ReactJS Developer</span>
                   </td>
                   <td></td>
                   <td className="text-right">
-                    <span className="text-muted font-weight-bold d-block font-size-sm">
-                      Paid
-                    </span>
+                    <span className="text-muted font-weight-bold d-block font-size-sm">Paid</span>
                     <span className="text-dark-75 font-weight-bolder d-block font-size-lg">
                       $3,400,000
                     </span>
@@ -215,97 +175,73 @@ export function BaseTablesWidget1({ className }) {
                   <td className="text-right">
                     <span className="font-weight-bolder text-danger">-34%</span>
                   </td>
-                  <td className="text-right pr-0">
+                  <td className="text-right pe-0">
                     <a href="#" className="btn btn-icon btn-light btn-sm">
                       <span className="svg-icon svg-icon-md svg-icon-success">
                         <SVG
-                          src={toAbsoluteUrl(
-                            "/media/svg/icons/Navigation/Arrow-right.svg"
-                          )}
-                        ></SVG>
+                          src={toAbsoluteUrl("/media/svg/icons/Navigation/Arrow-right.svg")}></SVG>
                       </span>
                     </a>
                   </td>
                 </tr>
                 <tr>
-                  <td className="pl-0">
-                    <div className="symbol symbol-50 symbol-light mr-2 mt-2">
+                  <td className="ps-0">
+                    <div className="symbol symbol-50 symbol-light me-2 mt-2">
                       <span className="symbol-label">
                         <SVG
                           className="h-75 align-self-end"
-                          src={toAbsoluteUrl(
-                            "/media/svg/avatars/014-girl-7.svg"
-                          )}
-                        ></SVG>
+                          src={toAbsoluteUrl("/media/svg/avatars/014-girl-7.svg")}></SVG>
                       </span>
                     </div>
                   </td>
-                  <td className="pl-0">
+                  <td className="ps-0">
                     <a
                       href="#"
-                      className="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg"
-                    >
+                      className="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg">
                       Natali Trump
                     </a>
-                    <span className="text-muted font-weight-bold d-block">
-                      UI/UX Designer
-                    </span>
+                    <span className="text-muted font-weight-bold d-block">UI/UX Designer</span>
                   </td>
                   <td></td>
                   <td className="text-right">
-                    <span className="text-muted font-weight-bold d-block font-size-sm">
-                      Paid
-                    </span>
+                    <span className="text-muted font-weight-bold d-block font-size-sm">Paid</span>
                     <span className="text-dark-75 font-weight-bolder d-block font-size-lg">
                       $4,500,000
                     </span>
                   </td>
                   <td className="text-right">
-                    <span className="font-weight-bolder text-success">
-                      +48%
-                    </span>
+                    <span className="font-weight-bolder text-success">+48%</span>
                   </td>
-                  <td className="text-right pr-0">
+                  <td className="text-right pe-0">
                     <a href="#" className="btn btn-icon btn-light btn-sm">
                       <span className="svg-icon svg-icon-md svg-icon-success">
                         <SVG
-                          src={toAbsoluteUrl(
-                            "/media/svg/icons/Navigation/Arrow-right.svg"
-                          )}
-                        ></SVG>
+                          src={toAbsoluteUrl("/media/svg/icons/Navigation/Arrow-right.svg")}></SVG>
                       </span>
                     </a>
                   </td>
                 </tr>
                 <tr>
-                  <td className="pl-0">
-                    <div className="symbol symbol-50 symbol-light mr-2 mt-2">
+                  <td className="ps-0">
+                    <div className="symbol symbol-50 symbol-light me-2 mt-2">
                       <span className="symbol-label">
                         <SVG
                           className="h-75 align-self-end"
-                          src={toAbsoluteUrl(
-                            "/media/svg/avatars/043-boy-18.svg"
-                          )}
-                        ></SVG>
+                          src={toAbsoluteUrl("/media/svg/avatars/043-boy-18.svg")}></SVG>
                       </span>
                     </div>
                   </td>
-                  <td className="pl-0">
+                  <td className="ps-0">
                     <a
                       href="#"
-                      className="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg"
-                    >
+                      className="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg">
                       Kevin Leonard
                     </a>
-                    <span className="text-muted font-weight-bold d-block">
-                      Art Director
-                    </span>
+                    <span className="text-muted font-weight-bold d-block">Art Director</span>
                   </td>
                   <td></td>
                   <td className="text-right">
-                    <span className="text-muted font-weight-bold d-block font-size-sm">
-                      Paid
-                    </span>
+                    <span className="text-muted font-weight-bold d-block font-size-sm">Paid</span>
                     <span className="text-dark-75 font-weight-bolder d-block font-size-lg">
                       $35,600,000
                     </span>
@@ -313,14 +249,11 @@ export function BaseTablesWidget1({ className }) {
                   <td className="text-right">
                     <span className="font-weight-bolder text-info">+230%</span>
                   </td>
-                  <td className="text-right pr-0">
+                  <td className="text-right pe-0">
                     <a href="#" className="btn btn-icon btn-light btn-sm">
                       <span className="svg-icon svg-icon-md svg-icon-success">
                         <SVG
-                          src={toAbsoluteUrl(
-                            "/media/svg/icons/Navigation/Arrow-right.svg"
-                          )}
-                        ></SVG>
+                          src={toAbsoluteUrl("/media/svg/icons/Navigation/Arrow-right.svg")}></SVG>
                       </span>
                     </a>
                   </td>

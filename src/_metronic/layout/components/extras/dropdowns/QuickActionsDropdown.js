@@ -26,7 +26,7 @@ export function QuickActionsDropdown() {
           overlay={<Tooltip id="quick-actions-tooltip">Quick actions</Tooltip>}>
           <div className="topbar-item">
             <div
-              className="btn btn-icon btn-clean btn-dropdown btn-lg mr-1"
+              className="btn btn-icon btn-clean btn-dropdown btn-lg me-1"
               id="kt_quick_actions_toggle">
               <span className="svg-icon svg-icon-xl svg-icon-primary">
                 <SVG src={toAbsoluteUrl("/media/svg/icons/Media/Equalizer.svg")} />
@@ -36,12 +36,12 @@ export function QuickActionsDropdown() {
         </OverlayTrigger>
       )}
       {!layoutProps.offcanvas && (
-        <Dropdown drop="down" align="end">
+        <Dropdown drop="down" alignRight>
           <Dropdown.Toggle as={DropdownTopbarItemToggler} id="kt_quick_actions_panel_toggle">
             <OverlayTrigger
               placement="bottom"
               overlay={<Tooltip id="quick-actions-tooltip">Quick actions</Tooltip>}>
-              <div className="btn btn-icon btn-hover-transparent-white btn-dropdown btn-lg mr-1">
+              <div className="btn btn-icon btn-hover-transparent-white btn-dropdown btn-lg me-1">
                 <span className="svg-icon svg-icon-xl">
                   <SVG src={toAbsoluteUrl("/media/svg/icons/Media/Equalizer.svg")} />
                 </span>

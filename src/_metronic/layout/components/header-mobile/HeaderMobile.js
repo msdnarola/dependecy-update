@@ -12,8 +12,7 @@ export function HeaderMobile() {
     return {
       headerLogo: uiService.getStickyLogo(),
       asideDisplay: objectPath.get(uiService.config, "aside.self.display"),
-      headerMenuSelfDisplay:
-        objectPath.get(uiService.config, "header.menu.self.display") === true,
+      headerMenuSelfDisplay: objectPath.get(uiService.config, "header.menu.self.display") === true,
       headerMobileCssClasses: uiService.getClasses("header_mobile", true),
       headerMobileAttributes: uiService.getAttributes("header_mobile"),
     };
@@ -25,8 +24,7 @@ export function HeaderMobile() {
       <div
         id="kt_header_mobile"
         className={`header-mobile ${layoutProps.headerMobileCssClasses}`}
-        {...layoutProps.headerMobileAttributes}
-      >
+        {...layoutProps.headerMobileAttributes}>
         {/* begin::Logo */}
         <Link to="/">
           <img
@@ -40,27 +38,22 @@ export function HeaderMobile() {
         {/* begin::Toolbar */}
         <div className="d-flex align-items-center">
           {layoutProps.asideDisplay && (
-            <button
-              className="btn p-0 burger-icon burger-icon-left"
-              id="kt_aside_mobile_toggle"
-            >
+            <button className="btn p-0 burger-icon burger-icon-left" id="kt_aside_mobile_toggle">
               <span />
             </button>
           )}
 
           {layoutProps.headerMenuSelfDisplay && (
             <button
-              className="btn p-0 burger-icon burger-icon-left ml-4"
-              id="kt_header_mobile_toggle"
-            >
+              className="btn p-0 burger-icon burger-icon-left ms-4"
+              id="kt_header_mobile_toggle">
               <span />
             </button>
           )}
 
           <button
-            className="btn btn-icon btn-hover-transparent-white p-0 ml-3"
-            id="kt_header_mobile_topbar_toggle"
-          >
+            className="btn btn-icon btn-hover-transparent-white p-0 ms-3"
+            id="kt_header_mobile_topbar_toggle">
             <span className="svg-icon svg-icon-xl">
               <SVG src={toAbsoluteUrl("/media/svg/icons/General/User.svg")} />
             </span>

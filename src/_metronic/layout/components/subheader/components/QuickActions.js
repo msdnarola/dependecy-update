@@ -14,7 +14,8 @@ const QuickActionsDropdownToggle = forwardRef((props, ref) => {
         props.onClick(e);
       }}
       id="kt_subheader_quick_actions"
-      className="btn btn-white font-weight-bold py-3 px-6">
+      className="btn btn-white font-weight-bold py-3 px-6"
+    >
       Actions
     </button>
   );
@@ -25,8 +26,9 @@ export function QuickActions() {
     <>
       <OverlayTrigger
         placement="left"
-        overlay={<Tooltip id="quick-actions-tooltip">Quick actions</Tooltip>}>
-        <Dropdown className="dropdown-inline" drop="down" align="end">
+        overlay={<Tooltip id="quick-actions-tooltip">Quick actions</Tooltip>}
+      >
+        <Dropdown className="dropdown-inline" drop="down" alignRight>
           <Dropdown.Toggle
             as={QuickActionsDropdownToggle}
             id="dropdown-toggle-quick-actions-subheader"

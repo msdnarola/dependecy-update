@@ -3,9 +3,7 @@
 // STORYBOOK: https://react-bootstrap-table.github.io/react-bootstrap-table2/storybook/index.html
 import React, { useEffect, useMemo } from "react";
 import BootstrapTable from "react-bootstrap-table-next";
-import paginationFactory, {
-  PaginationProvider,
-} from "react-bootstrap-table2-paginator";
+import paginationFactory, { PaginationProvider } from "react-bootstrap-table2-paginator";
 import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import * as actions from "../../../_redux/products/productsActions";
 import * as uiHelpers from "../ProductsUIHelpers";
@@ -35,10 +33,7 @@ export function ProductsTable() {
   }, [productsUIContext]);
 
   // Getting curret state of products list from store (Redux)
-  const { currentState } = useSelector(
-    (state) => ({ currentState: state.products }),
-    shallowEqual
-  );
+  const { currentState } = useSelector((state) => ({ currentState: state.products }), shallowEqual);
   const { totalCount, entities, listLoading } = currentState;
   // Products Redux state
   const dispatch = useDispatch();
@@ -111,8 +106,8 @@ export function ProductsTable() {
         openEditProductPage: productsUIProps.openEditProductPage,
         openDeleteProductDialog: productsUIProps.openDeleteProductDialog,
       },
-      classes: "text-right pr-0",
-      headerClasses: "text-right pr-3",
+      classes: "text-right pe-0",
+      headerClasses: "text-right pe-3",
       style: {
         minWidth: "100px",
       },
@@ -131,10 +126,7 @@ export function ProductsTable() {
       <PaginationProvider pagination={paginationFactory(paginationOptions)}>
         {({ paginationProps, paginationTableProps }) => {
           return (
-            <Pagination
-              isLoading={listLoading}
-              paginationProps={paginationProps}
-            >
+            <Pagination isLoading={listLoading} paginationProps={paginationProps}>
               <BootstrapTable
                 wrapperClasses="table-responsive"
                 classes="table table-head-custom table-vertical-center overflow-hidden"
@@ -145,16 +137,13 @@ export function ProductsTable() {
                 data={entities === null ? [] : entities}
                 columns={columns}
                 defaultSorted={uiHelpers.defaultSorted}
-                onTableChange={getHandlerTableChange(
-                  productsUIProps.setQueryParams
-                )}
+                onTableChange={getHandlerTableChange(productsUIProps.setQueryParams)}
                 selectRow={getSelectRow({
                   entities,
                   ids: productsUIProps.ids,
                   setIds: productsUIProps.setIds,
                 })}
-                {...paginationTableProps}
-              >
+                {...paginationTableProps}>
                 <PleaseWaitMessage entities={entities} />
                 <NoRecordsFoundMessage entities={entities} />
               </BootstrapTable>

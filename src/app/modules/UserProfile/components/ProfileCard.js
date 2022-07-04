@@ -39,7 +39,7 @@ export function ProfileCard() {
               {/* end::Toolbar */}
               {/* begin::User */}
               <div className="d-flex align-items-center">
-                <div className="symbol symbol-60 symbol-xxl-100 mr-5 align-self-start align-self-xxl-center">
+                <div className="symbol symbol-60 symbol-xxl-100 me-5 align-self-start align-self-xxl-center">
                   <div
                     className="symbol-label"
                     style={{ backgroundImage: `url(${user.pic})` }}></div>
@@ -57,7 +57,7 @@ export function ProfileCard() {
                   <div className="mt-2">
                     <a
                       href="#"
-                      className="btn btn-sm btn-primary font-weight-bold mr-2 py-2 px-3 px-xxl-5 my-1">
+                      className="btn btn-sm btn-primary font-weight-bold me-2 py-2 px-3 px-xxl-5 my-1">
                       Chat
                     </a>
                     <a
@@ -72,15 +72,15 @@ export function ProfileCard() {
               {/* begin::Contact */}
               <div className="py-9">
                 <div className="d-flex align-items-center justify-content-between mb-2">
-                  <span className="font-weight-bold mr-2">Email:</span>
+                  <span className="font-weight-bold me-2">Email:</span>
                   <span className="text-muted text-hover-primary">{user.email}</span>
                 </div>
                 <div className="d-flex align-items-center justify-content-between mb-2">
-                  <span className="font-weight-bold mr-2">Phone:</span>
+                  <span className="font-weight-bold me-2">Phone:</span>
                   <span className="text-muted">{user.phone}</span>
                 </div>
                 <div className="d-flex align-items-center justify-content-between">
-                  <span className="font-weight-bold mr-2">Location:</span>
+                  <span className="font-weight-bold me-2">Location:</span>
                   <span className="text-muted">{user.address.city}</span>
                 </div>
               </div>
@@ -92,7 +92,7 @@ export function ProfileCard() {
                     to="/user-profile/profile-overview"
                     className="navi-link py-4"
                     activeClassName="active">
-                    <span className="navi-icon mr-2">
+                    <span className="navi-icon me-2">
                       <span className="svg-icon">
                         <SVG src={toAbsoluteUrl("/media/svg/icons/Design/Layers.svg")}></SVG>{" "}
                       </span>
@@ -105,7 +105,7 @@ export function ProfileCard() {
                     to="/user-profile/personal-information"
                     className="navi-link py-4"
                     activeClassName="active">
-                    <span className="navi-icon mr-2">
+                    <span className="navi-icon me-2">
                       <span className="svg-icon">
                         <SVG src={toAbsoluteUrl("/media/svg/icons/General/User.svg")}></SVG>{" "}
                       </span>
@@ -118,7 +118,7 @@ export function ProfileCard() {
                     to="/user-profile/account-information"
                     className="navi-link py-4"
                     activeClassName="active">
-                    <span className="navi-icon mr-2">
+                    <span className="navi-icon me-2">
                       <span className="svg-icon">
                         <SVG src={toAbsoluteUrl("/media/svg/icons/Code/Compiling.svg")}></SVG>{" "}
                       </span>
@@ -131,7 +131,7 @@ export function ProfileCard() {
                     to="/user-profile/change-password"
                     className="navi-link py-4"
                     activeClassName="active">
-                    <span className="navi-icon mr-2">
+                    <span className="navi-icon me-2">
                       <span className="svg-icon">
                         <SVG
                           src={toAbsoluteUrl(
@@ -152,7 +152,7 @@ export function ProfileCard() {
                     to="/user-profile/email-settings"
                     className="navi-link py-4"
                     activeClassName="active">
-                    <span className="navi-icon mr-2">
+                    <span className="navi-icon me-2">
                       <span className="svg-icon">
                         <SVG
                           src={toAbsoluteUrl(
@@ -166,7 +166,7 @@ export function ProfileCard() {
                 <div className="navi-item mb-2">
                   <OverlayTrigger placement="right" overlay={<Tooltip>Coming soon...</Tooltip>}>
                     <a href="#" className="navi-link py-4">
-                      <span className="navi-icon mr-2">
+                      <span className="navi-icon me-2">
                         <span className="svg-icon">
                           <SVG
                             src={toAbsoluteUrl(
@@ -181,7 +181,7 @@ export function ProfileCard() {
                 <div className="navi-item mb-2">
                   <OverlayTrigger placement="right" overlay={<Tooltip>Coming soon...</Tooltip>}>
                     <a href="#" className="navi-link py-4">
-                      <span className="navi-icon mr-2">
+                      <span className="navi-icon me-2">
                         <span className="svg-icon">
                           <SVG src={toAbsoluteUrl("/media/svg/icons/Files/File.svg")}></SVG>{" "}
                         </span>
@@ -198,7 +198,7 @@ export function ProfileCard() {
                 <div className="navi-item mb-2">
                   <OverlayTrigger placement="right" overlay={<Tooltip>Coming soon...</Tooltip>}>
                     <a href="#" className="navi-link py-4">
-                      <span className="navi-icon mr-2">
+                      <span className="navi-icon me-2">
                         <span className="svg-icon">
                           <SVG src={toAbsoluteUrl("/media/svg/icons/Text/Article.svg")}></SVG>{" "}
                         </span>

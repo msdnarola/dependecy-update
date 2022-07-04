@@ -42,15 +42,9 @@ export function ProductsFetchDialog({ show, onHide }) {
   }, [productsUIProps.ids]);
 
   return (
-    <Modal
-      show={show}
-      onHide={onHide}
-      aria-labelledby="example-modal-sizes-title-lg"
-    >
+    <Modal show={show} onHide={onHide} aria-labelledby="example-modal-sizes-title-lg">
       <Modal.Header closeButton>
-        <Modal.Title id="example-modal-sizes-title-lg">
-          Fetch selected elements
-        </Modal.Title>
+        <Modal.Title id="example-modal-sizes-title-lg">Fetch selected elements</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <div className="list-timeline list-timeline-skin-light padding-30">
@@ -62,11 +56,10 @@ export function ProductsFetchDialog({ show, onHide }) {
                     className={`label label-lg label-light-${
                       ProductStatusCssClasses[product.status]
                     } label-inline`}
-                    style={{ width: "60px" }}
-                  >
+                    style={{ width: "60px" }}>
                     ID: {product.id}
                   </span>{" "}
-                  <span className="ml-5">
+                  <span className="ms-5">
                     {product.manufacture}, {product.model}
                   </span>
                 </span>
@@ -77,19 +70,11 @@ export function ProductsFetchDialog({ show, onHide }) {
       </Modal.Body>
       <Modal.Footer>
         <div>
-          <button
-            type="button"
-            onClick={onHide}
-            className="btn btn-light btn-elevate"
-          >
+          <button type="button" onClick={onHide} className="btn btn-light btn-elevate">
             Cancel
           </button>
           <> </>
-          <button
-            type="button"
-            onClick={onHide}
-            className="btn btn-primary btn-elevate"
-          >
+          <button type="button" onClick={onHide} className="btn btn-primary btn-elevate">
             Ok
           </button>
         </div>

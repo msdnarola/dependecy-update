@@ -1,33 +1,24 @@
 import React from "react";
 
-export function FooterCompact({
-  today,
-  footerClasses,
-  footerContainerClasses,
-}) {
+export function FooterCompact({ today, footerClasses, footerContainerClasses }) {
   return (
     <>
       {/* begin::Footer */}
       <div
         className={`footer bg-white py-4 d-flex flex-lg-column  ${footerClasses}`}
-        id="kt_footer"
-      >
+        id="kt_footer">
         {/* begin::Container */}
         <div
-          className={`${footerContainerClasses} d-flex flex-column flex-md-row align-items-center justify-content-between`}
-        >
+          className={`${footerContainerClasses} d-flex flex-column flex-md-row align-items-center justify-content-between`}>
           {/* begin::Copyright */}
           <div className="text-dark order-2 order-md-1">
-            <span className="text-muted font-weight-bold mr-2">
-              {today} &copy;
-            </span>
+            <span className="text-muted font-weight-bold me-2">{today} &copy;</span>
             {` `}
             <a
               href="http://keenthemes.com/metronic"
               rel="noopener noreferrer"
               target="_blank"
-              className="text-dark-75 text-hover-primary"
-            >
+              className="text-dark-75 text-hover-primary">
               Keenthemes
             </a>
           </div>
@@ -39,24 +30,21 @@ export function FooterCompact({
               href="http://keenthemes.com/metronic"
               target="_blank"
               rel="noopener noreferrer"
-              className="nav-link pr-3 pl-0"
-            >
+              className="nav-link pe-3 ps-0">
               About
             </a>
             <a
               href="http://keenthemes.com/metronic"
               target="_blank"
               rel="noopener noreferrer"
-              className="nav-link px-3"
-            >
+              className="nav-link px-3">
               Team
             </a>
             <a
               href="http://keenthemes.com/metronic"
               target="_blank"
               rel="noopener noreferrer"
-              className="nav-link pl-3 pr-0"
-            >
+              className="nav-link ps-3 pe-0">
               Contact
             </a>
           </div>

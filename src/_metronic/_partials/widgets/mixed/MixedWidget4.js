@@ -44,7 +44,7 @@ export function MixedWidget4({ className, chartColor = "danger" }) {
         <div className="card-header border-0 pt-5">
           <h3 className="card-title font-weight-bolder text-white">Sales Progress</h3>
           <div className="card-toolbar">
-            <Dropdown className="dropdown-inline" align="end">
+            <Dropdown className="dropdown-inline" alignRight>
               <Dropdown.Toggle
                 className="btn btn-text-white btn-hover-white btn-sm btn-icon border-0"
                 variant="transparent"
@@ -74,7 +74,7 @@ export function MixedWidget4({ className, chartColor = "danger" }) {
           <div className="card-spacer bg-white card-rounded flex-grow-1">
             {/* begin::Row */}
             <div className="row m-0">
-              <div className="col px-8 py-6 mr-8">
+              <div className="col px-8 py-6 me-8">
                 <div className="font-size-sm text-muted font-weight-bold">Average Sale</div>
                 <div className="font-size-h4 font-weight-bolder">$650</div>
               </div>
@@ -86,7 +86,7 @@ export function MixedWidget4({ className, chartColor = "danger" }) {
             {/* end::Row */}
             {/* begin::Row */}
             <div className="row m-0">
-              <div className="col px-8 py-6 mr-8">
+              <div className="col px-8 py-6 me-8">
                 <div className="font-size-sm text-muted font-weight-bold">Annual Taxes</div>
                 <div className="font-size-h4 font-weight-bolder">$29,004</div>
               </div>

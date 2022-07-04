@@ -1,10 +1,7 @@
 import React, { useEffect, useMemo } from "react";
 import { Modal } from "react-bootstrap";
 import { shallowEqual, useSelector } from "react-redux";
-import {
-  CustomerStatusCssClasses,
-  CustomerStatusTitles,
-} from "../CustomersUIHelpers";
+import { CustomerStatusCssClasses, CustomerStatusTitles } from "../CustomersUIHelpers";
 import { useCustomersUIContext } from "../CustomersUIContext";
 
 const selectedCustomers = (entities, ids) => {
@@ -30,10 +27,7 @@ export function CustomersFetchDialog({ show, onHide }) {
   // Customers Redux state
   const { customers } = useSelector(
     (state) => ({
-      customers: selectedCustomers(
-        state.customers.entities,
-        customersUIProps.ids
-      ),
+      customers: selectedCustomers(state.customers.entities, customersUIProps.ids),
     }),
     shallowEqual
   );
@@ -47,15 +41,9 @@ export function CustomersFetchDialog({ show, onHide }) {
   }, [customersUIProps.ids]);
 
   return (
-    <Modal
-      show={show}
-      onHide={onHide}
-      aria-labelledby="example-modal-sizes-title-lg"
-    >
+    <Modal show={show} onHide={onHide} aria-labelledby="example-modal-sizes-title-lg">
       <Modal.Header closeButton>
-        <Modal.Title id="example-modal-sizes-title-lg">
-          Fetch selected elements
-        </Modal.Title>
+        <Modal.Title id="example-modal-sizes-title-lg">Fetch selected elements</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <table className="table table table-head-custom table-vertical-center overflow-hidden">
@@ -74,14 +62,13 @@ export function CustomersFetchDialog({ show, onHide }) {
                   <span
                     className={`label label-lg label-light-${
                       CustomerStatusCssClasses[customer.status]
-                    } label-inline`}
-                  >
+                    } label-inline`}>
                     {" "}
                     {CustomerStatusTitles[customer.status]}
                   </span>
                 </td>
                 <td>
-                  <span className="ml-3">
+                  <span className="ms-3">
                     {customer.lastName}, {customer.firstName}
                   </span>
                 </td>
@@ -92,19 +79,11 @@ export function CustomersFetchDialog({ show, onHide }) {
       </Modal.Body>
       <Modal.Footer>
         <div>
-          <button
-            type="button"
-            onClick={onHide}
-            className="btn btn-light btn-elevate"
-          >
+          <button type="button" onClick={onHide} className="btn btn-light btn-elevate">
             Cancel
           </button>
           <> </>
-          <button
-            type="button"
-            onClick={onHide}
-            className="btn btn-primary btn-elevate"
-          >
+          <button type="button" onClick={onHide} className="btn btn-primary btn-elevate">
             Ok
           </button>
         </div>

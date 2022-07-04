@@ -17,9 +17,7 @@ export function BaseTablesWidget2({ className }) {
         {/* begin::Header */}
         <div className="card-header border-0 pt-5">
           <h3 className="card-title align-items-start flex-column">
-            <span className="card-label font-weight-bolder text-dark">
-              New Arrivals
-            </span>
+            <span className="card-label font-weight-bolder text-dark">New Arrivals</span>
             <span className="text-muted mt-3 font-weight-bold font-size-sm">
               More than 400+ new members
             </span>
@@ -28,34 +26,28 @@ export function BaseTablesWidget2({ className }) {
             <ul className="nav nav-pills nav-pills-sm nav-dark-75">
               <li className="nav-item">
                 <a
-                  className={`nav-link py-2 px-4 ${activeTab === tabs.tab1 &&
-                    "active"}`}
+                  className={`nav-link py-2 px-4 ${activeTab === tabs.tab1 && "active"}`}
                   data-toggle="tab"
                   href={`#${tabs.tab1}`}
-                  onClick={() => setActiveTab(tabs.tab1)}
-                >
+                  onClick={() => setActiveTab(tabs.tab1)}>
                   Month
                 </a>
               </li>
               <li className="nav-item">
                 <a
-                  className={`nav-link py-2 px-4 ${activeTab === tabs.tab2 &&
-                    "active"}`}
+                  className={`nav-link py-2 px-4 ${activeTab === tabs.tab2 && "active"}`}
                   data-toggle="tab"
                   href={`#${tabs.tab2}`}
-                  onClick={() => setActiveTab(tabs.tab2)}
-                >
+                  onClick={() => setActiveTab(tabs.tab2)}>
                   Week
                 </a>
               </li>
               <li className="nav-item">
                 <a
-                  className={`nav-link py-2 px-4 ${activeTab === tabs.tab3 &&
-                    "active"}`}
+                  className={`nav-link py-2 px-4 ${activeTab === tabs.tab3 && "active"}`}
                   data-toggle="tab"
                   href={`#${tabs.tab3}`}
-                  onClick={() => setActiveTab(tabs.tab3)}
-                >
+                  onClick={() => setActiveTab(tabs.tab3)}>
                   Day
                 </a>
               </li>
@@ -80,225 +72,166 @@ export function BaseTablesWidget2({ className }) {
               </thead>
               <tbody>
                 <tr>
-                  <td className="pl-0 py-5">
-                    <div className="symbol symbol-50 symbol-light mr-2">
+                  <td className="ps-0 py-5">
+                    <div className="symbol symbol-50 symbol-light me-2">
                       <span className="symbol-label">
                         <SVG
                           className="h-50 align-self-center"
-                          src={toAbsoluteUrl("/media/svg/misc/006-plurk.svg")}
-                        ></SVG>
+                          src={toAbsoluteUrl("/media/svg/misc/006-plurk.svg")}></SVG>
                       </span>
                     </div>
                   </td>
-                  <td className="pl-0">
+                  <td className="ps-0">
                     <a
                       href="#"
-                      className="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg"
-                    >
+                      className="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg">
                       Top Authors
                     </a>
-                    <span className="text-muted font-weight-bold d-block">
-                      Successful Fellas
-                    </span>
+                    <span className="text-muted font-weight-bold d-block">Successful Fellas</span>
                   </td>
                   <td className="text-right">
-                    <span className="text-muted font-weight-bold">
-                      ReactJs, HTML
-                    </span>
+                    <span className="text-muted font-weight-bold">ReactJs, HTML</span>
                   </td>
                   <td className="text-right">
-                    <span className="text-muted font-weight-bold">
-                      4600 Users
-                    </span>
+                    <span className="text-muted font-weight-bold">4600 Users</span>
                   </td>
-                  <td className="text-right pr-0">
+                  <td className="text-right pe-0">
                     <a href="#" className="btn btn-icon btn-light btn-sm">
                       <span className="svg-icon svg-icon-md svg-icon-success">
                         <SVG
-                          src={toAbsoluteUrl(
-                            "/media/svg/icons/Navigation/Arrow-right.svg"
-                          )}
-                        ></SVG>
+                          src={toAbsoluteUrl("/media/svg/icons/Navigation/Arrow-right.svg")}></SVG>
                       </span>
                     </a>
                   </td>
                 </tr>
                 <tr>
-                  <td className="pl-0 py-5">
-                    <div className="symbol symbol-50 symbol-light mr-2">
+                  <td className="ps-0 py-5">
+                    <div className="symbol symbol-50 symbol-light me-2">
                       <span className="symbol-label">
                         <SVG
                           className="h-50 align-self-center"
-                          src={toAbsoluteUrl(
-                            "/media/svg/misc/015-telegram.svg"
-                          )}
-                        ></SVG>
+                          src={toAbsoluteUrl("/media/svg/misc/015-telegram.svg")}></SVG>
                       </span>
                     </div>
                   </td>
-                  <td className="pl-0">
+                  <td className="ps-0">
                     <a
                       href="#"
-                      className="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg"
-                    >
+                      className="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg">
                       Popular Authors
                     </a>
-                    <span className="text-muted font-weight-bold d-block">
-                      Most Successful
-                    </span>
+                    <span className="text-muted font-weight-bold d-block">Most Successful</span>
                   </td>
                   <td className="text-right">
-                    <span className="text-muted font-weight-bold">
-                      Python, MySQL
-                    </span>
+                    <span className="text-muted font-weight-bold">Python, MySQL</span>
                   </td>
                   <td className="text-right">
-                    <span className="text-muted font-weight-bold">
-                      7200 Users
-                    </span>
+                    <span className="text-muted font-weight-bold">7200 Users</span>
                   </td>
-                  <td className="text-right pr-0">
+                  <td className="text-right pe-0">
                     <a href="#" className="btn btn-icon btn-light btn-sm">
                       <span className="svg-icon svg-icon-md svg-icon-success">
                         <SVG
-                          src={toAbsoluteUrl(
-                            "/media/svg/icons/Navigation/Arrow-right.svg"
-                          )}
-                        ></SVG>
+                          src={toAbsoluteUrl("/media/svg/icons/Navigation/Arrow-right.svg")}></SVG>
                       </span>
                     </a>
                   </td>
                 </tr>
                 <tr>
-                  <td className="pl-0 py-5">
-                    <div className="symbol symbol-50 symbol-light mr-2">
+                  <td className="ps-0 py-5">
+                    <div className="symbol symbol-50 symbol-light me-2">
                       <span className="symbol-label">
                         <SVG
                           className="h-50 align-self-center"
-                          src={toAbsoluteUrl("/media/svg/misc/003-puzzle.svg")}
-                        ></SVG>
+                          src={toAbsoluteUrl("/media/svg/misc/003-puzzle.svg")}></SVG>
                       </span>
                     </div>
                   </td>
-                  <td className="pl-0">
+                  <td className="ps-0">
                     <a
                       href="#"
-                      className="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg"
-                    >
+                      className="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg">
                       New Users
                     </a>
-                    <span className="text-muted font-weight-bold d-block">
-                      Awesome Users
-                    </span>
+                    <span className="text-muted font-weight-bold d-block">Awesome Users</span>
                   </td>
                   <td className="text-right">
-                    <span className="text-muted font-weight-bold">
-                      Laravel, Metronic
-                    </span>
+                    <span className="text-muted font-weight-bold">Laravel, Metronic</span>
                   </td>
                   <td className="text-right">
-                    <span className="text-muted font-weight-bold">
-                      890 Users
-                    </span>
+                    <span className="text-muted font-weight-bold">890 Users</span>
                   </td>
-                  <td className="text-right pr-0">
+                  <td className="text-right pe-0">
                     <a href="#" className="btn btn-icon btn-light btn-sm">
                       <span className="svg-icon svg-icon-md svg-icon-success">
                         <SVG
-                          src={toAbsoluteUrl(
-                            "/media/svg/icons/Navigation/Arrow-right.svg"
-                          )}
-                        ></SVG>
+                          src={toAbsoluteUrl("/media/svg/icons/Navigation/Arrow-right.svg")}></SVG>
                       </span>
                     </a>
                   </td>
                 </tr>
                 <tr>
-                  <td className="pl-0 py-5">
-                    <div className="symbol symbol-50 symbol-light mr-2">
+                  <td className="ps-0 py-5">
+                    <div className="symbol symbol-50 symbol-light me-2">
                       <span className="symbol-label">
                         <SVG
                           className="h-50 align-self-center"
-                          src={toAbsoluteUrl("/media/svg/misc/005-bebo.svg")}
-                        ></SVG>
+                          src={toAbsoluteUrl("/media/svg/misc/005-bebo.svg")}></SVG>
                       </span>
                     </div>
                   </td>
-                  <td className="pl-0">
+                  <td className="ps-0">
                     <a
                       href="#"
-                      className="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg"
-                    >
+                      className="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg">
                       Active Customers
                     </a>
-                    <span className="text-muted font-weight-bold d-block">
-                      Best Customers
-                    </span>
+                    <span className="text-muted font-weight-bold d-block">Best Customers</span>
                   </td>
                   <td className="text-right">
-                    <span className="text-muted font-weight-bold">
-                      AngularJS, C#
-                    </span>
+                    <span className="text-muted font-weight-bold">AngularJS, C#</span>
                   </td>
                   <td className="text-right">
-                    <span className="text-muted font-weight-bold">
-                      6370 Users
-                    </span>
+                    <span className="text-muted font-weight-bold">6370 Users</span>
                   </td>
-                  <td className="text-right pr-0">
+                  <td className="text-right pe-0">
                     <a href="#" className="btn btn-icon btn-light btn-sm">
                       <span className="svg-icon svg-icon-md svg-icon-success">
                         <SVG
-                          src={toAbsoluteUrl(
-                            "/media/svg/icons/Navigation/Arrow-right.svg"
-                          )}
-                        ></SVG>
+                          src={toAbsoluteUrl("/media/svg/icons/Navigation/Arrow-right.svg")}></SVG>
                       </span>
                     </a>
                   </td>
                 </tr>
                 <tr>
-                  <td className="pl-0 py-5">
-                    <div className="symbol symbol-50 symbol-light mr-2">
+                  <td className="ps-0 py-5">
+                    <div className="symbol symbol-50 symbol-light me-2">
                       <span className="symbol-label">
                         <SVG
                           className="h-50 align-self-center"
-                          src={toAbsoluteUrl(
-                            "/media/svg/misc/014-kickstarter.svg"
-                          )}
-                        ></SVG>
+                          src={toAbsoluteUrl("/media/svg/misc/014-kickstarter.svg")}></SVG>
                       </span>
                     </div>
                   </td>
-                  <td className="pl-0">
+                  <td className="ps-0">
                     <a
                       href="#"
-                      className="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg"
-                    >
+                      className="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg">
                       Bestseller Theme
                     </a>
-                    <span className="text-muted font-weight-bold d-block">
-                      Amazing Templates
-                    </span>
+                    <span className="text-muted font-weight-bold d-block">Amazing Templates</span>
                   </td>
                   <td className="text-right">
-                    <span className="text-muted font-weight-bold">
-                      ReactJS, Ruby
-                    </span>
+                    <span className="text-muted font-weight-bold">ReactJS, Ruby</span>
                   </td>
                   <td className="text-right">
-                    <span className="text-muted font-weight-bold">
-                      354 Users
-                    </span>
+                    <span className="text-muted font-weight-bold">354 Users</span>
                   </td>
-                  <td className="text-right pr-0">
+                  <td className="text-right pe-0">
                     <a href="#" className="btn btn-icon btn-light btn-sm">
                       <span className="svg-icon svg-icon-md svg-icon-success">
                         <SVG
-                          src={toAbsoluteUrl(
-                            "/media/svg/icons/Navigation/Arrow-right.svg"
-                          )}
-                        ></SVG>
+                          src={toAbsoluteUrl("/media/svg/icons/Navigation/Arrow-right.svg")}></SVG>
                       </span>
                     </a>
                   </td>

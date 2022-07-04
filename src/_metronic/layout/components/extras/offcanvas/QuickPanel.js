@@ -45,7 +45,7 @@ export function QuickPanel() {
           </Nav>
 
           <div
-            className="offcanvas-close mt-n1 pr-5"
+            className="offcanvas-close mt-n1 pe-5"
             style={{ position: "absolute", top: "15px", right: "10px" }}>
             <a
               href="#"
@@ -63,13 +63,13 @@ export function QuickPanel() {
             <div
               id="kt_quick_panel_logs"
               role="tabpanel"
-              className={`tab-pane fade pt-3 pr-5 mr-n5 scroll ps ${
+              className={`tab-pane fade pt-3 pe-5 me-n5 scroll ps ${
                 selectedTab === "AuditLogs" ? "active show" : ""
               }`}>
               <div className="mb-15">
                 <h5 className="font-weight-bold mb-5">System Messages</h5>
                 <div className="d-flex align-items-center flex-wrap mb-5">
-                  <div className="symbol symbol-50 symbol-light mr-5">
+                  <div className="symbol symbol-50 symbol-light me-5">
                     <span className="symbol-label">
                       <img
                         src={toAbsoluteUrl("/media/svg/misc/006-plurk.svg")}
@@ -78,7 +78,7 @@ export function QuickPanel() {
                       />
                     </span>
                   </div>
-                  <div className="d-flex flex-column flex-grow-1 mr-2">
+                  <div className="d-flex flex-column flex-grow-1 me-2">
                     <a
                       href="#"
                       className="font-weight-bolder text-dark-75 text-hover-primary font-size-lg mb-1">
@@ -92,7 +92,7 @@ export function QuickPanel() {
                 </div>
 
                 <div className="d-flex align-items-center flex-wrap mb-5">
-                  <div className="symbol symbol-50 symbol-light mr-5">
+                  <div className="symbol symbol-50 symbol-light me-5">
                     <span className="symbol-label">
                       <img
                         src={toAbsoluteUrl("/media/svg/misc/015-telegram.svg")}
@@ -101,7 +101,7 @@ export function QuickPanel() {
                       />
                     </span>
                   </div>
-                  <div className="d-flex flex-column flex-grow-1 mr-2">
+                  <div className="d-flex flex-column flex-grow-1 me-2">
                     <a
                       href="#"
                       className="font-weight-bolder text-dark-75 text-hover-primary font-size-lg mb-1">
@@ -115,7 +115,7 @@ export function QuickPanel() {
                 </div>
 
                 <div className="d-flex align-items-center flex-wrap mb-5">
-                  <div className="symbol symbol-50 symbol-light mr-5">
+                  <div className="symbol symbol-50 symbol-light me-5">
                     <span className="symbol-label">
                       <img
                         src={toAbsoluteUrl("/media/svg/misc/003-puzzle.svg")}
@@ -124,7 +124,7 @@ export function QuickPanel() {
                       />
                     </span>
                   </div>
-                  <div className="d-flex flex-column flex-grow-1 mr-2">
+                  <div className="d-flex flex-column flex-grow-1 me-2">
                     <a
                       href="#"
                       className="font-weight-bolder text-dark-75 text-hover-primary font-size-lg mb-1">
@@ -138,7 +138,7 @@ export function QuickPanel() {
                 </div>
 
                 <div className="d-flex align-items-center flex-wrap mb-5">
-                  <div className="symbol symbol-50 symbol-light mr-5">
+                  <div className="symbol symbol-50 symbol-light me-5">
                     <span className="symbol-label">
                       <img
                         src={toAbsoluteUrl("/media/svg/misc/005-bebo.svg")}
@@ -147,7 +147,7 @@ export function QuickPanel() {
                       />
                     </span>
                   </div>
-                  <div className="d-flex flex-column flex-grow-1 mr-2">
+                  <div className="d-flex flex-column flex-grow-1 me-2">
                     <a
                       href="#"
                       className="font-weight-bolder text-dark-75 text-hover-primary font-size-lg mb-1">
@@ -161,7 +161,7 @@ export function QuickPanel() {
                 </div>
 
                 <div className="d-flex align-items-center flex-wrap">
-                  <div className="symbol symbol-50 symbol-light mr-5">
+                  <div className="symbol symbol-50 symbol-light me-5">
                     <span className="symbol-label">
                       <img
                         src={toAbsoluteUrl("/media/svg/misc/014-kickstarter.svg")}
@@ -170,7 +170,7 @@ export function QuickPanel() {
                       />
                     </span>
                   </div>
-                  <div className="d-flex flex-column flex-grow-1 mr-2">
+                  <div className="d-flex flex-column flex-grow-1 me-2">
                     <a
                       href="#"
                       className="font-weight-bolder text-dark-75 text-hover-primary font-size-lg mb-1">
@@ -188,13 +188,13 @@ export function QuickPanel() {
                 <h5 className="font-weight-bold mb-5">Notifications</h5>
 
                 <div className="d-flex align-items-center bg-light-warning rounded p-5 mb-5">
-                  <span className="svg-icon svg-icon-warning mr-5">
+                  <span className="svg-icon svg-icon-warning me-5">
                     <SVG
                       src={toAbsoluteUrl("/media//svg/icons/Home/Library.svg")}
                       className="svg-icon svg-icon-lg"></SVG>
                   </span>
 
-                  <div className="d-flex flex-column flex-grow-1 mr-2">
+                  <div className="d-flex flex-column flex-grow-1 me-2">
                     <a
                       href="#"
                       className="font-weight-normal text-dark-75 text-hover-primary font-size-lg mb-1">
@@ -207,12 +207,12 @@ export function QuickPanel() {
                 </div>
 
                 <div className="d-flex align-items-center bg-light-success rounded p-5 mb-5">
-                  <span className="svg-icon svg-icon-success mr-5">
+                  <span className="svg-icon svg-icon-success me-5">
                     <SVG
                       src={toAbsoluteUrl("/media/svg/icons/Communication/Write.svg")}
                       className="svg-icon svg-icon-lg"></SVG>
                   </span>
-                  <div className="d-flex flex-column flex-grow-1 mr-2">
+                  <div className="d-flex flex-column flex-grow-1 me-2">
                     <a
                       href="#"
                       className="font-weight-normal text-dark-75 text-hover-primary font-size-lg mb-1">
@@ -225,12 +225,12 @@ export function QuickPanel() {
                 </div>
 
                 <div className="d-flex align-items-center bg-light-danger rounded p-5 mb-5">
-                  <span className="svg-icon svg-icon-danger mr-5">
+                  <span className="svg-icon svg-icon-danger me-5">
                     <SVG
                       src={toAbsoluteUrl("/media/svg/icons/Communication/Group-chat.svg")}
                       className="svg-icon svg-icon-lg"></SVG>
                   </span>
-                  <div className="d-flex flex-column flex-grow-1 mr-2">
+                  <div className="d-flex flex-column flex-grow-1 me-2">
                     <a
                       href="#"
                       className="font-weight-normel text-dark-75 text-hover-primary font-size-lg mb-1">
@@ -243,13 +243,13 @@ export function QuickPanel() {
                 </div>
 
                 <div className="d-flex align-items-center bg-light-info rounded p-5">
-                  <span className="svg-icon svg-icon-info mr-5">
+                  <span className="svg-icon svg-icon-info me-5">
                     <SVG
                       src={toAbsoluteUrl("/media/svg/icons/General/Attachment2.svg")}
                       className="svg-icon svg-icon-lg"></SVG>
                   </span>
 
-                  <div className="d-flex flex-column flex-grow-1 mr-2">
+                  <div className="d-flex flex-column flex-grow-1 me-2">
                     <a
                       href="#"
                       className="font-weight-normel text-dark-75 text-hover-primary font-size-lg mb-1">
@@ -265,13 +265,13 @@ export function QuickPanel() {
             <div
               id="kt_quick_panel_notifications"
               role="tabpanel"
-              className={`tab-pane fade pt-2 pr-5 mr-n5 scroll ps ${
+              className={`tab-pane fade pt-2 pe-5 me-n5 scroll ps ${
                 selectedTab === "Notifications" ? "active show" : ""
               }`}>
               <div className="navi navi-icon-circle navi-spacer-x-0">
                 <a href="#" className="navi-item">
                   <div className="navi-link rounded">
-                    <div className="symbol symbol-50 mr-3">
+                    <div className="symbol symbol-50 me-3">
                       <div className="symbol-label">
                         <i className="flaticon-bell text-success icon-lg"></i>
                       </div>
@@ -286,7 +286,7 @@ export function QuickPanel() {
                 </a>
                 <a href="#" className="navi-item">
                   <div className="navi-link rounded">
-                    <div className="symbol symbol-50 mr-3">
+                    <div className="symbol symbol-50 me-3">
                       <div className="symbol-label">
                         <i className="flaticon2-box text-danger icon-lg"></i>
                       </div>
@@ -300,7 +300,7 @@ export function QuickPanel() {
 
                 <a href="#" className="navi-item">
                   <div className="navi-link rounded">
-                    <div className="symbol symbol-50 mr-3">
+                    <div className="symbol symbol-50 me-3">
                       <div className="symbol-label">
                         <i className="flaticon-psd text-primary icon-lg"></i>
                       </div>
@@ -314,7 +314,7 @@ export function QuickPanel() {
 
                 <a href="#" className="navi-item">
                   <div className="navi-link rounded">
-                    <div className="symbol symbol-50 mr-3">
+                    <div className="symbol symbol-50 me-3">
                       <div className="symbol-label">
                         <i className="flaticon2-supermarket text-warning icon-lg"></i>
                       </div>
@@ -330,7 +330,7 @@ export function QuickPanel() {
 
                 <a href="#" className="navi-item">
                   <div className="navi-link rounded">
-                    <div className="symbol symbol-50 mr-3">
+                    <div className="symbol symbol-50 me-3">
                       <div className="symbol-label">
                         <i className="flaticon-paper-plane-1 text-success icon-lg"></i>
                       </div>
@@ -345,7 +345,7 @@ export function QuickPanel() {
                 </a>
                 <a href="#" className="navi-item">
                   <div className="navi-link rounded">
-                    <div className="symbol symbol-50 mr-3">
+                    <div className="symbol symbol-50 me-3">
                       <div className="symbol-label">
                         <i className="flaticon-safe-shield-protection text-danger icon-lg"></i>
                       </div>
@@ -358,7 +358,7 @@ export function QuickPanel() {
                 </a>
                 <a href="#" className="navi-item">
                   <div className="navi-link rounded">
-                    <div className="symbol symbol-50 mr-3">
+                    <div className="symbol symbol-50 me-3">
                       <div className="symbol-label">
                         <i className="flaticon-notepad text-primary icon-lg"></i>
                       </div>
@@ -373,7 +373,7 @@ export function QuickPanel() {
                 </a>
                 <a href="#" className="navi-item">
                   <div className="navi-link rounded">
-                    <div className="symbol symbol-50 mr-3">
+                    <div className="symbol symbol-50 me-3">
                       <div className="symbol-label">
                         <i className="flaticon-users-1 text-warning icon-lg"></i>
                       </div>
@@ -388,7 +388,7 @@ export function QuickPanel() {
                 </a>
                 <a href="#" className="navi-item">
                   <div className="navi-link rounded">
-                    <div className="symbol symbol-50 mr-3">
+                    <div className="symbol symbol-50 me-3">
                       <div className="symbol-label">
                         <i className="flaticon2-box text-info icon-lg"></i>
                       </div>
@@ -403,7 +403,7 @@ export function QuickPanel() {
                 </a>
                 <a href="#" className="navi-item">
                   <div className="navi-link rounded">
-                    <div className="symbol symbol-50 mr-3">
+                    <div className="symbol symbol-50 me-3">
                       <div className="symbol-label">
                         <i className="flaticon2-download text-success icon-lg"></i>
                       </div>
@@ -418,7 +418,7 @@ export function QuickPanel() {
                 </a>
                 <a href="#" className="navi-item">
                   <div className="navi-link rounded">
-                    <div className="symbol symbol-50 mr-3">
+                    <div className="symbol symbol-50 me-3">
                       <div className="symbol-label">
                         <i className="flaticon2-supermarket text-danger icon-lg"></i>
                       </div>
@@ -433,7 +433,7 @@ export function QuickPanel() {
                 </a>
                 <a href="#" className="navi-item">
                   <div className="navi-link rounded">
-                    <div className="symbol symbol-50 mr-3">
+                    <div className="symbol symbol-50 me-3">
                       <div className="symbol-label">
                         <i className="flaticon-bell text-primary icon-lg"></i>
                       </div>
@@ -448,7 +448,7 @@ export function QuickPanel() {
                 </a>
                 <a href="#" className="navi-item">
                   <div className="navi-link rounded">
-                    <div className="symbol symbol-50 mr-3">
+                    <div className="symbol symbol-50 me-3">
                       <div className="symbol-label">
                         <i className="flaticon-paper-plane-1 text-success icon-lg"></i>
                       </div>
@@ -466,13 +466,13 @@ export function QuickPanel() {
             <div
               id="kt_quick_panel_settings"
               role="tabpanel"
-              className={`tab-pane fade pt-3 pr-5 mr-n5 scroll ps ${
+              className={`tab-pane fade pt-3 pe-5 me-n5 scroll ps ${
                 selectedTab === "Settings" ? "active show" : ""
               }`}>
               <form className="form">
                 <div>
                   <h5 className="font-weight-bold mb-3">Customer Care</h5>
-                  <div className="mb-3 mb-0 row">
+                  <div className="form-group mb-0 row">
                     <label className="col-8 col-form-label">Enable Notifications:</label>
                     <div className="col-4 text-right">
                       <span className="switch switch-success switch-sm">
@@ -483,7 +483,7 @@ export function QuickPanel() {
                       </span>
                     </div>
                   </div>
-                  <div className="mb-3 mb-0 row">
+                  <div className="form-group mb-0 row">
                     <label className="col-8 col-form-label">Enable Case Tracking:</label>
                     <div className="col-4 text-right">
                       <span className="switch switch-success switch-sm">
@@ -498,7 +498,7 @@ export function QuickPanel() {
                       </span>
                     </div>
                   </div>
-                  <div className="mb-3 mb-0 row">
+                  <div className="form-group mb-0 row">
                     <label className="col-8 col-form-label">Support Portal:</label>
                     <div className="col-4 text-right">
                       <span className="switch switch-success switch-sm">
@@ -515,7 +515,7 @@ export function QuickPanel() {
 
                 <div className="pt-2">
                   <h5 className="font-weight-bold mb-3">Reports</h5>
-                  <div className="mb-3 mb-0 row">
+                  <div className="form-group mb-0 row">
                     <label className="col-8 col-form-label">Generate Reports:</label>
                     <div className="col-4 text-right">
                       <span className="switch switch-sm switch-danger">
@@ -526,7 +526,7 @@ export function QuickPanel() {
                       </span>
                     </div>
                   </div>
-                  <div className="mb-3 mb-0 row">
+                  <div className="form-group mb-0 row">
                     <label className="col-8 col-form-label">Enable Report Export:</label>
                     <div className="col-4 text-right">
                       <span className="switch switch-sm switch-danger">
@@ -537,7 +537,7 @@ export function QuickPanel() {
                       </span>
                     </div>
                   </div>
-                  <div className="mb-3 mb-0 row">
+                  <div className="form-group mb-0 row">
                     <label className="col-8 col-form-label">Allow Data Collection:</label>
                     <div className="col-4 text-right">
                       <span className="switch switch-sm switch-danger">
@@ -554,7 +554,7 @@ export function QuickPanel() {
 
                 <div className="pt-2">
                   <h5 className="font-weight-bold mb-3">Memebers</h5>
-                  <div className="mb-3 mb-0 row">
+                  <div className="form-group mb-0 row">
                     <label className="col-8 col-form-label">Enable Member singup:</label>
                     <div className="col-4 text-right">
                       <span className="switch switch-sm switch-primary">
@@ -565,7 +565,7 @@ export function QuickPanel() {
                       </span>
                     </div>
                   </div>
-                  <div className="mb-3 mb-0 row">
+                  <div className="form-group mb-0 row">
                     <label className="col-8 col-form-label">Allow User Feedbacks:</label>
                     <div className="col-4 text-right">
                       <span className="switch switch-sm switch-primary">
@@ -576,7 +576,7 @@ export function QuickPanel() {
                       </span>
                     </div>
                   </div>
-                  <div className="mb-3 mb-0 row">
+                  <div className="form-group mb-0 row">
                     <label className="col-8 col-form-label">Enable Customer Portal:</label>
                     <div className="col-4 text-right">
                       <span className="switch switch-sm switch-primary">

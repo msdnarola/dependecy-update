@@ -97,7 +97,7 @@ export function CustomersUpdateStateDialog({ show, onHide }) {
                   </span>
                 </td>
                 <td>
-                  <span className="ml-3">
+                  <span className="ms-3">
                     {customer.lastName}, {customer.firstName}
                   </span>
                 </td>
@@ -118,7 +118,7 @@ export function CustomersUpdateStateDialog({ show, onHide }) {
           </select>
         </div>
         <div className="mb-3">
-          <button type="button" onClick={onHide} className="btn btn-light btn-elevate mr-3">
+          <button type="button" onClick={onHide} className="btn btn-light btn-elevate me-3">
             Cancel
           </button>
           <button type="button" onClick={updateStatus} className="btn btn-primary btn-elevate">

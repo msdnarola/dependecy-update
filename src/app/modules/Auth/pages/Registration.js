@@ -238,7 +238,7 @@ function Registration(props) {
               className="m-1"
               {...formik.getFieldProps("acceptTerms")}
             />
-            <Link to="/terms" target="_blank" className="mr-1" rel="noopener noreferrer">
+            <Link to="/terms" target="_blank" className="me-1" rel="noopener noreferrer">
               I agree the Terms & Conditions
             </Link>
             <span />
@@ -256,7 +256,7 @@ function Registration(props) {
             disabled={formik.isSubmitting || !formik.isValid || !formik.values.acceptTerms}
             className="btn btn-primary font-weight-bold px-9 py-4 my-3 mx-4">
             <span>Submit</span>
-            {loading && <span className="ml-3 spinner spinner-white"></span>}
+            {loading && <span className="ms-3 spinner spinner-white"></span>}
           </button>
 
           <Link to="/auth/login">

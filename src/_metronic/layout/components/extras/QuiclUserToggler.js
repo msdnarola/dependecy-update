@@ -12,8 +12,7 @@ export function QuickUserToggler() {
   const uiService = useHtmlClassService();
   const layoutProps = useMemo(() => {
     return {
-      offcanvas:
-        objectPath.get(uiService.config, "extras.user.layout") === "offcanvas",
+      offcanvas: objectPath.get(uiService.config, "extras.user.layout") === "offcanvas",
     };
   }, [uiService]);
 
@@ -22,17 +21,15 @@ export function QuickUserToggler() {
       {layoutProps.offcanvas && (
         <OverlayTrigger
           placement="bottom"
-          overlay={<Tooltip id="quick-user-tooltip">View user</Tooltip>}
-        >
+          overlay={<Tooltip id="quick-user-tooltip">View user</Tooltip>}>
           <div className="topbar-item">
             <div
               className="btn btn-icon btn-hover-transparent-white d-flex align-items-center btn-lg px-md-2 w-md-auto"
-              id="kt_quick_user_toggle"
-            >
-              <span className="text-white opacity-70 font-weight-bold font-size-base d-none d-md-inline mr-1">
+              id="kt_quick_user_toggle">
+              <span className="text-white opacity-70 font-weight-bold font-size-base d-none d-md-inline me-1">
                 Hi,
               </span>
-              <span className="text-white opacity-90 font-weight-bolder font-size-base d-none d-md-inline mr-4">
+              <span className="text-white opacity-90 font-weight-bolder font-size-base d-none d-md-inline me-4">
                 {user.firsname} {user.lastname}
               </span>
               <span className="symbol symbol-35">

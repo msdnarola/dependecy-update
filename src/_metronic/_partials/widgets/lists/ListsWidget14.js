@@ -13,7 +13,7 @@ export function ListsWidget14({ className }) {
         <div className="card-header border-0">
           <h3 className="card-title font-weight-bolder text-dark">Market Leaders</h3>
           <div className="card-toolbar">
-            <Dropdown className="dropdown-inline" align="end">
+            <Dropdown className="dropdown-inline" alignRight>
               <Dropdown.Toggle id="dropdown-toggle-top" as={DropdownCustomToggler}>
                 <i className="ki ki-bold-more-ver" />
               </Dropdown.Toggle>
@@ -30,7 +30,7 @@ export function ListsWidget14({ className }) {
           {/* begin::Item */}
           <div className="d-flex flex-wrap align-items-center mb-10">
             {/* begin::Symbol */}
-            <div className="symbol symbol-60 symbol-2by3 flex-shrink-0 mr-4">
+            <div className="symbol symbol-60 symbol-2by3 flex-shrink-0 me-4">
               <div
                 className="symbol-label"
                 style={{
@@ -40,7 +40,7 @@ export function ListsWidget14({ className }) {
             {/* end::Symbol */}
 
             {/* begin::Title */}
-            <div className="d-flex flex-column flex-grow-1 my-lg-0 my-2 pr-3">
+            <div className="d-flex flex-column flex-grow-1 my-lg-0 my-2 pe-3">
               <a
                 href="#"
                 className="text-dark-75 font-weight-bolder text-hover-primary font-size-lg">
@@ -69,7 +69,7 @@ export function ListsWidget14({ className }) {
           {/* begin: Item */}
           <div className="d-flex flex-wrap align-items-center mb-10">
             {/* begin::Symbol */}
-            <div className="symbol symbol-60 symbol-2by3 flex-shrink-0 mr-4">
+            <div className="symbol symbol-60 symbol-2by3 flex-shrink-0 me-4">
               <div
                 className="symbol-label"
                 style={{
@@ -79,7 +79,7 @@ export function ListsWidget14({ className }) {
             {/* end::Symbol */}
 
             {/* begin::Title */}
-            <div className="d-flex flex-column flex-grow-1 my-lg-0 my-2 pr-3">
+            <div className="d-flex flex-column flex-grow-1 my-lg-0 my-2 pe-3">
               <a
                 href="#"
                 className="text-dark-75 font-weight-bolder text-hover-primary font-size-lg">
@@ -108,7 +108,7 @@ export function ListsWidget14({ className }) {
           {/* begin::Item */}
           <div className="d-flex flex-wrap align-items-center mb-10">
             {/* begin::Symbol */}
-            <div className="symbol symbol-60 symbol-2by3 flex-shrink-0 mr-4">
+            <div className="symbol symbol-60 symbol-2by3 flex-shrink-0 me-4">
               <div
                 className="symbol-label"
                 style={{
@@ -118,7 +118,7 @@ export function ListsWidget14({ className }) {
             {/* end::Symbol */}
 
             {/* begin::Title */}
-            <div className="d-flex flex-column flex-grow-1 pr-3">
+            <div className="d-flex flex-column flex-grow-1 pe-3">
               <a
                 href="#"
                 className="text-dark-75 font-weight-bolder text-hover-primary font-size-lg">
@@ -147,7 +147,7 @@ export function ListsWidget14({ className }) {
           {/* begin::Item */}
           <div className="d-flex flex-wrap align-items-center mb-10">
             {/* begin::Symbol */}
-            <div className="symbol symbol-60 symbol-2by3 flex-shrink-0 mr-4">
+            <div className="symbol symbol-60 symbol-2by3 flex-shrink-0 me-4">
               <div
                 className="symbol-label"
                 style={{
@@ -157,7 +157,7 @@ export function ListsWidget14({ className }) {
             {/* end::Symbol */}
 
             {/* begin::Title */}
-            <div className="d-flex flex-column flex-grow-1 my-lg-0 my-2 pr-3">
+            <div className="d-flex flex-column flex-grow-1 my-lg-0 my-2 pe-3">
               <a
                 href="#"
                 className="text-dark-75 font-weight-bolder text-hover-primary font-size-lg">
@@ -186,7 +186,7 @@ export function ListsWidget14({ className }) {
           {/* begin::Item */}
           <div className="d-flex flex-wrap align-items-center">
             {/* begin::Symbol */}
-            <div className="symbol symbol-60 symbol-2by3 flex-shrink-0 mr-4">
+            <div className="symbol symbol-60 symbol-2by3 flex-shrink-0 me-4">
               <div
                 className="symbol-label"
                 style={{
@@ -196,7 +196,7 @@ export function ListsWidget14({ className }) {
             {/* end::Symbol */}
 
             {/* begin::Title */}
-            <div className="d-flex flex-column flex-grow-1 my-lg-0 my-2 pr-3">
+            <div className="d-flex flex-column flex-grow-1 my-lg-0 my-2 pe-3">
               <a
                 href="#"
                 className="text-dark-75 font-weight-bolder text-hover-primary font-size-lg">

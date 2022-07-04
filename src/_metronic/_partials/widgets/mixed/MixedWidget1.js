@@ -43,7 +43,7 @@ export function MixedWidget1({ className }) {
       <div className="card-header border-0 bg-danger py-5">
         <h3 className="card-title font-weight-bolder text-white">Sales Stat</h3>
         <div className="card-toolbar">
-          <Dropdown className="dropdown-inline" drop="down" align="end">
+          <Dropdown className="dropdown-inline" drop="down" alignRight>
             <Dropdown.Toggle
               className="btn btn-transparent-white btn-sm font-weight-bolder dropdown-toggle px-5"
               variant="transparent"
@@ -67,7 +67,7 @@ export function MixedWidget1({ className }) {
         {/* Stat */}
         <div className="card-spacer mt-n25">
           <div className="row m-0">
-            <div className="col bg-light-warning px-6 py-8 rounded-xl mr-7 mb-7">
+            <div className="col bg-light-warning px-6 py-8 rounded-xl me-7 mb-7">
               <span className="svg-icon svg-icon-3x svg-icon-warning d-block my-2">
                 <SVG src={toAbsoluteUrl("/media/svg/icons/Media/Equalizer.svg")}></SVG>
               </span>
@@ -85,7 +85,7 @@ export function MixedWidget1({ className }) {
             </div>
           </div>
           <div className="row m-0">
-            <div className="col bg-light-danger px-6 py-8 rounded-xl mr-7">
+            <div className="col bg-light-danger px-6 py-8 rounded-xl me-7">
               <span className="svg-icon svg-icon-3x svg-icon-danger d-block my-2">
                 <SVG src={toAbsoluteUrl("/media/svg/icons/Design/Layers.svg")}></SVG>
               </span>

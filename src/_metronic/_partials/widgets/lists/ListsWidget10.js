@@ -12,7 +12,7 @@ export function ListsWidget10({ className }) {
           <h3 className="card-title font-weight-bolder text-dark">Notifications</h3>
 
           <div className="card-toolbar">
-            <Dropdown className="dropdown-inline" align="end">
+            <Dropdown className="dropdown-inline" alignRight>
               <Dropdown.Toggle id="dropdown-toggle-top" as={DropdownCustomToggler}>
                 <i className="ki ki-bold-more-ver" />
               </Dropdown.Toggle>
@@ -27,7 +27,7 @@ export function ListsWidget10({ className }) {
         <div className="card-body pt-0">
           <div className="mb-6">
             <div className="d-flex align-items-center flex-grow-1">
-              <label className="checkbox checkbox-lg checkbox-lg checkbox-single flex-shrink-0 mr-4">
+              <label className="checkbox checkbox-lg checkbox-lg checkbox-single flex-shrink-0 me-4">
                 <input type="checkbox" value="1" />
                 <span></span>
               </label>
@@ -52,7 +52,7 @@ export function ListsWidget10({ className }) {
 
           <div className="mb-6">
             <div className="d-flex align-items-center flex-grow-1">
-              <label className="checkbox checkbox-lg checkbox-lg checkbox-single flex-shrink-0 mr-4">
+              <label className="checkbox checkbox-lg checkbox-lg checkbox-single flex-shrink-0 me-4">
                 <input type="checkbox" value="1" />
                 <span></span>
               </label>
@@ -92,7 +92,7 @@ export function ListsWidget10({ className }) {
             {/* begin::Content */}
             <div className="d-flex align-items-center flex-grow-1">
               {/* begin::Checkbox */}
-              <label className="checkbox checkbox-lg checkbox-lg checkbox-single flex-shrink-0 mr-4">
+              <label className="checkbox checkbox-lg checkbox-lg checkbox-single flex-shrink-0 me-4">
                 <input type="checkbox" value="1" />
                 <span></span>
               </label>
@@ -133,7 +133,7 @@ export function ListsWidget10({ className }) {
             {/* begin::Content */}
             <div className="d-flex align-items-center flex-grow-1">
               {/* begin::Checkbox */}
-              <label className="checkbox checkbox-lg checkbox-lg checkbox-single flex-shrink-0 mr-4">
+              <label className="checkbox checkbox-lg checkbox-lg checkbox-single flex-shrink-0 me-4">
                 <input type="checkbox" value="1" />
                 <span></span>
               </label>
@@ -174,7 +174,7 @@ export function ListsWidget10({ className }) {
             {/* begin::Content */}
             <div className="d-flex align-items-center flex-grow-1">
               {/* begin::Checkbox */}
-              <label className="checkbox checkbox-lg checkbox-lg checkbox-single flex-shrink-0 mr-4">
+              <label className="checkbox checkbox-lg checkbox-lg checkbox-single flex-shrink-0 me-4">
                 <input type="checkbox" value="1" />
                 <span></span>
               </label>

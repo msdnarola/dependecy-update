@@ -85,7 +85,7 @@ export function ProductsUpdateStatusDialog({ show, onHide }) {
                     style={{ width: "60px" }}>
                     ID: {product.id}
                   </span>{" "}
-                  <span className="ml-5">
+                  <span className="ms-5">
                     {product.manufacture}, {product.model}
                   </span>
                 </span>

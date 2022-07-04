@@ -4,9 +4,7 @@
 import React, { useEffect, useMemo } from "react";
 import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import BootstrapTable from "react-bootstrap-table-next";
-import paginationFactory, {
-  PaginationProvider,
-} from "react-bootstrap-table2-paginator";
+import paginationFactory, { PaginationProvider } from "react-bootstrap-table2-paginator";
 import * as actions from "../../../_redux/specifications/specificationsActions";
 import { ActionsColumnFormatter } from "./column-formatters/ActionsColumnFormatter";
 import * as uiHelpers from "./SpecificationsUIHelper";
@@ -28,8 +26,7 @@ export function SpecificationsTable() {
       queryParams: specsUIContext.queryParams,
       setQueryParams: specsUIContext.setQueryParams,
       openEditSpecificationDialog: specsUIContext.openEditSpecificationDialog,
-      openDeleteSpecificationDialog:
-        specsUIContext.openDeleteSpecificationDialog,
+      openDeleteSpecificationDialog: specsUIContext.openDeleteSpecificationDialog,
       ids: specsUIContext.ids,
       setIds: specsUIContext.setIds,
       productId: specsUIContext.productId,
@@ -46,9 +43,7 @@ export function SpecificationsTable() {
   const dispatch = useDispatch();
   useEffect(() => {
     specsUIProps.setIds([]);
-    dispatch(
-      actions.fetchSpecifications(specsUIProps.queryParams,specsUIProps.productId)
-    );
+    dispatch(actions.fetchSpecifications(specsUIProps.queryParams, specsUIProps.productId));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [specsUIProps.queryParams, dispatch, specsUIProps.productId]);
 
@@ -71,11 +66,10 @@ export function SpecificationsTable() {
       formatter: ActionsColumnFormatter,
       formatExtraData: {
         openEditSpecificationDialog: specsUIProps.openEditSpecificationDialog,
-        openDeleteSpecificationDialog:
-          specsUIProps.openDeleteSpecificationDialog,
+        openDeleteSpecificationDialog: specsUIProps.openDeleteSpecificationDialog,
       },
-      classes: "text-right pr-0",
-      headerClasses: "text-right pr-3",
+      classes: "text-right pe-0",
+      headerClasses: "text-right pe-3",
       style: {
         minWidth: "100px",
       },
@@ -94,10 +88,7 @@ export function SpecificationsTable() {
       <PaginationProvider pagination={paginationFactory(paginationOptions)}>
         {({ paginationProps, paginationTableProps }) => {
           return (
-            <Pagination
-              isLoading={listLoading}
-              paginationProps={paginationProps}
-            >
+            <Pagination isLoading={listLoading} paginationProps={paginationProps}>
               <BootstrapTable
                 wrapperClasses="table-responsive"
                 classes="table table-head-custom table-vertical-center overflow-hidden"
@@ -108,16 +99,13 @@ export function SpecificationsTable() {
                 data={entities === null ? [] : entities}
                 columns={columns}
                 defaultSorted={uiHelpers.defaultSorted}
-                onTableChange={getHandlerTableChange(
-                  specsUIProps.setQueryParams
-                )}
+                onTableChange={getHandlerTableChange(specsUIProps.setQueryParams)}
                 selectRow={getSelectRow({
                   entities,
                   ids: specsUIProps.ids,
                   setIds: specsUIProps.setIds,
                 })}
-                {...paginationTableProps}
-              >
+                {...paginationTableProps}>
                 <PleaseWaitMessage entities={entities} />
                 <NoRecordsFoundMessage entities={entities} />
               </BootstrapTable>

@@ -14,7 +14,7 @@ export function ListsWidget11({ className }) {
           <h3 className="card-title font-weight-bolder text-dark">Trends</h3>
 
           <div className="card-toolbar">
-            <Dropdown className="dropdown-inline" align="end">
+            <Dropdown className="dropdown-inline" alignRight>
               <Dropdown.Toggle id="dropdown-toggle-top" as={DropdownCustomToggler}>
                 <i className="ki ki-bold-more-ver" />
               </Dropdown.Toggle>
@@ -28,11 +28,11 @@ export function ListsWidget11({ className }) {
         {/* Body */}
         <div className="card-body pt-0">
           <div className="d-flex align-items-center mb-9 bg-light-warning rounded p-5">
-            <span className="svg-icon svg-icon-warning mr-5 svg-icon-lg">
+            <span className="svg-icon svg-icon-warning me-5 svg-icon-lg">
               <SVG src={toAbsoluteUrl("/media/svg/icons/Home/Library.svg")}></SVG>
             </span>
 
-            <div className="d-flex flex-column flex-grow-1 mr-2">
+            <div className="d-flex flex-column flex-grow-1 me-2">
               <a
                 href="#"
                 className="font-weight-bold text-dark-75 text-hover-primary font-size-lg mb-1">
@@ -45,10 +45,10 @@ export function ListsWidget11({ className }) {
           </div>
 
           <div className="d-flex align-items-center bg-light-success rounded p-5 mb-9">
-            <span className="svg-icon svg-icon-success mr-5 svg-icon-lg">
+            <span className="svg-icon svg-icon-success me-5 svg-icon-lg">
               <SVG src={toAbsoluteUrl("/media/svg/icons/Communication/Write.svg")}></SVG>
             </span>
-            <div className="d-flex flex-column flex-grow-1 mr-2">
+            <div className="d-flex flex-column flex-grow-1 me-2">
               <a
                 href="#"
                 className="font-weight-bold text-dark-75 text-hover-primary font-size-lg mb-1">
@@ -61,11 +61,11 @@ export function ListsWidget11({ className }) {
           </div>
 
           <div className="d-flex align-items-center bg-light-danger rounded p-5 mb-9">
-            <span className="svg-icon svg-icon-danger mr-5 svg-icon-lg">
+            <span className="svg-icon svg-icon-danger me-5 svg-icon-lg">
               <SVG src={toAbsoluteUrl("/media/svg/icons/Communication/Group-chat.svg")}></SVG>
             </span>
 
-            <div className="d-flex flex-column flex-grow-1 mr-2">
+            <div className="d-flex flex-column flex-grow-1 me-2">
               <a
                 href="#"
                 className="font-weight-bold text-dark-75 text-hover-primary font-size-lg mb-1">
@@ -78,11 +78,11 @@ export function ListsWidget11({ className }) {
           </div>
 
           <div className="d-flex align-items-center bg-light-info rounded p-5">
-            <span className="svg-icon svg-icon-info mr-5 svg-icon-lg">
+            <span className="svg-icon svg-icon-info me-5 svg-icon-lg">
               <SVG src={toAbsoluteUrl("/media/svg/icons/General/Attachment2.svg")}></SVG>
             </span>
 
-            <div className="d-flex flex-column flex-grow-1 mr-2">
+            <div className="d-flex flex-column flex-grow-1 me-2">
               <a
                 href="#"
                 className="font-weight-bold text-dark-75 text-hover-primary font-size-lg mb-1">

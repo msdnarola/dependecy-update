@@ -117,7 +117,7 @@ function EmailSettings(props) {
         <div className="card-toolbar">
           <button
             type="submit"
-            className="btn btn-success mr-2"
+            className="btn btn-success me-2"
             disabled={formik.isSubmitting || (formik.touched && !formik.isValid)}>
             Save Changes
             {formik.isSubmitting}

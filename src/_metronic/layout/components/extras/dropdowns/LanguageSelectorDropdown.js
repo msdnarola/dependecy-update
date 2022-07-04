@@ -44,12 +44,12 @@ export function LanguageSelectorDropdown() {
   const lang = useLang();
   const currentLanguage = languages.find((x) => x.lang === lang);
   return (
-    <Dropdown drop="down" align="end">
+    <Dropdown drop="down" alignRight>
       <Dropdown.Toggle as={DropdownTopbarItemToggler} id="dropdown-toggle-my-cart">
         <OverlayTrigger
           placement="bottom"
           overlay={<Tooltip id="language-panel-tooltip">Select Language</Tooltip>}>
-          <div className="btn btn-icon btn-hover-transparent-white btn-dropdown btn-lg mr-1">
+          <div className="btn btn-icon btn-hover-transparent-white btn-dropdown btn-lg me-1">
             <img
               className="h-20px w-20px rounded-sm"
               src={currentLanguage.flag}
@@ -67,7 +67,7 @@ export function LanguageSelectorDropdown() {
                 active: language.lang === currentLanguage.lang,
               })}>
               <a href="#" onClick={() => setLanguage(language.lang)} className="navi-link">
-                <span className="symbol symbol-20 mr-3">
+                <span className="symbol symbol-20 me-3">
                   <img src={language.flag} alt={language.name} />
                 </span>
                 <span className="navi-text">{language.name}</span>

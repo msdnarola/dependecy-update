@@ -16,27 +16,12 @@ export function Topbar() {
 
   const layoutProps = useMemo(() => {
     return {
-      viewSearchDisplay: objectPath.get(
-        uiService.config,
-        "extras.search.display"
-      ),
-      viewNotificationsDisplay: objectPath.get(
-        uiService.config,
-        "extras.notifications.display"
-      ),
-      viewQuickActionsDisplay: objectPath.get(
-        uiService.config,
-        "extras.quick-actions.display"
-      ),
+      viewSearchDisplay: objectPath.get(uiService.config, "extras.search.display"),
+      viewNotificationsDisplay: objectPath.get(uiService.config, "extras.notifications.display"),
+      viewQuickActionsDisplay: objectPath.get(uiService.config, "extras.quick-actions.display"),
       viewCartDisplay: objectPath.get(uiService.config, "extras.cart.display"),
-      viewQuickPanelDisplay: objectPath.get(
-        uiService.config,
-        "extras.quick-panel.display"
-      ),
-      viewLanguagesDisplay: objectPath.get(
-        uiService.config,
-        "extras.languages.display"
-      ),
+      viewQuickPanelDisplay: objectPath.get(uiService.config, "extras.quick-panel.display"),
+      viewLanguagesDisplay: objectPath.get(uiService.config, "extras.languages.display"),
       viewUserDisplay: objectPath.get(uiService.config, "extras.user.display"),
     };
   }, [uiService]);
@@ -54,24 +39,17 @@ export function Topbar() {
       {layoutProps.viewQuickPanelDisplay && (
         <OverlayTrigger
           placement="bottom"
-          overlay={<Tooltip id="quick-panel-tooltip">Quick panel</Tooltip>}
-        >
+          overlay={<Tooltip id="quick-panel-tooltip">Quick panel</Tooltip>}>
           <div
             className="topbar-item"
             data-toggle="tooltip"
             title="Quick panel"
-            data-placement="right"
-          >
+            data-placement="right">
             <div
-              className="btn btn-icon btn-hover-transparent-white btn-lg mr-1"
-              id="kt_quick_panel_toggle"
-            >
+              className="btn btn-icon btn-hover-transparent-white btn-lg me-1"
+              id="kt_quick_panel_toggle">
               <span className="svg-icon svg-icon-xl">
-                <SVG
-                  src={toAbsoluteUrl(
-                    "/media/svg/icons/Layout/Layout-4-blocks.svg"
-                  )}
-                />
+                <SVG src={toAbsoluteUrl("/media/svg/icons/Layout/Layout-4-blocks.svg")} />
               </span>
             </div>
           </div>

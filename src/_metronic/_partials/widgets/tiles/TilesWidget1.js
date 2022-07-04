@@ -51,7 +51,7 @@ export function TilesWidget1({ className, chartColor = "danger" }) {
             </div>
           </div>
           <div className="card-toolbar">
-            <Dropdown className="dropdown-inline" align="end">
+            <Dropdown className="dropdown-inline" alignRight>
               <Dropdown.Toggle
                 className="btn btn-clean btn-hover-light-primary btn-sm btn-icon"
                 variant="transparent"
@@ -77,8 +77,8 @@ export function TilesWidget1({ className, chartColor = "danger" }) {
           <div className="flex-grow-1 card-spacer-x">
             {/* begin::Item */}
             <div className="d-flex align-items-center justify-content-between mb-10">
-              <div className="d-flex align-items-center mr-2">
-                <div className="symbol symbol-50 symbol-light mr-3 flex-shrink-0">
+              <div className="d-flex align-items-center me-2">
+                <div className="symbol symbol-50 symbol-light me-3 flex-shrink-0">
                   <div className="symbol-label">
                     <span className="svg-icon">
                       <SVG
@@ -106,8 +106,8 @@ export function TilesWidget1({ className, chartColor = "danger" }) {
 
             {/* begin::Item */}
             <div className="d-flex align-items-center justify-content-between mb-10">
-              <div className="d-flex align-items-center mr-2">
-                <div className="symbol symbol-50 symbol-light mr-3 flex-shrink-0">
+              <div className="d-flex align-items-center me-2">
+                <div className="symbol symbol-50 symbol-light me-3 flex-shrink-0">
                   <div className="symbol-label">
                     <span className="svg-icon">
                       <SVG
@@ -135,8 +135,8 @@ export function TilesWidget1({ className, chartColor = "danger" }) {
 
             {/* begin::Item */}
             <div className="d-flex align-items-center justify-content-between">
-              <div className="d-flex align-items-center mr-2">
-                <div className="symbol symbol-50 symbol-light mr-3 flex-shrink-0">
+              <div className="d-flex align-items-center me-2">
+                <div className="symbol symbol-50 symbol-light me-3 flex-shrink-0">
                   <div className="symbol-label">
                     <span className="svg-icon">
                       <SVG

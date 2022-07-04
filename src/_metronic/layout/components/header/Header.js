@@ -14,10 +14,7 @@ export function Header() {
       headerClasses: uiService.getClasses("header", true),
       headerAttributes: uiService.getAttributes("header"),
       headerContainerClasses: uiService.getClasses("header_container", true),
-      menuHeaderDisplay: objectPath.get(
-        uiService.config,
-        "header.menu.self.display"
-      ),
+      menuHeaderDisplay: objectPath.get(uiService.config, "header.menu.self.display"),
     };
   }, [uiService]);
 
@@ -27,14 +24,12 @@ export function Header() {
       <div
         className={`header ${layoutProps.headerClasses}`}
         id="kt_header"
-        {...layoutProps.headerAttributes}
-      >
+        {...layoutProps.headerAttributes}>
         {/*begin::Container*/}
         <div
-          className={` ${layoutProps.headerContainerClasses} d-flex align-items-stretch justify-content-between`}
-        >
+          className={` ${layoutProps.headerContainerClasses} d-flex align-items-stretch justify-content-between`}>
           {/* begin::Left */}
-          <div className="d-flex align-items-stretch mr-3">
+          <div className="d-flex align-items-stretch me-3">
             {/* begin::Header Logo */}
             <div className="header-logo">
               <Link to="/">

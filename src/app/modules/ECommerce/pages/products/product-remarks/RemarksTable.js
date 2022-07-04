@@ -4,9 +4,7 @@
 import React, { useEffect, useMemo } from "react";
 import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import BootstrapTable from "react-bootstrap-table-next";
-import paginationFactory, {
-  PaginationProvider,
-} from "react-bootstrap-table2-paginator";
+import paginationFactory, { PaginationProvider } from "react-bootstrap-table2-paginator";
 import * as actions from "../../../_redux/remarks/remarksActions";
 import { ActionsColumnFormatter } from "./column-formatters/ActionsColumnFormatter";
 import * as uiHelpers from "./RemarksUIHelper";
@@ -36,17 +34,12 @@ export function RemarksTable() {
   }, [remarksUIContext]);
 
   // Getting curret state of products list from store (Redux)
-  const { currentState } = useSelector(
-    (state) => ({ currentState: state.remarks }),
-    shallowEqual
-  );
+  const { currentState } = useSelector((state) => ({ currentState: state.remarks }), shallowEqual);
   const { totalCount, entities, listLoading } = currentState;
   const dispatch = useDispatch();
   useEffect(() => {
     remarksUIProps.setIds([]);
-    dispatch(
-      actions.fetchRemarks(remarksUIProps.queryParams, remarksUIProps.productId)
-    );
+    dispatch(actions.fetchRemarks(remarksUIProps.queryParams, remarksUIProps.productId));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [remarksUIProps.queryParams, dispatch, remarksUIProps.productId]);
   const columns = [
@@ -75,8 +68,8 @@ export function RemarksTable() {
         openEditRemarkDialog: remarksUIProps.openEditRemarkDialog,
         openDeleteRemarkDialog: remarksUIProps.openDeleteRemarkDialog,
       },
-      classes: "text-right pr-0",
-      headerClasses: "text-right pr-3",
+      classes: "text-right pe-0",
+      headerClasses: "text-right pe-3",
       style: {
         minWidth: "100px",
       },
@@ -95,10 +88,7 @@ export function RemarksTable() {
       <PaginationProvider pagination={paginationFactory(paginationOptions)}>
         {({ paginationProps, paginationTableProps }) => {
           return (
-            <Pagination
-              isLoading={listLoading}
-              paginationProps={paginationProps}
-            >
+            <Pagination isLoading={listLoading} paginationProps={paginationProps}>
               <BootstrapTable
                 wrapperClasses="table-responsive"
                 classes="table table-head-custom table-vertical-center overflow-hidden"
@@ -109,16 +99,13 @@ export function RemarksTable() {
                 data={entities === null ? [] : entities}
                 columns={columns}
                 defaultSorted={uiHelpers.defaultSorted}
-                onTableChange={getHandlerTableChange(
-                  remarksUIProps.setQueryParams
-                )}
+                onTableChange={getHandlerTableChange(remarksUIProps.setQueryParams)}
                 selectRow={getSelectRow({
                   entities,
                   ids: remarksUIProps.ids,
                   setIds: remarksUIProps.setIds,
                 })}
-                {...paginationTableProps}
-              >
+                {...paginationTableProps}>
                 <PleaseWaitMessage entities={entities} />
                 <NoRecordsFoundMessage entities={entities} />
               </BootstrapTable>
