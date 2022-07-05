@@ -1,5 +1,5 @@
 import React from "react";
-import { Redirect, Switch } from "react-router-dom";
+import { Redirect, Switch, Routes } from "react-router-dom";
 import AccordionExamplesPage from "./AccordionExamplesPage";
 import AlertExamplesPage from "./AlertExamplesPage";
 import BadgeExamplesPage from "./BadgeExamplesPage";
@@ -31,7 +31,7 @@ import { ContentRoute } from "../../../_metronic/layout";
 
 export default function ReactBootstrapPage() {
   return (
-    <Switch>
+    <Routes>
       <Redirect exact={true} from="/react-bootstrap" to="/react-bootstrap/accordion" />
 
       <ContentRoute path="/react-bootstrap/accordion" component={AccordionExamplesPage} />
@@ -61,6 +61,6 @@ export default function ReactBootstrapPage() {
       <ContentRoute path="/react-bootstrap/tabs" component={TabsExamplesPage} />
       <ContentRoute path="/react-bootstrap/tooltips" component={TooltipsExamplesPage} />
       <ContentRoute path="/react-bootstrap/toasts" component={ToastsExamplesPage} />
-    </Switch>
+    </Routes>
   );
 }

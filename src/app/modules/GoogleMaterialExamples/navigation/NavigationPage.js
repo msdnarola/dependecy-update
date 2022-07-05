@@ -1,5 +1,5 @@
 import React from "react";
-import { Redirect, Switch } from "react-router-dom";
+import { Redirect, Switch, Routes } from "react-router-dom";
 import { ContentRoute } from "../../../../_metronic/layout";
 import BreadcrumbsExamplesPage from "./BreadcrumbsExamplesPage";
 import DrawerExamplesPage from "./DrawerExamplesPage";
@@ -11,7 +11,7 @@ import BottomNavigationExamplesPage from "./BottomNavigationExamplesPage";
 
 export function NavigationPage() {
   return (
-    <Switch>
+    <Routes>
       <Redirect
         exact={true}
         from="/google-material/navigation"
@@ -25,26 +25,11 @@ export function NavigationPage() {
         path="/google-material/navigation/breadcrumbs"
         component={BreadcrumbsExamplesPage}
       />
-      <ContentRoute
-        path="/google-material/navigation/drawer"
-        component={DrawerExamplesPage}
-      />
-      <ContentRoute
-        path="/google-material/navigation/links"
-        component={LinksExamplesPage}
-      />
-      <ContentRoute
-        path="/google-material/navigation/menus"
-        component={MenusExamplesPage}
-      />
-      <ContentRoute
-        path="/google-material/navigation/steppers"
-        component={SteppersExamplesPage}
-      />
-      <ContentRoute
-        path="/google-material/navigation/tabs"
-        component={TabsExamplesPage}
-      />
-    </Switch>
+      <ContentRoute path="/google-material/navigation/drawer" component={DrawerExamplesPage} />
+      <ContentRoute path="/google-material/navigation/links" component={LinksExamplesPage} />
+      <ContentRoute path="/google-material/navigation/menus" component={MenusExamplesPage} />
+      <ContentRoute path="/google-material/navigation/steppers" component={SteppersExamplesPage} />
+      <ContentRoute path="/google-material/navigation/tabs" component={TabsExamplesPage} />
+    </Routes>
   );
 }

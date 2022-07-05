@@ -90,8 +90,7 @@ export function ProfileCard() {
                 <div className="navi-item mb-2">
                   <NavLink
                     to="/user-profile/profile-overview"
-                    className="navi-link py-4"
-                    activeClassName="active">
+                    className={({ isActive }) => (isActive ? "active" : "navi-link py-4")}>
                     <span className="navi-icon me-2">
                       <span className="svg-icon">
                         <SVG src={toAbsoluteUrl("/media/svg/icons/Design/Layers.svg")}></SVG>{" "}
@@ -103,8 +102,7 @@ export function ProfileCard() {
                 <div className="navi-item mb-2">
                   <NavLink
                     to="/user-profile/personal-information"
-                    className="navi-link py-4"
-                    activeClassName="active">
+                    className={({ isActive }) => (isActive ? "active" : "navi-link py-4")}>
                     <span className="navi-icon me-2">
                       <span className="svg-icon">
                         <SVG src={toAbsoluteUrl("/media/svg/icons/General/User.svg")}></SVG>{" "}
@@ -116,8 +114,7 @@ export function ProfileCard() {
                 <div className="navi-item mb-2">
                   <NavLink
                     to="/user-profile/account-information"
-                    className="navi-link py-4"
-                    activeClassName="active">
+                    className={({ isActive }) => (isActive ? "active" : "navi-link py-4")}>
                     <span className="navi-icon me-2">
                       <span className="svg-icon">
                         <SVG src={toAbsoluteUrl("/media/svg/icons/Code/Compiling.svg")}></SVG>{" "}
@@ -129,8 +126,7 @@ export function ProfileCard() {
                 <div className="navi-item mb-2">
                   <NavLink
                     to="/user-profile/change-password"
-                    className="navi-link py-4"
-                    activeClassName="active">
+                    className={({ isActive }) => (isActive ? "active" : "navi-link py-4")}>
                     <span className="navi-icon me-2">
                       <span className="svg-icon">
                         <SVG
@@ -150,8 +146,7 @@ export function ProfileCard() {
                 <div className="navi-item mb-2">
                   <NavLink
                     to="/user-profile/email-settings"
-                    className="navi-link py-4"
-                    activeClassName="active">
+                    className={({ isActive }) => (isActive ? "active" : "navi-link py-4")}>
                     <span className="navi-icon me-2">
                       <span className="svg-icon">
                         <SVG

@@ -7,26 +7,27 @@ import { ProductsFetchDialog } from "./products-fetch-dialog/ProductsFetchDialog
 import { ProductsUpdateStatusDialog } from "./products-update-status-dialog/ProductsUpdateStatusDialog";
 import { ProductsCard } from "./ProductsCard";
 import { ProductsUIProvider } from "./ProductsUIContext";
+import { Route } from "react-router-dom";
 
-export function ProductsPage({ history }) {
+export function ProductsPage({ navigate }) {
   const productsUIEvents = {
     newProductButtonClick: () => {
-      history.push("/e-commerce/products/new");
+      navigate("/e-commerce/products/new");
     },
     openEditProductPage: (id) => {
-      history.push(`/e-commerce/products/${id}/edit`);
+      navigate(`/e-commerce/products/${id}/edit`);
     },
     openDeleteProductDialog: (id) => {
-      history.push(`/e-commerce/products/${id}/delete`);
+      navigate(`/e-commerce/products/${id}/delete`);
     },
     openDeleteProductsDialog: () => {
-      history.push(`/e-commerce/products/deleteProducts`);
+      navigate(`/e-commerce/products/deleteProducts`);
     },
     openFetchProductsDialog: () => {
-      history.push(`/e-commerce/products/fetch`);
+      navigate(`/e-commerce/products/fetch`);
     },
     openUpdateProductsStatusDialog: () => {
-      history.push("/e-commerce/products/updateStatus");
+      navigate("/e-commerce/products/updateStatus");
     },
   };
 
@@ -34,42 +35,42 @@ export function ProductsPage({ history }) {
     <ProductsUIProvider productsUIEvents={productsUIEvents}>
       <ProductsLoadingDialog />
       <Route path="/e-commerce/products/deleteProducts">
-        {({ history, match }) => (
+        {({ navigate, match }) => (
           <ProductsDeleteDialog
             show={match != null}
             onHide={() => {
-              history.push("/e-commerce/products");
+              navigate("/e-commerce/products");
             }}
           />
         )}
       </Route>
       <Route path="/e-commerce/products/:id/delete">
-        {({ history, match }) => (
+        {({ navigate, match }) => (
           <ProductDeleteDialog
             show={match != null}
             id={match && match.params.id}
             onHide={() => {
-              history.push("/e-commerce/products");
+              navigate("/e-commerce/products");
             }}
           />
         )}
       </Route>
       <Route path="/e-commerce/products/fetch">
-        {({ history, match }) => (
+        {({ navigate, match }) => (
           <ProductsFetchDialog
             show={match != null}
             onHide={() => {
-              history.push("/e-commerce/products");
+              navigate("/e-commerce/products");
             }}
           />
         )}
       </Route>
       <Route path="/e-commerce/products/updateStatus">
-        {({ history, match }) => (
+        {({ navigate, match }) => (
           <ProductsUpdateStatusDialog
             show={match != null}
             onHide={() => {
-              history.push("/e-commerce/products");
+              navigate("/e-commerce/products");
             }}
           />
         )}

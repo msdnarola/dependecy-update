@@ -1,31 +1,24 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-restricted-imports */
 import React from "react";
-import {makeStyles, emphasize, withStyles} from "@material-ui/core/styles";
-import {
-  Paper,
-  Breadcrumbs,
-  Link,
-  Typography,
-  Chip,
-  Avatar
-} from "@material-ui/core";
+import { makeStyles, emphasize, withStyles } from "@material-ui/core/styles";
+import { Paper, Breadcrumbs, Link, Typography, Chip, Avatar } from "@material-ui/core";
 import NavigateNextIcon from "@material-ui/icons/NavigateNext";
 import HomeIcon from "@material-ui/icons/Home";
 import WhatshotIcon from "@material-ui/icons/Whatshot";
 import GrainIcon from "@material-ui/icons/Grain";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import {Notice, KTCodeExample} from "../../../../_metronic/_partials/controls";
+import { Notice, KTCodeExample } from "../../../../_metronic/_partials/controls";
 
 // Example1
-const useStyles1 = makeStyles(theme => ({
+const useStyles1 = makeStyles((theme) => ({
   root: {
     justifyContent: "center",
-    flexWrap: "wrap"
+    flexWrap: "wrap",
   },
   paper: {
-    padding: theme.spacing(1, 2)
-  }
+    padding: theme.spacing(1, 2),
+  },
 }));
 
 function handleClick1(event) {
@@ -34,14 +27,14 @@ function handleClick1(event) {
 }
 
 // Example 2
-const useStyles2 = makeStyles(theme => ({
+const useStyles2 = makeStyles((theme) => ({
   root: {
     justifyContent: "center",
-    flexWrap: "wrap"
+    flexWrap: "wrap",
   },
   paper: {
-    padding: theme.spacing(1, 2)
-  }
+    padding: theme.spacing(1, 2),
+  },
 }));
 
 function handleClick2(event) {
@@ -50,18 +43,18 @@ function handleClick2(event) {
 }
 
 // Example 3
-const useStyles3 = makeStyles(theme => ({
+const useStyles3 = makeStyles((theme) => ({
   root: {
-    padding: theme.spacing(1, 2)
+    padding: theme.spacing(1, 2),
   },
   link: {
-    display: "flex"
+    display: "flex",
   },
   icon: {
     marginRight: theme.spacing(0.5),
     width: 20,
-    height: 20
-  }
+    height: 20,
+  },
 }));
 
 function handleClick3(event) {
@@ -70,14 +63,14 @@ function handleClick3(event) {
 }
 
 // Example 4
-const useStyles4 = makeStyles(theme => ({
+const useStyles4 = makeStyles((theme) => ({
   root: {
     justifyContent: "center",
-    flexWrap: "wrap"
+    flexWrap: "wrap",
   },
   paper: {
-    padding: theme.spacing(1, 2)
-  }
+    padding: theme.spacing(1, 2),
+  },
 }));
 
 function handleClick4(event) {
@@ -86,20 +79,20 @@ function handleClick4(event) {
 }
 
 // Example 5
-const StyledBreadcrumb = withStyles(theme => ({
+const StyledBreadcrumb = withStyles((theme) => ({
   root: {
     backgroundColor: theme.palette.grey[100],
     height: 24,
     color: theme.palette.grey[800],
     fontWeight: theme.typography.fontWeightRegular,
     "&:hover, &:focus": {
-      backgroundColor: theme.palette.grey[300]
+      backgroundColor: theme.palette.grey[300],
     },
     "&:active": {
       boxShadow: theme.shadows[1],
-      backgroundColor: emphasize(theme.palette.grey[300], 0.12)
-    }
-  }
+      backgroundColor: emphasize(theme.palette.grey[300], 0.12),
+    },
+  },
 }))(Chip); // TypeScript only: need a type cast here because https://github.com/Microsoft/TypeScript/issues/26591
 
 function handleClick5(event) {
@@ -107,14 +100,14 @@ function handleClick5(event) {
   alert("You clicked a breadcrumb.");
 }
 
-const useStyles5 = makeStyles(theme => ({
+const useStyles5 = makeStyles((theme) => ({
   root: {
-    padding: theme.spacing(1)
+    padding: theme.spacing(1),
   },
   avatar: {
     background: "none",
-    marginRight: -theme.spacing(1.5)
-  }
+    marginRight: -theme.spacing(1.5),
+  },
 }));
 
 export default function BreadcrumbsExamplesPage() {
@@ -136,17 +129,14 @@ export default function BreadcrumbsExamplesPage() {
   return (
     <>
       <Notice icon="flaticon-warning font-primary">
-        <span>
-          Breadcrumbs allow users to make selections from a range of values.
-        </span>{" "}
+        <span>Breadcrumbs allow users to make selections from a range of values.</span>{" "}
         <span>
           For more info please check the components's official{" "}
           <a
             target="_blank"
             className="font-weight-bold"
             rel="noopener noreferrer"
-            href="https://material-ui.com/components/breadcrumbs/"
-          >
+            href="https://material-ui.com/components/breadcrumbs/">
             demos & documentation
           </a>
         </span>
@@ -157,8 +147,7 @@ export default function BreadcrumbsExamplesPage() {
           <KTCodeExample
             jsCode={jsCode1}
             beforeCodeTitle="Simple breadcrumbs"
-            codeBlockHeight="400px"
-          >
+            codeBlockHeight="400px">
             <div className={classes1.root}>
               <Paper elevation={0} className={classes1.paper}>
                 <Breadcrumbs aria-label="Breadcrumb">
@@ -168,8 +157,7 @@ export default function BreadcrumbsExamplesPage() {
                   <Link
                     color="inherit"
                     href="/getting-started/installation/"
-                    onClick={handleClick1}
-                  >
+                    onClick={handleClick1}>
                     Core
                   </Link>
                   <Typography color="textPrimary">Breadcrumb</Typography>
@@ -184,16 +172,14 @@ export default function BreadcrumbsExamplesPage() {
                   <Link
                     color="inherit"
                     href="/getting-started/installation/"
-                    onClick={handleClick1}
-                  >
+                    onClick={handleClick1}>
                     Core
                   </Link>
                   <Link
                     color="textPrimary"
                     href="/components/breadcrumbs/"
                     onClick={handleClick1}
-                    aria-current="page"
-                  >
+                    aria-current="page">
                     Breadcrumb
                   </Link>
                 </Breadcrumbs>
@@ -203,16 +189,10 @@ export default function BreadcrumbsExamplesPage() {
           <KTCodeExample
             jsCode={jsCode3}
             beforeCodeTitle="Breadcrumbs with icons"
-            codeBlockHeight="400px"
-          >
+            codeBlockHeight="400px">
             <Paper elevation={0} className={classes3.root}>
               <Breadcrumbs aria-label="Breadcrumb">
-                <Link
-                  color="inherit"
-                  href="/"
-                  onClick={handleClick3}
-                  className={classes3.link}
-                >
+                <Link color="inherit" href="/" onClick={handleClick3} className={classes3.link}>
                   <HomeIcon className={classes3.icon} />
                   Material-UI
                 </Link>
@@ -220,8 +200,7 @@ export default function BreadcrumbsExamplesPage() {
                   color="inherit"
                   href="/getting-started/installation/"
                   onClick={handleClick3}
-                  className={classes3.link}
-                >
+                  className={classes3.link}>
                   <WhatshotIcon className={classes3.icon} />
                   Core
                 </Link>
@@ -235,11 +214,10 @@ export default function BreadcrumbsExamplesPage() {
           <KTCodeExample
             jsCode={jsCode5}
             beforeCodeTitle="Customized breadcrumbs"
-            codeBlockHeight="400px"
-          >
+            codeBlockHeight="400px">
             <span>
-              Here is an example of customizing the component. You can learn
-              more about this in the overrides documentation page.
+              Here is an example of customizing the component. You can learn more about this in the
+              overrides documentation page.
             </span>
             <div className="separator separator-dashed my-7"></div>
             <Paper elevation={0} className={classes5.root}>
@@ -255,12 +233,7 @@ export default function BreadcrumbsExamplesPage() {
                   }
                   onClick={handleClick5}
                 />
-                <StyledBreadcrumb
-                  component="a"
-                  href="#"
-                  label="Catalog"
-                  onClick={handleClick5}
-                />
+                <StyledBreadcrumb component="a" href="#" label="Catalog" onClick={handleClick5} />
                 <StyledBreadcrumb
                   label="Accessories"
                   deleteIcon={<ExpandMoreIcon />}
@@ -275,11 +248,9 @@ export default function BreadcrumbsExamplesPage() {
           <KTCodeExample
             jsCode={jsCode2}
             beforeCodeTitle="Custom separator"
-            codeBlockHeight="400px"
-          >
+            codeBlockHeight="400px">
             <span>
-              In the following examples, we are using two string separators, and
-              an SVG icon.
+              In the following examples, we are using two string separators, and an SVG icon.
             </span>
             <div className="separator separator-dashed my-7"></div>
             <div className={classes2.root}>
@@ -291,8 +262,7 @@ export default function BreadcrumbsExamplesPage() {
                   <Link
                     color="inherit"
                     href="/getting-started/installation/"
-                    onClick={handleClick2}
-                  >
+                    onClick={handleClick2}>
                     Core
                   </Link>
                   <Typography color="textPrimary">Breadcrumb</Typography>
@@ -307,8 +277,7 @@ export default function BreadcrumbsExamplesPage() {
                   <Link
                     color="inherit"
                     href="/getting-started/installation/"
-                    onClick={handleClick2}
-                  >
+                    onClick={handleClick2}>
                     Core
                   </Link>
                   <Typography color="textPrimary">Breadcrumb</Typography>
@@ -318,16 +287,14 @@ export default function BreadcrumbsExamplesPage() {
               <Paper elevation={0} className={classes2.paper}>
                 <Breadcrumbs
                   separator={<NavigateNextIcon fontSize="small" />}
-                  aria-label="Breadcrumb"
-                >
+                  aria-label="Breadcrumb">
                   <Link color="inherit" href="/" onClick={handleClick2}>
                     Material-UI
                   </Link>
                   <Link
                     color="inherit"
                     href="/getting-started/installation/"
-                    onClick={handleClick2}
-                  >
+                    onClick={handleClick2}>
                     Core
                   </Link>
                   <Typography color="textPrimary">Breadcrumb</Typography>
@@ -338,8 +305,7 @@ export default function BreadcrumbsExamplesPage() {
           <KTCodeExample
             jsCode={jsCode4}
             beforeCodeTitle="Collapsed breadcrumbs"
-            codeBlockHeight="400px"
-          >
+            codeBlockHeight="400px">
             <Paper elevation={0} className={classes4.paper}>
               <Breadcrumbs maxItems={2} aria-label="Breadcrumb">
                 <Link color="inherit" href="#" onClick={handleClick4}>
@@ -685,7 +651,8 @@ import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import Breadcrumbs from '@material-ui/core/Breadcrumbs';
 import { Route, MemoryRouter } from 'react-router';
-import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink } from 'react-router-dom-v5-compat';
+
 
 const breadcrumbNameMap = {
   '/inbox': 'Inbox',
@@ -772,7 +739,7 @@ class RouterBreadcrumbs extends React.Component {
                 </Breadcrumbs>
               );
             }}
-          </Route>
+         </Route>
           <nav className={classes.lists} aria-label="Mailbox folders">
             <List>
               <ListItemLink to="/inbox" open={this.state.open} onClick={this.handleClick} />

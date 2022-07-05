@@ -346,12 +346,11 @@ export default function ButtonsExamplesPage() {
               should be able to take advantage of it everywhere:
             </span>
             <div className="separator separator-dashed my-7"></div>
-            <Router>
-              <Button color="primary" component={AdapterLink} to="/">
-                Simple case
-              </Button>
-              <Button component={CollisionLink}>Avoids props collision</Button>
-            </Router>
+
+            <Button color="primary" component={AdapterLink} to="/">
+              Simple case
+            </Button>
+            <Button component={CollisionLink}>Avoids props collision</Button>
           </KTCodeExample>
 
           <KTCodeExample jsCode={jsCode7} beforeCodeTitle="Sizes" codeBlockHeight="400px">

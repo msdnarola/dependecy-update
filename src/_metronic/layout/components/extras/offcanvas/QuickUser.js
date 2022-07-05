@@ -1,20 +1,22 @@
 /* eslint-disable no-script-url,jsx-a11y/anchor-is-valid,no-undef */
 import React from "react";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 import SVG from "react-inlinesvg";
 import { shallowEqual, useSelector } from "react-redux";
-import { useHistory } from "react-router-dom";
+//import { useHistory } from "react-router-dom";
+
 import { toAbsoluteUrl } from "../../../../_helpers";
+import { Link, useNavigate } from "react-router-dom";
 
 export function QuickUser() {
-  const history = useHistory();
+  const navigate = useNavigate();
   const user = useSelector((state) => state.auth.user, shallowEqual);
   const logoutClick = () => {
     const toggle = document.getElementById("kt_quick_user_toggle");
     if (toggle) {
       toggle.click();
     }
-    history.push("/logout");
+    navigate("/logout");
   };
 
   return (

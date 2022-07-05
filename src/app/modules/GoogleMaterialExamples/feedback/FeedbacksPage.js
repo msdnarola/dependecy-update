@@ -1,5 +1,5 @@
 import React from "react";
-import { Redirect, Switch } from "react-router-dom";
+import { Redirect, Switch, Routes } from "react-router-dom";
 import { ContentRoute } from "../../../../_metronic/layout";
 import ProgressExamplesPage from "./ProgressExamplesPage";
 import DialogsExamplesPage from "./DialogsExamplesPage";
@@ -7,25 +7,19 @@ import SnackbarsExamplesPage from "./SnackbarsExamplesPage";
 
 export function FeedbackPage() {
   return (
-    <Switch>
+    <Routes>
       <Redirect
         exact={true}
         from="/google-material/feedback"
         to="/google-material/feedback/progress"
       />
 
-      <ContentRoute
-        path="/google-material/feedback/progress"
-        component={ProgressExamplesPage}
-      />
-      <ContentRoute
-        path="/google-material/feedback/dialogs"
-        component={DialogsExamplesPage}
-      />
+      <ContentRoute path="/google-material/feedback/progress" element={<ProgressExamplesPage />} />
+      <ContentRoute path="/google-material/feedback/dialogs" element={<DialogsExamplesPage />} />
       <ContentRoute
         path="/google-material/feedback/snackbars"
-        component={SnackbarsExamplesPage}
+        element={<SnackbarsExamplesPage />}
       />
-    </Switch>
+    </Routes>
   );
 }

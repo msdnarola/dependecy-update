@@ -32,7 +32,7 @@ const initProduct = {
 };
 
 export function ProductEdit({
-  history,
+  navigate,
   match: {
     params: { id },
   },
@@ -84,7 +84,7 @@ export function ProductEdit({
   };
 
   const backToProductsList = () => {
-    history.push(`/e-commerce/products`);
+    navigate(`/e-commerce/products`);
   };
 
   return (

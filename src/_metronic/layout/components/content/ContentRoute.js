@@ -1,11 +1,13 @@
 import React from "react";
-import {Route} from "react-router-dom";
-import {Content} from "./Content";
+import { Route } from "react-router-dom";
 
-export function ContentRoute({ children, component, render, ...props }) {
+import { Content } from "./Content";
+
+export function ContentRoute({ children, element, render, ...props }) {
   return (
-    <Route {...props}>
-      {routeProps => {
+    <Route
+      {...props}
+      element={(routeProps) => {
         if (typeof children === "function") {
           return <Content>{children(routeProps)}</Content>;
         }
@@ -18,10 +20,8 @@ export function ContentRoute({ children, component, render, ...props }) {
           return <Content>{children}</Content>;
         }
 
-        if (component) {
-          return (
-            <Content>{React.createElement(component, routeProps)}</Content>
-          );
+        if (element) {
+          return <Content>{React.createElement(element, routeProps)}</Content>;
         }
 
         if (render) {
@@ -29,7 +29,6 @@ export function ContentRoute({ children, component, render, ...props }) {
         }
 
         return null;
-      }}
-    </Route>
+      }}></Route>
   );
 }

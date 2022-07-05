@@ -1,6 +1,8 @@
 import React from "react";
-import {withRouter} from "react-router-dom";
-import {ProgressBar} from "react-bootstrap";
+// import { withRouter } from "react-router-dom";
+import { ProgressBar } from "react-bootstrap";
+
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 
 // TODO: Should be rewrited to pure function
 class AnimateLoading extends React.Component {
@@ -8,7 +10,7 @@ class AnimateLoading extends React.Component {
   stopAnimateTimeout;
   state = {
     width: 0,
-    routeChanged: false
+    routeChanged: false,
   };
 
   componentDidUpdate(nextProps) {
@@ -51,16 +53,24 @@ class AnimateLoading extends React.Component {
   }
   render() {
     return (
-      <div
-        className="header-progress-bar"
-        style={{ height: "3px", width: "100%" }}
-      >
+      <div className="header-progress-bar" style={{ height: "3px", width: "100%" }}>
         {this.state.width > 0 && (
-          <ProgressBar variant="primary" now={this.state.width} style={{ height: "3px" }}  />
+          <ProgressBar variant="primary" now={this.state.width} style={{ height: "3px" }} />
         )}
       </div>
     );
   }
+}
+
+function withRouter(Component) {
+  function ComponentWithRouterProp(props) {
+    let location = useLocation();
+    let navigate = useNavigate();
+    let params = useParams();
+    return <Component {...props} router={{ location, navigate, params }} />;
+  }
+
+  return ComponentWithRouterProp;
 }
 
 export default withRouter(AnimateLoading);

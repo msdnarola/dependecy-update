@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import { useFormik } from "formik";
 import { connect } from "react-redux";
 import * as Yup from "yup";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
+
 import { FormattedMessage, injectIntl } from "react-intl";
 import * as auth from "../_redux/authRedux";
 import { register } from "../_redux/authCrud";
+import { Link } from "react-router-dom";
 
 const initialValues = {
   fullname: "",
