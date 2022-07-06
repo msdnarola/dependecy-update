@@ -24,10 +24,7 @@ export function Layout({ children }) {
       selfLayout: objectPath.get(uiService.config, "self.layout"),
       asideDisplay: objectPath.get(uiService.config, "aside.self.display"),
       subheaderDisplay: objectPath.get(uiService.config, "subheader.display"),
-      desktopHeaderDisplay: objectPath.get(
-        uiService.config,
-        "header.self.fixed.desktop"
-      ),
+      desktopHeaderDisplay: objectPath.get(uiService.config, "header.self.fixed.desktop"),
       contentCssClasses: uiService.getClasses("content", true),
       contentContainerClasses: uiService.getClasses("content_container", true),
       contentExtended: objectPath.get(uiService.config, "content.extended"),
@@ -45,16 +42,12 @@ export function Layout({ children }) {
         {/*begin::Page*/}
         <div className="d-flex flex-row flex-column-fluid page">
           {/*begin::Wrapper*/}
-          <div
-            className="d-flex flex-column flex-row-fluid wrapper"
-            id="kt_wrapper"
-          >
+          <div className="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
             <Header />
             {/*begin::Content*/}
             <div
               id="kt_content"
-              className={`content ${layoutProps.contentCssClasses} d-flex flex-column flex-column-fluid`}
-            >
+              className={`content ${layoutProps.contentCssClasses} d-flex flex-column flex-column-fluid`}>
               {layoutProps.subheaderDisplay && <SubHeader />}
               {/*begin::Entry*/}
               {layoutProps.contentExtended && (
@@ -67,7 +60,6 @@ export function Layout({ children }) {
                   )}
 
                   {!layoutProps.asideDisplay && <>{children}</>}
-
                 </>
               )}
 
@@ -78,9 +70,7 @@ export function Layout({ children }) {
                     {layoutProps.asideDisplay && (
                       <div className="d-lg-flex flex-row-fluid">
                         <Aside />
-                        <div className="content-wrapper flex-row-fluid">
-                          {children}
-                        </div>
+                        <div className="content-wrapper flex-row-fluid">{children}</div>
                       </div>
                     )}
                     {!layoutProps.asideDisplay && <>{children}</>}
@@ -89,7 +79,6 @@ export function Layout({ children }) {
                 </div>
               )}
 
-              
               {/*end::Entry*/}
             </div>
             {/*end::Content*/}

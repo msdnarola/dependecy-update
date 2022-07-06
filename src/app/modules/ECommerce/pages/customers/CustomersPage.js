@@ -8,7 +8,6 @@ import { CustomersFetchDialog } from "./customers-fetch-dialog/CustomersFetchDia
 import { CustomersUpdateStateDialog } from "./customers-update-status-dialog/CustomersUpdateStateDialog";
 import { CustomersUIProvider } from "./CustomersUIContext";
 import { CustomersCard } from "./CustomersCard";
-import { Route } from "react-router-dom";
 
 export function CustomersPage({ navigate }) {
   const customersUIEvents = {

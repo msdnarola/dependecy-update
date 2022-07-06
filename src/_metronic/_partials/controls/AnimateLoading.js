@@ -14,7 +14,7 @@ class AnimateLoading extends React.Component {
   };
 
   componentDidUpdate(nextProps) {
-    if (this.props.location.pathname !== nextProps.location.pathname) {
+    if (this.props.location?.pathname !== nextProps.location?.pathname) {
       this.animate();
       this.scrollToTop();
     }

@@ -1,5 +1,5 @@
 import React from "react";
-import { Redirect, Routes } from "react-router-dom";
+import { Navigate, Routes, Route } from "react-router-dom";
 import { InputsPage } from "./inputs/InputsPage";
 import { DataDisplaysPage } from "./data-displays/DataDisplaysPage";
 import { FeedbackPage } from "./feedback/FeedbacksPage";
@@ -13,29 +13,32 @@ import { ContentRoute } from "../../../_metronic/layout";
 export default function GoogleMaterialPage() {
   return (
     <Routes>
-      <Redirect exact={true} from="/google-material" to="/google-material/inputs/autocomplete" />
+      <Route
+        from="/google-material"
+        element={<Navigate to={"/google-material/inputs/autocomplete"}></Navigate>}
+      />
       {/* Surfaces */}
-      <ContentRoute from="/google-material/surfaces" element={<SurfacesPage></SurfacesPage>} />
+      <Route from="/google-material/surfaces" element={<SurfacesPage></SurfacesPage>} />
 
       {/* Layout */}
-      <ContentRoute from="/google-material/layout" element={<LayoutPage />} />
+      <Route from="/google-material/layout" element={<LayoutPage />} />
 
       {/* Inputs */}
-      <ContentRoute from="/google-material/inputs" element={<InputsPage />} />
+      <Route from="/google-material/inputs" element={<InputsPage />} />
       {/* Data Display */}
-      <ContentRoute from="/google-material/data-displays" element={<DataDisplaysPage />} />
+      <Route from="/google-material/data-displays" element={<DataDisplaysPage />} />
 
       {/* Navigation */}
-      <ContentRoute from="/google-material/navigation" element={<NavigationPage />} />
+      <Route from="/google-material/navigation" element={<NavigationPage />} />
 
       {/* Feedback */}
-      <ContentRoute from="/google-material/feedback" element={<FeedbackPage />} />
+      <Route from="/google-material/feedback" element={<FeedbackPage />} />
 
       {/* Utils */}
-      <ContentRoute from="/google-material/utils" element={<UtilsPage />} />
+      <Route from="/google-material/utils" element={<UtilsPage />} />
 
       {/* Lab */}
-      <ContentRoute from="/google-material/labs" element={<LabsPage />} />
+      <Route from="/google-material/labs" element={<LabsPage />} />
     </Routes>
   );
 }

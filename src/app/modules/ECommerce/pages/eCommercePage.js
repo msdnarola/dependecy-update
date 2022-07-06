@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import { Redirect, Switch, Routes } from "react-router-dom";
+import { Switch, Routes, Route, Navigate } from "react-router-dom";
 import { CustomersPage } from "./customers/CustomersPage";
 import { ProductsPage } from "./products/ProductsPage";
 import { ProductEdit } from "./products/product-edit/ProductEdit";
@@ -11,12 +11,14 @@ export default function eCommercePage() {
       <Routes>
         {
           /* Redirect from eCommerce root URL to /customers */
-          <Redirect exact={true} from="/e-commerce" to="/e-commerce/customers" />
+          <Route
+            path="/e-commerce"
+            element={<Navigate to={"/e-commerce/customers"}></Navigate>}></Route>
         }
-        <ContentRoute path="/e-commerce/customers" element={<CustomersPage />} />
-        <ContentRoute path="/e-commerce/products/new" element={<ProductEdit />} />
-        <ContentRoute path="/e-commerce/products/:id/edit" element={<ProductEdit />} />
-        <ContentRoute path="/e-commerce/products" element={<ProductsPage />} />
+        <Route path="/e-commerce/customers" element={<CustomersPage />} />
+        <Route path="/e-commerce/products/new" element={<ProductEdit />} />
+        <Route path="/e-commerce/products/:id/edit" element={<ProductEdit />} />
+        <Route path="/e-commerce/products" element={<ProductsPage />} />
       </Routes>
     </Suspense>
   );

@@ -23,6 +23,7 @@ const dudUrl = "#";
 
 export default function LinksExamplesPage() {
   const classes1 = useStyles1();
+  const AdapterLink = React.forwardRef((props, ref) => <Link innerRef={ref} {...props} />);
 
   return (
     <>

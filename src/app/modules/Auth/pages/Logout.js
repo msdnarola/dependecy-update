@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Redirect } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import { LayoutSplashScreen } from "../../../../_metronic/layout";
 import * as auth from "../_redux/authRedux";
 
@@ -11,7 +11,7 @@ class Logout extends Component {
 
   render() {
     const { hasAuthToken } = this.props;
-    return hasAuthToken ? <LayoutSplashScreen /> : <Redirect to="/auth/login" />;
+    return hasAuthToken ? <LayoutSplashScreen /> : <Navigate to="/auth/login" />;
   }
 }
 

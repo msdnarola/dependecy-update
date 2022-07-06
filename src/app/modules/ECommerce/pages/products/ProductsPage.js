@@ -7,7 +7,6 @@ import { ProductsFetchDialog } from "./products-fetch-dialog/ProductsFetchDialog
 import { ProductsUpdateStatusDialog } from "./products-update-status-dialog/ProductsUpdateStatusDialog";
 import { ProductsCard } from "./ProductsCard";
 import { ProductsUIProvider } from "./ProductsUIContext";
-import { Route } from "react-router-dom";
 
 export function ProductsPage({ navigate }) {
   const productsUIEvents = {

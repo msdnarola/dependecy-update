@@ -1,5 +1,5 @@
 import React from "react";
-import { Redirect, Switch, Routes } from "react-router-dom";
+import { Switch, Routes, Route } from "react-router-dom";
 import { ContentRoute } from "../../../../_metronic/layout";
 import ClickAwayListenerExamplesPage from "./ClickAwayListenerExamplesPage";
 import ModalExamplesPage from "./ModalExamplesPage";
@@ -13,25 +13,22 @@ import UseMediaQueryExamplesPage from "./UseMediaQueryExamplesPage";
 export function UtilsPage() {
   return (
     <Routes>
-      <Redirect
+      {/* <Redirect
         exact={true}
         from="/google-material/utils"
         to="/google-material/utils/click-away-listener"
-      />
-      <ContentRoute
+      /> */}
+      <Route
         path="/google-material/utils/click-away-listener"
         component={ClickAwayListenerExamplesPage}
       />
-      <ContentRoute path="/google-material/utils/modal" component={ModalExamplesPage} />
-      <ContentRoute path="/google-material/utils/no-ssr" component={NoSSRExamplesPage} />
-      <ContentRoute path="/google-material/utils/popover" component={PopoverExamplesPage} />
-      <ContentRoute path="/google-material/utils/popper" component={PopperExamplesPage} />
-      <ContentRoute path="/google-material/utils/portal" component={PortalExamplesPage} />
-      <ContentRoute path="/google-material/utils/transitions" component={TransitionsExamplesPage} />
-      <ContentRoute
-        path="/google-material/utils/use-media-query"
-        component={UseMediaQueryExamplesPage}
-      />
+      <Route path="/google-material/utils/modal" component={ModalExamplesPage} />
+      <Route path="/google-material/utils/no-ssr" component={NoSSRExamplesPage} />
+      <Route path="/google-material/utils/popover" component={PopoverExamplesPage} />
+      <Route path="/google-material/utils/popper" component={PopperExamplesPage} />
+      <Route path="/google-material/utils/portal" component={PortalExamplesPage} />
+      <Route path="/google-material/utils/transitions" component={TransitionsExamplesPage} />
+      <Route path="/google-material/utils/use-media-query" component={UseMediaQueryExamplesPage} />
     </Routes>
   );
 }

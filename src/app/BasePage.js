@@ -1,10 +1,9 @@
 import React, { Suspense, lazy } from "react";
-import { Redirect, Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import { LayoutSplashScreen, ContentRoute } from "../_metronic/layout";
 import { BuilderPage } from "./pages/BuilderPage";
 import { MyPage } from "./pages/MyPage";
 import { DashboardPage } from "./pages/DashboardPage";
-import { Route } from "react-router-dom";
 
 const GoogleMaterialPage = lazy(() =>
   import("./modules/GoogleMaterialExamples/GoogleMaterialPage")
@@ -26,16 +25,16 @@ export default function BasePage() {
       <Routes>
         {
           /* Redirect from root URL to /dashboard. */
-          <Redirect exact from="/" to="/dashboard" />
+          <Route path="/" element={<Navigate to={"/dashboard"} />}></Route>
         }
-        <ContentRoute path="/dashboard" element={<DashboardPage />} />
-        <ContentRoute path="/builder" element={<BuilderPage />} />
-        <ContentRoute path="/my-page" element={<MyPage />} />
+        <Route path="/dashboard/" element={<DashboardPage />} />
+        <Route path="/builder" element={<BuilderPage />} />
+        <Route path="/my-page" element={<MyPage />} />
         <Route path="/google-material" element={<GoogleMaterialPage />} />
         <Route path="/react-bootstrap" element={<ReactBootstrapPage />} />
         <Route path="/e-commerce" element={<ECommercePage />} />
         <Route path="/user-profile" element={<UserProfilepage />} />
-        <Redirect to="error/error-v1" />
+        <Route path="*" element={<Navigate to={"error/error-v1"} />} />
       </Routes>
     </Suspense>
   );
