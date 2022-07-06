@@ -4,21 +4,21 @@
 
 
 @mixin switch-size($margin, $width, $height, $line-height, $space, $checked-tick-pos, $icon-font-size) {
-    input:empty ~ span {
+    input:empty~span {
         //line-height: $line-height;
         margin: $margin;
         height: $height;
         width: $width + $space;
-        border-radius: ($height/2);
+        border-radius: calc($height/2);
     }
 
-    input:empty ~ span:before,
-    input:empty ~ span:after {
+    input:empty~span:before,
+    input:empty~span:after {
         width: $width;
-        border-radius: ($height/2);
+        border-radius: calc($height/2);
     }
 
-    input:empty ~ span:after {
+    input:empty~span:after {
         height: $height - 2 * $space;
         width: $height - 2 * $space;
         //line-height: $line-height;
@@ -30,31 +30,33 @@
         vertical-align: middle;
     }
 
-    input:checked ~ span:after {
+    input:checked~span:after {
         margin-left: $checked-tick-pos;
     }
 }
 
 @mixin switch-default-theme($base, $tick, $checked-base, $checked-tick-bg, $checked-tick-color) {
+
     // Base
-    input:empty ~ span:before {
+    input:empty~span:before {
         background-color: $base;
     }
 
     // Tick
-    input:empty ~ span:after {
+    input:empty~span:after {
         background-color: $tick;
         opacity: 0.7;
     }
 
     input:checked {
+
         // Base
-        ~ span:before {
+        ~span:before {
             background-color: $checked-base;
         }
 
         // Tick
-        ~ span:after {
+        ~span:after {
             opacity: 1;
             color: $checked-tick-color;
             background-color: $checked-tick-bg;
@@ -63,26 +65,28 @@
 }
 
 @mixin switch-outline-theme($outline, $tick-bg, $checked-outline, $checked-tick-bg, $checked-tick-color) {
+
     // Base
-    input:empty ~ span:before {
+    input:empty~span:before {
         border: 2px solid $outline;
         background-color: transparent;
     }
 
     // Tick
-    input:empty ~ span:after {
+    input:empty~span:after {
         background-color: $tick-bg;
     }
 
     input:checked {
+
         // Base
-        ~ span:before {
+        ~span:before {
             border: 2px solid $checked-outline;
             background-color: transparent;
         }
 
         // Tick
-        ~ span:after {
+        ~span:after {
             color: $checked-tick-color;
             background-color: $checked-tick-bg;
         }

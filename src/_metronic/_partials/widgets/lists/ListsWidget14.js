@@ -13,7 +13,7 @@ export function ListsWidget14({ className }) {
         <div className="card-header border-0">
           <h3 className="card-title font-weight-bolder text-dark">Market Leaders</h3>
           <div className="card-toolbar">
-            <Dropdown className="dropdown-inline" alignRight>
+            <Dropdown className="dropdown-inline" alignright="true">
               <Dropdown.Toggle id="dropdown-toggle-top" as={DropdownCustomToggler}>
                 <i className="ki ki-bold-more-ver" />
               </Dropdown.Toggle>

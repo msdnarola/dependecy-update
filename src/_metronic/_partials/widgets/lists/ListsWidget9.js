@@ -14,7 +14,7 @@ export function ListsWidget9({ className }) {
             <span className="text-muted mt-3 font-weight-bold font-size-sm">890,344 Sales</span>
           </h3>
           <div className="card-toolbar">
-            <Dropdown className="dropdown-inline" alignRight>
+            <Dropdown className="dropdown-inline" alignright="true">
               <Dropdown.Toggle id="dropdown-toggle-top" as={DropdownCustomToggler}>
                 <i className="ki ki-bold-more-hor" />
               </Dropdown.Toggle>

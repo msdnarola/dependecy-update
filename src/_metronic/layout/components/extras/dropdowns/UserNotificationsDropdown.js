@@ -40,7 +40,7 @@ export function UserNotificationsDropdown() {
         </div>
       )}
       {!layoutProps.offcanvas && (
-        <Dropdown drop="down" alignRight>
+        <Dropdown drop="down" alignright="true">
           <Dropdown.Toggle as={DropdownTopbarItemToggler} id="kt_quick_notifications_toggle">
             <OverlayTrigger
               placement="bottom"

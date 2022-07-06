@@ -14,7 +14,7 @@ export function ListsWidget11({ className }) {
           <h3 className="card-title font-weight-bolder text-dark">Trends</h3>
 
           <div className="card-toolbar">
-            <Dropdown className="dropdown-inline" alignRight>
+            <Dropdown className="dropdown-inline" alignright="true">
               <Dropdown.Toggle id="dropdown-toggle-top" as={DropdownCustomToggler}>
                 <i className="ki ki-bold-more-ver" />
               </Dropdown.Toggle>

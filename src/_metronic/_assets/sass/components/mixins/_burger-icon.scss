@@ -3,7 +3,7 @@
 //
 
 @mixin burger-icon-build($config) {
-	$space: get($config, thickness) + get($config, space);
+	$space: get($config, thickness)+get($config, space);
 
 	@include button-reset();
 
@@ -19,7 +19,7 @@
 	border-radius: none;
 	border: none;
 	cursor: pointer;
-	background-color:none;
+	background-color: none;
 	outline: none !important;
 	width: get($config, width);
 	height: get($config, height);
@@ -27,144 +27,144 @@
 
 	span {
 		display: block;
-  		position: absolute;
+		position: absolute;
 		@include border-radius(get($config, radius));
 		transition: get($config, transition);
-  		top: (get($config, height) / 2) - (get($config, thickness)) + 1px;
-  		height: get($config, thickness);
-  		min-height: get($config, thickness);
-  		width: 100%;
+		top: calc(get($config, height) / 2) - (get($config, thickness)) + 1px;
+		height: get($config, thickness);
+		min-height: get($config, thickness);
+		width: 100%;
 
-  		&::before,
-  		&::after {
-  			position: absolute;
-		  	display: block;
-		  	left: 0;
-		  	width: 100%;
-		  	height: get($config, thickness);
-		  	min-height: get($config, thickness);
-		  	content: "";
-		  	transition: get($config, transition);
+		&::before,
+		&::after {
+			position: absolute;
+			display: block;
+			left: 0;
+			width: 100%;
+			height: get($config, thickness);
+			min-height: get($config, thickness);
+			content: "";
+			transition: get($config, transition);
 			@include border-radius(get($config, radius));
-  		}
+		}
 
-  		&::before {
-  			top: -($space);
-  		}
+		&::before {
+			top: -($space);
+		}
 
-  		&::after {
-  			bottom: -($space);
-  		}
+		&::after {
+			bottom: -($space);
+		}
 	}
 
-    // Left Direction
-    &-left {
-    	span {
-    		&:before {
-    			transition: get($config, transition);
-    			left: auto;
-    			right: 0px;
-    			width: 50%;
-    		}
+	// Left Direction
+	&-left {
+		span {
+			&:before {
+				transition: get($config, transition);
+				left: auto;
+				right: 0px;
+				width: 50%;
+			}
 
-    		&:after {
-    			transition: get($config, transition);
-    			left: auto;
-    			right: 0px;
-    			width: 75%;
-    		}
-    	}
+			&:after {
+				transition: get($config, transition);
+				left: auto;
+				right: 0px;
+				width: 75%;
+			}
+		}
 
-    	// Active State
-	    &-active {
-	    	span {
-	    		&:before {
-	    			transition: get($config, transition);
-	    			left: 0px;
-	    			right: auto;
-	    			width: 50%;
-	    		}
+		// Active State
+		&-active {
+			span {
+				&:before {
+					transition: get($config, transition);
+					left: 0px;
+					right: auto;
+					width: 50%;
+				}
 
-	    		&:after {
-	    			transition: get($config, transition);
-	    			left: 0px;
-	    			right: auto;
-	    			width: 75%;
-	    		}
-	    	}
-	    }
-    }
+				&:after {
+					transition: get($config, transition);
+					left: 0px;
+					right: auto;
+					width: 75%;
+				}
+			}
+		}
+	}
 
-    // Right Direction
-    &-right {
-    	span {
-	    	&:before {
-	    		left: 0px;
-	    		right: auto;
-	    		width: 50%;
-	    		transition: get($config, transition);
-	    	}
+	// Right Direction
+	&-right {
+		span {
+			&:before {
+				left: 0px;
+				right: auto;
+				width: 50%;
+				transition: get($config, transition);
+			}
 
-	    	&:after {
-	    		left: 0px;
-	    		right: auto;
-	    		width: 75%;
-	    		transition: get($config, transition);
-	    	}
-	    }
+			&:after {
+				left: 0px;
+				right: auto;
+				width: 75%;
+				transition: get($config, transition);
+			}
+		}
 
-    	// Active State
-	    &-active {
-	    	span {
-	    		&:before {
-	    			left: auto;
-    				right: 0px;
-	    			width: 50%;
-	    			transition: get($config, transition);
-	    		}
+		// Active State
+		&-active {
+			span {
+				&:before {
+					left: auto;
+					right: 0px;
+					width: 50%;
+					transition: get($config, transition);
+				}
 
-	    		&:after {
-	    			left: auto;
-    				right: 0px;
-	    			width: 75%;
-	    			transition: get($config, transition);
-	    		}
-	    	}
-	    }
-    }
+				&:after {
+					left: auto;
+					right: 0px;
+					width: 75%;
+					transition: get($config, transition);
+				}
+			}
+		}
+	}
 }
 
 @mixin burger-icon-theme($default, $hover, $active) {
 	span {
- 		background-color: $default;
+		background-color: $default;
 
-  		&::before,
-  		&::after {
-		  	background-color: $default;
-  		}
+		&::before,
+		&::after {
+			background-color: $default;
+		}
 	}
 
-    // Hover State
-    &:hover {
-    	span {
-	    	background-color: $hover;
+	// Hover State
+	&:hover {
+		span {
+			background-color: $hover;
 
-	    	&::before,
-	  		&::after {
-	  			background-color: $hover;
-	  		}
-	  	}
-    }
+			&::before,
+			&::after {
+				background-color: $hover;
+			}
+		}
+	}
 
 	// Active State
-    &-active {
+	&-active {
 		span {
-	    	background-color: $active;
+			background-color: $active;
 
-	    	&::before,
-	  		&::after {
-	  			background-color: $active;
-	  		}
-	  	}
+			&::before,
+			&::after {
+				background-color: $active;
+			}
+		}
 	}
 }

@@ -19,7 +19,7 @@ export function UserProfileDropdown() {
   }, [uiService]);
 
   return (
-    <Dropdown drop="down" alignRight>
+    <Dropdown drop="down" alignright="true">
       <Dropdown.Toggle as={DropdownTopbarItemToggler} id="dropdown-toggle-user-profile">
         <div
           className={

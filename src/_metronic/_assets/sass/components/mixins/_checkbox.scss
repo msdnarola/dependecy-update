@@ -4,59 +4,61 @@
 
 
 @mixin checkbox-solid-theme($bg-color, $checked-bg-color, $checked-tick-color) {
-	// Default state
-    > span {
+
+    // Default state
+    >span {
         background-color: $bg-color;
         border: 1px solid transparent;
     }
 
-	// Focus state
-    > input:focus ~ span {
+    // Focus state
+    >input:focus~span {
         border: 1px solid transparent;
     }
 
-	// Checked state
-    > input:checked ~ span {
+    // Checked state
+    >input:checked~span {
         background-color: $checked-bg-color;
 
-		&:after {
+        &:after {
             border-color: $checked-tick-color;
         }
     }
 }
 
 @mixin checkbox-outline-theme($outline-color, $checked-outline-color, $checked-tick-color) {
-	// Default state
-	> span {
-		background-color: transparent;
+
+    // Default state
+    >span {
+        background-color: transparent;
         border-color: $outline-color;
     }
 
-	// Focus state
-	> input:focus ~ span {
-		background-color: transparent;
+    // Focus state
+    >input:focus~span {
+        background-color: transparent;
         border-color: $outline-color;
     }
 
-	// Checked state
-    > input:checked ~ span {
-		background-color: transparent;
+    // Checked state
+    >input:checked~span {
+        background-color: transparent;
         border-color: $checked-outline-color;
 
-		&:after {
+        &:after {
             border-color: $checked-tick-color;
         }
     }
 }
 
 @mixin checkbox-size($base, $tick) {
-	> span {
+    >span {
         height: $base;
         width: $base;
 
-		&:after {
-            width: $tick / 2;
+        &:after {
+            width: calc($tick / 2);
             height: $tick;
-		}
-	}
+        }
+    }
 }

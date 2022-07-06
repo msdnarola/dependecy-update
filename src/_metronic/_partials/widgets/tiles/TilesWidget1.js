@@ -51,7 +51,7 @@ export function TilesWidget1({ className, chartColor = "danger" }) {
             </div>
           </div>
           <div className="card-toolbar">
-            <Dropdown className="dropdown-inline" alignRight>
+            <Dropdown className="dropdown-inline" alignright="true">
               <Dropdown.Toggle
                 className="btn btn-clean btn-hover-light-primary btn-sm btn-icon"
                 variant="transparent"

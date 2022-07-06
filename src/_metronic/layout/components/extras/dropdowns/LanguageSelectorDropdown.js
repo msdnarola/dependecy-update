@@ -44,7 +44,7 @@ export function LanguageSelectorDropdown() {
   const lang = useLang();
   const currentLanguage = languages.find((x) => x.lang === lang);
   return (
-    <Dropdown drop="down" alignRight>
+    <Dropdown drop="down" alignright="true">
       <Dropdown.Toggle as={DropdownTopbarItemToggler} id="dropdown-toggle-my-cart">
         <OverlayTrigger
           placement="bottom"

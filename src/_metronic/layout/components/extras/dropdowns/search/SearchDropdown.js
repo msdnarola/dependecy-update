@@ -156,7 +156,7 @@ export function SearchDropdown() {
       )}
       {!layoutProps.offcanvas && (
         <Dropdown
-          alignRight
+          alignright="true"
           drop="down"
           onToggle={() => {
             setData(null);

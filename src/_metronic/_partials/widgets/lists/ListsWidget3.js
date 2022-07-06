@@ -13,7 +13,7 @@ export function ListsWidget3({ className }) {
         <div className="card-header border-0">
           <h3 className="card-title font-weight-bolder text-dark">Authors</h3>
           <div className="card-toolbar">
-            <Dropdown className="dropdown-inline" drop="down" alignRight>
+            <Dropdown className="dropdown-inline" drop="down" alignright="true">
               <Dropdown.Toggle
                 id="dropdown-toggle-top2"
                 variant="transparent"
@@ -120,7 +120,7 @@ export function ListsWidget3({ className }) {
 const ItemDropdown = ({ item }) => {
   return (
     <>
-      <Dropdown className="dropdown-inline" alignRight>
+      <Dropdown className="dropdown-inline" alignright="true">
         <Dropdown.Toggle id="dropdown-toggle-top" as={DropdownCustomToggler}>
           <i className="ki ki-bold-more-hor" />
         </Dropdown.Toggle>

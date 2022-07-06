@@ -43,7 +43,7 @@ export function MixedWidget1({ className }) {
       <div className="card-header border-0 bg-danger py-5">
         <h3 className="card-title font-weight-bolder text-white">Sales Stat</h3>
         <div className="card-toolbar">
-          <Dropdown className="dropdown-inline" drop="down" alignRight>
+          <Dropdown className="dropdown-inline" drop="down" alignright="true">
             <Dropdown.Toggle
               className="btn btn-transparent-white btn-sm font-weight-bolder dropdown-toggle px-5"
               variant="transparent"

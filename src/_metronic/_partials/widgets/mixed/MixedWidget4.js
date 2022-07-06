@@ -44,7 +44,7 @@ export function MixedWidget4({ className, chartColor = "danger" }) {
         <div className="card-header border-0 pt-5">
           <h3 className="card-title font-weight-bolder text-white">Sales Progress</h3>
           <div className="card-toolbar">
-            <Dropdown className="dropdown-inline" alignRight>
+            <Dropdown className="dropdown-inline" alignright="true">
               <Dropdown.Toggle
                 className="btn btn-text-white btn-hover-white btn-sm btn-icon border-0"
                 variant="transparent"
