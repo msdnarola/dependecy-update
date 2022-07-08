@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Routes, Route } from "react-router-dom";
+import { Route } from "react-router-dom";
 import ButtonsExamplesPage from "./ButtonsExamplesPage";
 import CheckboxesExamplesPage from "./CheckboxesExamplesPage";
 import PickersExamplesPage from "./PickersExamplesPage";
@@ -9,26 +9,19 @@ import SwitchesExamplesPage from "./SwitchesExamplesPage";
 import TextFieldsExamplesPage from "./TextFieldsExamplesPage";
 import TransferListExamplesPage from "./TransferListExamplesPage";
 import AutocompleteExamplesPage from "./AutocompleteExamplesPage";
-import { ContentRoute } from "../../../../_metronic/layout";
 
 export function InputsPage() {
   return (
-    <Routes>
-      {/* <Redirect
-        exact={true}
-        from="/google-material/inputs"
-        to="/google-material/inputs/autocomplete"
-      /> */}
-
-      <Route path="/google-material/inputs/autocomplete" component={AutocompleteExamplesPage} />
-      <Route path="/google-material/inputs/buttons" component={ButtonsExamplesPage} />
-      <Route path="/google-material/inputs/checkboxes" component={CheckboxesExamplesPage} />
-      <Route path="/google-material/inputs/pickers" component={PickersExamplesPage} />
-      <Route path="/google-material/inputs/radio-buttons" component={RadioButtonsExamplesPage} />
-      <Route path="/google-material/inputs/selects" component={SelectsExamplesPage} />
-      <Route path="/google-material/inputs/switches" component={SwitchesExamplesPage} />
-      <Route path="/google-material/inputs/text-fields" component={TextFieldsExamplesPage} />
-      <Route path="/google-material/inputs/transfer-list" component={TransferListExamplesPage} />
-    </Routes>
+    <>
+      <Route path="inputs/autocomplete" element={<AutocompleteExamplesPage />} />
+      <Route path="inputs/buttons" element={<ButtonsExamplesPage></ButtonsExamplesPage>} />
+      <Route path="inputs/checkboxes" element={<CheckboxesExamplesPage />} />
+      <Route path="inputs/pickers" element={<PickersExamplesPage />} />
+      <Route path="inputs/radio-buttons" element={<RadioButtonsExamplesPage />} />
+      <Route path="inputs/selects" element={<SelectsExamplesPage />} />
+      <Route path="inputs/switches" element={<SwitchesExamplesPage />} />
+      <Route path="inputs/text-fields" element={<TextFieldsExamplesPage />} />
+      <Route path="inputs/transfer-list" element={<TransferListExamplesPage />} />
+    </>
   );
 }

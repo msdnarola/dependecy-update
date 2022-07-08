@@ -14,8 +14,9 @@ import { QuickUser } from "./extras/offcanvas/QuickUser";
 import { ScrollTop } from "./extras/ScrollTop";
 import { StickyToolbar } from "./extras/StickyToolbar";
 import { AnimateLoading } from "../../_partials/controls";
+import { Outlet } from "react-router-dom";
 
-export function Layout({ children }) {
+export function Layout({ children, nooutlet = false }) {
   const uiService = useHtmlClassService();
   // Layout settings (cssClasses/cssAttributes)
   const layoutProps = useMemo(() => {
@@ -70,10 +71,18 @@ export function Layout({ children }) {
                     {layoutProps.asideDisplay && (
                       <div className="d-lg-flex flex-row-fluid">
                         <Aside />
-                        <div className="content-wrapper flex-row-fluid">{children}</div>
+                        <div className="content-wrapper flex-row-fluid">
+                          {children}
+                          {!nooutlet && <Outlet></Outlet>}
+                        </div>
                       </div>
                     )}
-                    {!layoutProps.asideDisplay && <>{children}</>}
+                    {!layoutProps.asideDisplay && (
+                      <>
+                        {children}
+                        {!nooutlet && <Outlet></Outlet>}
+                      </>
+                    )}
                   </div>
                   {/*end::Container*/}
                 </div>
@@ -97,6 +106,9 @@ export function Layout({ children }) {
     </>
   ) : (
     // BLANK LAYOUT
-    <div className="d-flex flex-column flex-root">{children}</div>
+    <div className="d-flex flex-column flex-root">
+      {children}
+      {!nooutlet && <Outlet></Outlet>}
+    </div>
   );
 }

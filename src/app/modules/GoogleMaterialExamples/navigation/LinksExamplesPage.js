@@ -3,7 +3,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Link, Typography } from "@material-ui/core";
-import { MemoryRouter as Router } from "react-router";
 //import { Link as RouterLink } from "react-router-dom";
 import { Link as RouterLink } from "react-router-dom";
 import { Notice, KTCodeExample } from "../../../../_metronic/_partials/controls";

@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Routes, Route } from "react-router-dom";
+import { Route } from "react-router-dom";
 import AccordionExamplesPage from "./AccordionExamplesPage";
 import AlertExamplesPage from "./AlertExamplesPage";
 import BadgeExamplesPage from "./BadgeExamplesPage";
@@ -27,40 +27,39 @@ import TableExamplesPage from "./TableExamplesPage";
 import TabsExamplesPage from "./TabsExamplesPage";
 import TooltipsExamplesPage from "./TooltipsExamplesPage";
 import ToastsExamplesPage from "./ToastsExamplesPage";
-import { ContentRoute } from "../../../_metronic/layout";
 
 export default function ReactBootstrapPage() {
   return (
-    <Routes>
-      {/* <Redirect exact={true} from="/react-bootstrap" to="/react-bootstrap/accordion" /> */}
+    <>
+      {/* <Redirect exact={true} from="" to="react-bootstrap/accordion" /> */}
 
-      <Route path="/react-bootstrap/accordion" component={AccordionExamplesPage} />
-      <Route path="/react-bootstrap/alert" component={AlertExamplesPage} />
-      <Route path="/react-bootstrap/badge" component={BadgeExamplesPage} />
-      <Route path="/react-bootstrap/breadcrumb" component={BreadcrumbExamplesPage} />
-      <Route path="/react-bootstrap/buttons" component={ButtonsExamplesPage} />
-      <Route path="/react-bootstrap/button-group" component={ButtonGroupExamplesPage} />
-      <Route path="/react-bootstrap/cards" component={CardsExamplesPage} />
-      <Route path="/react-bootstrap/carousel" component={CarouselExamplesPage} />
-      <Route path="/react-bootstrap/dropdowns" component={DropdownsExamplesPage} />
-      <Route path="/react-bootstrap/forms" component={FormsExamplesPage} />
-      <Route path="/react-bootstrap/input-group" component={InputGroupExamplesPage} />
-      <Route path="/react-bootstrap/images" component={ImagesExamplesPage} />
-      <Route path="/react-bootstrap/figures" component={FiguresExamplesPage} />
-      <Route path="/react-bootstrap/jumbotron" component={JumbotronExamplesPage} />
-      <Route path="/react-bootstrap/list-group" component={ListGroupExamplesPage} />
-      <Route path="/react-bootstrap/modal" component={ModalExamplesPage} />
-      <Route path="/react-bootstrap/navs" component={NavsExamplesPage} />
-      <Route path="/react-bootstrap/navbar" component={NavbarExamplesPage} />
-      <Route path="/react-bootstrap/overlays" component={OverlaysExamplesPage} />
-      <Route path="/react-bootstrap/pagination" component={PaginationExamplesPage} />
-      <Route path="/react-bootstrap/popovers" component={PopoversExamplesPage} />
-      <Route path="/react-bootstrap/progress" component={ProgressExamplesPage} />
-      <Route path="/react-bootstrap/spinners" component={SpinnersExamplesPage} />
-      <Route path="/react-bootstrap/table" component={TableExamplesPage} />
-      <Route path="/react-bootstrap/tabs" component={TabsExamplesPage} />
-      <Route path="/react-bootstrap/tooltips" component={TooltipsExamplesPage} />
-      <Route path="/react-bootstrap/toasts" component={ToastsExamplesPage} />
-    </Routes>
+      <Route path="accordion" element={<AccordionExamplesPage />} />
+      <Route path="alert" element={<AlertExamplesPage />} />
+      <Route path="badge" element={<BadgeExamplesPage />} />
+      <Route path="breadcrumb" element={<BreadcrumbExamplesPage />} />
+      <Route path="buttons" element={<ButtonsExamplesPage />} />
+      <Route path="button-group" element={<ButtonGroupExamplesPage />} />
+      <Route path="cards" element={<CardsExamplesPage />} />
+      <Route path="carousel" element={<CarouselExamplesPage />} />
+      <Route path="dropdowns" element={<DropdownsExamplesPage />} />
+      <Route path="forms" element={<FormsExamplesPage />} />
+      <Route path="input-group" element={<InputGroupExamplesPage />} />
+      <Route path="images" element={<ImagesExamplesPage />} />
+      <Route path="figures" element={<FiguresExamplesPage />} />
+      <Route path="jumbotron" element={<JumbotronExamplesPage />} />
+      <Route path="list-group" element={<ListGroupExamplesPage />} />
+      <Route path="modal" element={<ModalExamplesPage />} />
+      <Route path="navs" element={<NavsExamplesPage />} />
+      <Route path="navbar" element={<NavbarExamplesPage />} />
+      <Route path="overlays" element={<OverlaysExamplesPage />} />
+      <Route path="pagination" element={<PaginationExamplesPage />} />
+      <Route path="popovers" element={<PopoversExamplesPage />} />
+      <Route path="progress" element={<ProgressExamplesPage />} />
+      <Route path="spinners" element={<SpinnersExamplesPage />} />
+      <Route path="table" element={<TableExamplesPage />} />
+      <Route path="tabs" element={<TabsExamplesPage />} />
+      <Route path="tooltips" element={<TooltipsExamplesPage />} />
+      <Route path="toasts" element={<ToastsExamplesPage />} />
+    </>
   );
 }

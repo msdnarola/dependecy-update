@@ -2,7 +2,6 @@
 import React from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import { toAbsoluteUrl } from "../../../../_metronic/_helpers";
-import { ContentRoute } from "../../../../_metronic/layout";
 import Login from "./Login";
 import Registration from "./Registration";
 import ForgotPassword from "./ForgotPassword";

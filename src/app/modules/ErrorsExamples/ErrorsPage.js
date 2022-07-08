@@ -1,6 +1,5 @@
 import React from "react";
-import { Route, Switch, Routes } from "react-router-dom";
-
+import { Route, Routes } from "react-router-dom";
 import { ErrorPage1 } from "./ErrorPage1";
 import { ErrorPage2 } from "./ErrorPage2";
 import { ErrorPage3 } from "./ErrorPage3";

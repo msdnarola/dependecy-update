@@ -1,6 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
-import { ContentRoute } from "../../../../_metronic/layout";
+import { Route } from "react-router-dom";
 import AvatarsExamplesPage from "./AvatarsExamplesPage";
 import BadgesExamplesPage from "./BadgesExamplesPage";
 import ChipsExamplesPage from "./ChipsExamplesPage";
@@ -13,17 +12,17 @@ import TypographyExamplesPage from "./TypographyExamplesPage";
 
 export function DataDisplaysPage() {
   return (
-    <Routes>
+    <>
       {/* <Redirect exact={true} from="/google-material" to="/google-material/data-displays/avatars" /> */}
-      <Route path="/google-material/data-displays/avatars" component={AvatarsExamplesPage} />
-      <Route path="/google-material/data-displays/badges" component={BadgesExamplesPage} />
-      <Route path="/google-material/data-displays/chips" component={ChipsExamplesPage} />
-      <Route path="/google-material/data-displays/dividers" component={DividersExamplesPage} />
-      <Route path="/google-material/data-displays/icons" component={IconsExamplesPage} />
-      <Route path="/google-material/data-displays/lists" component={ListsExamplesPage} />
-      <Route path="/google-material/data-displays/tables" component={TablesExamplesPage} />
-      <Route path="/google-material/data-displays/tooltips" component={TooltipsExamplesPage} />
-      <Route path="/google-material/data-displays/typography" component={TypographyExamplesPage} />
-    </Routes>
+      <Route path="data-displays/avatars" element={<AvatarsExamplesPage></AvatarsExamplesPage>} />
+      <Route path="data-displays/badges" element={<BadgesExamplesPage />} />
+      <Route path="data-displays/chips" element={<ChipsExamplesPage />} />
+      <Route path="data-displays/dividers" element={<DividersExamplesPage />} />
+      <Route path="data-displays/icons" element={<IconsExamplesPage />} />
+      <Route path="data-displays/lists" element={<ListsExamplesPage />} />
+      <Route path="data-displays/tables" element={<TablesExamplesPage />} />
+      <Route path="data-displays/tooltips" element={<TooltipsExamplesPage />} />
+      <Route path="data-displays/typography" element={<TypographyExamplesPage />} />
+    </>
   );
 }

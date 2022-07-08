@@ -5,14 +5,25 @@
  * components (e.g: `src/app/modules/Auth/pages/AuthPage`, `src/app/BasePage`).
  */
 
-import React, { useEffect } from "react";
-import { Switch, Routes as Routess, Navigate, useNavigate } from "react-router-dom";
+import React from "react";
+import { Routes as Routess, Navigate, Outlet } from "react-router-dom";
 import { shallowEqual, useSelector } from "react-redux";
 import { Layout } from "../_metronic/layout";
-import BasePage from "./BasePage";
 import { Logout, AuthPage } from "./modules/Auth";
 import ErrorsPage from "./modules/ErrorsExamples/ErrorsPage";
 import { Route } from "react-router-dom";
+import { Dashboard } from "../_metronic/_partials";
+import { InputsPage } from "./modules/GoogleMaterialExamples/inputs/InputsPage";
+import { NavigationPage } from "./modules/GoogleMaterialExamples/navigation/NavigationPage";
+import { DataDisplaysPage } from "./modules/GoogleMaterialExamples/data-displays/DataDisplaysPage";
+import { FeedbackPage } from "./modules/GoogleMaterialExamples/feedback/FeedbacksPage";
+import { SurfacesPage } from "./modules/GoogleMaterialExamples/surfaces/SurfacesPage";
+import { UtilsPage } from "./modules/GoogleMaterialExamples/utils/UtilsPage";
+import { LayoutPage } from "./modules/GoogleMaterialExamples/layout/LayoutPage";
+import ReactBootstrapPage from "./modules/ReactBootstrapExamples/ReactBootstrapPage";
+import { BuilderPage } from "./pages/BuilderPage";
+import { ProfileCard } from "./modules/UserProfile/components/ProfileCard";
+import UserProfilePage from "./modules/UserProfile/UserProfilePage";
 
 export function Routes() {
   const { isAuthorized } = useSelector(
@@ -21,7 +32,7 @@ export function Routes() {
     }),
     shallowEqual
   );
-  const navigate = useNavigate();
+
   //   useEffect(() => {
   //     if (!isAuthorized) {
   //       navigate("auth");
@@ -38,9 +49,49 @@ export function Routes() {
             path="/dashboard"
             element={
               <Layout>
-                <BasePage />
+                {/* <BasePage /> */}
+                <Dashboard></Dashboard>
               </Layout>
             }></Route>
+          <Route path="/google-material/*" element={<Layout></Layout>}>
+            {InputsPage()}
+            {NavigationPage()}
+            {DataDisplaysPage()}
+            {FeedbackPage()}
+            {SurfacesPage()}
+            {UtilsPage()}
+            {LayoutPage()}
+          </Route>
+
+          <Route path="/react-bootstrap/*" element={<Layout></Layout>}>
+            {ReactBootstrapPage()}
+          </Route>
+          <Route
+            path="/builder"
+            element={
+              <Layout>
+                <BuilderPage></BuilderPage>
+              </Layout>
+            }></Route>
+          <Route
+            path="/user-profile/*"
+            element={
+              <Layout nooutlet={true}>
+                <div className="d-flex flex-row">
+                  <ProfileCard></ProfileCard>
+                  <div className="flex-row-fluid ms-lg-8">
+                    <Outlet></Outlet>
+                  </div>
+                </div>
+              </Layout>
+            }>
+            {UserProfilePage()}
+          </Route>
+
+          {/* <Route path="/e-commerce/*" element={<Layout></Layout>}>
+            {eCommercePage()}
+          </Route> */}
+
           <Route path="*" element={<Navigate to={"/dashboard"} />} />
         </>
       )}
@@ -48,14 +99,4 @@ export function Routes() {
       <Route path="*" element={<AuthPage />} />
     </Routess>
   );
-}
-
-{
-  /* <Route
-path=""
-element={
-  <Layout>
-    <BasePage />
-  </Layout>
-}></Route> */
 }

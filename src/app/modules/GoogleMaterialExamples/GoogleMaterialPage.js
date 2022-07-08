@@ -8,7 +8,6 @@ import { NavigationPage } from "./navigation/NavigationPage";
 import { LayoutPage } from "./layout/LayoutPage";
 import { SurfacesPage } from "./surfaces/SurfacesPage";
 import { UtilsPage } from "./utils/UtilsPage";
-import { ContentRoute } from "../../../_metronic/layout";
 
 export default function GoogleMaterialPage() {
   return (

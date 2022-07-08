@@ -1,6 +1,5 @@
 import React from "react";
-import { Switch, Routes, Route } from "react-router-dom";
-import { ContentRoute } from "../../../../_metronic/layout";
+import { Route } from "react-router-dom";
 import BoxExamplesPage from "./BoxExamplesPage";
 import ContainerExamplesPage from "./ContainerExamplesPage";
 import GridExamplesPage from "./GridExamplesPage";
@@ -9,14 +8,14 @@ import HiddenExamplesPage from "./HiddenExamplesPage";
 
 export function LayoutPage() {
   return (
-    <Routes>
+    <>
       {/* <Redirect exact={true} from="/google-material/layout" to="/google-material/layout/box" /> */}
 
-      <Route path="/google-material/layout/box" component={BoxExamplesPage} />
-      <Route path="/google-material/layout/container" component={ContainerExamplesPage} />
-      <Route path="/google-material/layout/grid" component={GridExamplesPage} />
-      <Route path="/google-material/layout/grid-list" component={GridListExamplesPage} />
-      <Route path="/google-material/layout/hidden" component={HiddenExamplesPage} />
-    </Routes>
+      <Route path="layout/box" element={<BoxExamplesPage />} />
+      <Route path="layout/container" element={<ContainerExamplesPage />} />
+      <Route path="layout/grid" element={<GridExamplesPage />} />
+      <Route path="layout/grid-list" element={<GridListExamplesPage />} />
+      <Route path="layout/hidden" element={<HiddenExamplesPage></HiddenExamplesPage>} />
+    </>
   );
 }

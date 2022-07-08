@@ -1,6 +1,5 @@
 import React from "react";
-import { Switch, Routes, Route } from "react-router-dom";
-import { ContentRoute } from "../../../../_metronic/layout";
+import { Route } from "react-router-dom";
 import ClickAwayListenerExamplesPage from "./ClickAwayListenerExamplesPage";
 import ModalExamplesPage from "./ModalExamplesPage";
 import NoSSRExamplesPage from "./NoSSRExamplesPage";
@@ -12,23 +11,15 @@ import UseMediaQueryExamplesPage from "./UseMediaQueryExamplesPage";
 
 export function UtilsPage() {
   return (
-    <Routes>
-      {/* <Redirect
-        exact={true}
-        from="/google-material/utils"
-        to="/google-material/utils/click-away-listener"
-      /> */}
-      <Route
-        path="/google-material/utils/click-away-listener"
-        component={ClickAwayListenerExamplesPage}
-      />
-      <Route path="/google-material/utils/modal" component={ModalExamplesPage} />
-      <Route path="/google-material/utils/no-ssr" component={NoSSRExamplesPage} />
-      <Route path="/google-material/utils/popover" component={PopoverExamplesPage} />
-      <Route path="/google-material/utils/popper" component={PopperExamplesPage} />
-      <Route path="/google-material/utils/portal" component={PortalExamplesPage} />
-      <Route path="/google-material/utils/transitions" component={TransitionsExamplesPage} />
-      <Route path="/google-material/utils/use-media-query" component={UseMediaQueryExamplesPage} />
-    </Routes>
+    <>
+      <Route path="utils/click-away-listener" element={<ClickAwayListenerExamplesPage />} />
+      <Route path="utils/modal" element={<ModalExamplesPage />} />
+      <Route path="utils/no-ssr" element={<NoSSRExamplesPage />} />
+      <Route path="utils/popover" element={<PopoverExamplesPage />} />
+      <Route path="utils/popper" element={<PopperExamplesPage />} />
+      <Route path="utils/portal" element={<PortalExamplesPage />} />
+      <Route path="utils/transitions" element={<TransitionsExamplesPage />} />
+      <Route path="utils/use-media-query" element={<UseMediaQueryExamplesPage />} />
+    </>
   );
 }
